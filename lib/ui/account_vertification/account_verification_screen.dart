@@ -1,8 +1,8 @@
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/strings.dart';
-import 'package:fantasy_app/routers/ui/account_vertification/veify_bank_account.dart';
-import 'package:fantasy_app/routers/ui/account_vertification/verify_pan_card.dart';
-import 'package:fantasy_app/routers/ui/account_vertification/verify_phone_email.dart';
+import 'package:fantasy_app/ui/account_vertification/veify_bank_account.dart';
+import 'package:fantasy_app/ui/account_vertification/verify_pan_card.dart';
+import 'package:fantasy_app/ui/account_vertification/verify_phone_email.dart';
 import 'package:flutter/material.dart';
 
 class AccountVerificationScreen extends StatefulWidget {

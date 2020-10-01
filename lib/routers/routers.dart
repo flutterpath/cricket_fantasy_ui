@@ -1,4 +1,4 @@
-import 'package:fantasy_app/routers/ui/account_vertification/account_verification_screen.dart';
+import 'package:fantasy_app/ui/account_vertification/account_verification_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouters {
