@@ -1,3 +1,4 @@
+import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:flutter/material.dart';
 
 class FilledButton extends StatelessWidget {
@@ -27,7 +28,7 @@ class FilledButton extends StatelessWidget {
         width: width ?? null,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(radius ?? 5),
-          color: buttonColor ?? Colors.black,
+          color: buttonColor ?? AppColors.colorSecondary,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -37,7 +38,7 @@ class FilledButton extends StatelessWidget {
               child: Text(
                 buttonText,
                 style:
-                Theme.of(context).textTheme.button.copyWith(color: textColor ?? Colors.white),
+                Theme.of(context).textTheme.button.copyWith(color: textColor ?? Colors.white, fontFamily: 'Raleway', fontWeight: FontWeight.w400),
               ),
             ),
           ],

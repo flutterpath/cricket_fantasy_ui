@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigationPage() {
-    Navigator.of(context).pushReplacementNamed(AppRouters.ON_BOARDING_SCREEN);
+    Navigator.of(context).pushNamed(AppRouters.ON_BOARDING_SCREEN);
   }
 
   @override
@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
-        color: AppColors.colorWhite,
+        color: AppColors.colorPrimaryLight,
         width: double.infinity,
         height: MediaQuery.of(context).size.height,
 //        decoration: BoxDecoration(
@@ -48,21 +48,6 @@ class _SplashScreenState extends State<SplashScreen> {
 //          mainAxisAlignment: MainAxisAlignment.center,
 //          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-
-            Expanded(
-              child: Container(
-                child: Column(
-                  children: [
-                    SizedBox(height: 80,),
-                    Image.asset(AppImages.imageSplashScreen,width: (MediaQuery.of(context).size.width)),
-                    SizedBox(height: 30,),
-                    Text("Cricket Fantasy", textScaleFactor: 2.5, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorPrimary),),
-                    SizedBox(height: 10),
-                    CircularProgressIndicator(backgroundColor: AppColors.colorPrimary, strokeWidth: 5.0, valueColor: new AlwaysStoppedAnimation<Color>(AppColors.colorGrey),),
-                  ],
-                ),
-              ),
-            ),
 
             Positioned(
               left: -50,
@@ -162,20 +147,27 @@ class _SplashScreenState extends State<SplashScreen> {
 
                 ),
               ),
-            )
+            ),
+
+            Expanded(
+              child: Container(
+                child: Column(
+                  children: [
+                    SizedBox(height: 80,),
+                    Image.asset(AppImages.imageSplashScreen,width: (MediaQuery.of(context).size.width)),
+                    SizedBox(height: 30,),
+                    Text("Cricket Fantasy", textScaleFactor: 2.5, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorSecondary, fontFamily: 'Raleway'),),
+                    SizedBox(height: 10),
+                    CircularProgressIndicator(backgroundColor: AppColors.colorPrimary, strokeWidth: 5.0, valueColor: new AlwaysStoppedAnimation<Color>(AppColors.colorSecondary),),
+                  ],
+                ),
+              ),
+            ),
 
           ],
         ),
       ),
-      // body: Column(
-      //   mainAxisAlignment: MainAxisAlignment.center,
-      //   crossAxisAlignment: CrossAxisAlignment.center,
-      //   children: [
-      //     Text("Cricket League", textScaleFactor: 2.0, style: TextStyle(fontWeight: FontWeight.bold),),
-      //     SizedBox(height: 10),
-      //     CircularProgressIndicator(backgroundColor: Colors.white,)
-      //   ],
-      // )
+
     );
   }
 }

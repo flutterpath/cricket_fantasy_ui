@@ -49,7 +49,7 @@ flutter:
     - assets/images/
 
   fonts:
-    - family: Schyler
+    - family: Raleway
       fonts:
         - asset: assets/fonts/raleway_extra_light.ttf
           weight: 200

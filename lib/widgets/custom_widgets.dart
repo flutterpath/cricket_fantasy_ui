@@ -18,6 +18,21 @@ class AppWidgets {
     );
   }
 
+  static getCircularAvatarWithBorder(double size, String assetImage) {
+    return ClipRRect(
+      borderRadius: BorderRadius.all(Radius.circular(size/2)),
+      child: Container(
+        height: size,
+        width: size,
+        color: AppColors.colorSecondary,
+        child: CircleAvatar(
+          radius: size - 5,
+          backgroundImage: AssetImage(assetImage),
+        ),
+      ),
+    );
+  }
+
 
 
 }

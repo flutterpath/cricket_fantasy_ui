@@ -44,8 +44,9 @@ class TextWidget extends StatelessWidget {
       data,
       textAlign: textAlign,
       style: style ?? TextStyle(
-          color: color ?? Colors.black,
-          fontWeight: fontWeight ?? FontWeight.normal) ,
+          color: color ?? Colors.white,
+          fontWeight: fontWeight ?? FontWeight.normal,
+      fontFamily: 'Raleway') ,
     );
   }
 }
@@ -95,6 +96,7 @@ class TextWidgetBold extends StatelessWidget {
       textAlign: textAlign,
       style: TextStyle(
           fontWeight: FontWeight.bold,
+          fontFamily: 'Raleway',
           fontSize: fontSize ?? 24,
           color: color,
       ),

@@ -1,3 +1,4 @@
+import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:flutter/material.dart';
 
 class SimpleTextField extends StatelessWidget {
@@ -81,12 +82,13 @@ class SimpleTextField extends StatelessWidget {
       validator: validator,
       readOnly: readOnly,
       cursorColor: Colors.black,
-      textAlign: textAlign,
+      textAlign: textAlign ?? TextAlign.left,
 //      cursorHeight: 30,
       style: TextStyle(
-        fontWeight: FontWeight.bold,
-        color: inputTextColor ?? Colors.white,
-        fontSize: inputTextSize,
+        fontWeight: FontWeight.w400,
+        color: inputTextColor ?? AppColors.colorSecondary,
+        fontSize: 16,
+        fontFamily: 'Raleway'
       ),
       decoration: InputDecoration(
         prefixIcon: this.prefixIcon,
@@ -106,9 +108,10 @@ class SimpleTextField extends StatelessWidget {
         ),
         hintText: this.hint,
         hintStyle:TextStyle(
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w400,
           color: Colors.grey,
-          fontSize: hintSize ?? 24
+          fontSize: hintSize ?? 16,
+            fontFamily: 'Raleway'
         ),
         errorText: errorText,
         errorStyle: Theme.of(context)

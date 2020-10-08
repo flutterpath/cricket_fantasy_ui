@@ -1,4 +1,5 @@
 import 'package:fantasy_app/animation/fadeAnimation.dart';
+import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
 import 'package:fantasy_app/routers/routers.dart';
 import 'package:fantasy_app/ui/create_account/otp_screen.dart';
@@ -64,79 +65,158 @@ class _MobileScreenState extends State<MobileScreen> {
 
     return Scaffold(
       resizeToAvoidBottomPadding: false,
-      body: SingleChildScrollView(
-        child: Column(
+      body: Container(
+        color: AppColors.colorPrimaryLight,
+        child: Stack(
           children: [
-            Stack(
-              children: [
-                       Positioned(
-                         child: FadeAnimation(
-                           1,
-                           Container(
-                              height: height*0.50,
-                              child: Image.asset(AppImages.imageMobileScreen, fit: BoxFit.cover,)),
-                         ),
-                       ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 30,right: 30),
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 20,
+
+            Positioned(
+              left: -300,
+              bottom: -80,
+              child: RotationTransition(
+                turns: new AlwaysStoppedAnimation(45 / 360),
+                child: Container(
+                  height: 500,
+                  width: 500,
+                  decoration: new BoxDecoration(
+                    gradient: new LinearGradient(
+                        colors: [
+                          const Color(0xFFF78B6B),
+                          const Color(0xFF7B422F),
+                          const Color(0xFF251707),
+                        ],
+                        begin: const FractionalOffset(0.0, 0.0),
+                        end: const FractionalOffset(1.0, 0.0),
+                        stops: [0.0, 0.7, 1.0],
+                        tileMode: TileMode.clamp),
                   ),
-                FadeAnimation(
-                1.3,SimpleTextField(
-                    onTap: _openFilteredCupertinoCountryPicker,
-                    readOnly: true,
-                    hint: "Select your country",
-                    textController: _countryCode,
-                  ),),
-                  SizedBox(height: 20,),
-              FadeAnimation(
-                1.5,SimpleTextField(
-                    onTap: (){},
-                    readOnly: false,
-                    hint: "Your Phone Number",
-                  ),),
-                ],
+                  child: Center(
+                    child: Container(
+                      color: AppColors.colorWhite,
+                      height: 360,
+                      width: 350,
+                      child: Container(
+                        color: AppColors.colorPrimaryLight,
+                      ),
+                    ),
+                  ),
+
+                ),
               ),
             ),
 
-          ],
-        ),
-      ),
-      bottomSheet: Padding(
-        padding: const EdgeInsets.only(left: 30,right: 30,bottom: 30),
-        child: FadeAnimation(
-    1.5,Row(
-          children: [
-            Expanded(
-              flex: 3,
-              child: TextWidget(
-                data: "By continuing you may receive an one time SMS for verification. Message carrier rates may apply",
+            Positioned(
+              right: -130,
+              top: 30,
+              child: RotationTransition(
+                turns: new AlwaysStoppedAnimation(45 / 360),
+                child: Container(
+                  height: 70,
+                  width: 700,
+                  decoration: new BoxDecoration(
+                    gradient: new LinearGradient(
+                        colors: [
+                          const Color(0xFFF78B6B),
+                          const Color(0xFF7B422F),
+                          const Color(0xFF251707),
+                        ],
+                        begin: const FractionalOffset(0.0, 0.0),
+                        end: const FractionalOffset(1.0, 0.0),
+                        stops: [0.0, 0.7, 1.0],
+                        tileMode: TileMode.clamp),
+                  ),
+                ),
               ),
             ),
-            Expanded(
-              flex: 1,
-              child: Hero(
-                tag: "arrow",
-                child: RoundButton(
-                  onPressed: (){
-                    Navigator.of(context).pushReplacementNamed(AppRouters.OTP_SCREEN);
-                  },
-                  buttonColor: Colors.black,
-                  child : Icon(
-                    Icons.arrow_forward,
-                    size: 24,
-                    color: Colors.white,
+
+            Container(
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 30, bottom: 50, top: 100),
+                  child: Container(
+
+                      height: height*0.35,
+                      decoration: BoxDecoration(boxShadow: [BoxShadow(color: AppColors.colorGreyLight, spreadRadius: 1, blurRadius: 10),],
+                        color: AppColors.colorWhite,
+                        borderRadius: BorderRadius.only(topLeft: Radius.circular(25), bottomLeft: Radius.circular(25)),
+
+                      ),
+                      child: Stack(
+                        overflow: Overflow.visible,
+                        children: [
+
+                          Positioned(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 30,right: 30),
+                              child: Column(
+                                children: [
+                                  SizedBox(
+                                    height: height*0.1,
+                                  ),
+                                  FadeAnimation(
+                                    1.3,SimpleTextField(
+                                    onTap: _openFilteredCupertinoCountryPicker,
+                                    readOnly: true,
+                                    hint: "Select your country",
+                                    textController: _countryCode,
+                                  ),),
+                                  SizedBox(height: 20,),
+                                  FadeAnimation(
+                                    1.5,SimpleTextField(
+                                    onTap: (){},
+                                    readOnly: false,
+                                    inputType: TextInputType.number,
+                                    hint: "Your Phone Number",
+                                  ),),
+
+                                  SizedBox(
+                                    height: height*0.1,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+
+                          Positioned(
+                            bottom: -30,
+                            right: 10,
+                            child: Hero(
+                              tag: "arrow",
+                              child: RoundButton(
+                                onPressed: (){
+                                  Navigator.of(context).pushNamed(AppRouters.OTP_SCREEN);
+                                },
+                                buttonColor: AppColors.colorSecondary,
+                                child : Icon(
+                                  Icons.arrow_forward,
+                                  size: 24,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          Positioned(
+                            top: -80,
+                            left: width*0.3,
+                            child: FadeAnimation(
+                              1,
+                              Container(
+                                  height: 150,
+                                  width: 150,
+                                  child: Image.asset(AppImages.iconLogo, fit: BoxFit.fill,)),
+                            ),
+                          ),
+
+                        ],
+                      )
                   ),
                 ),
               ),
             )
+
           ],
-        ),),
+        )
       ),
     );
   }
