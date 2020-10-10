@@ -33,6 +33,33 @@ class AppWidgets {
     );
   }
 
+  static getTextFieldFloatLabelWithInBorder(String labelText, TextInputType inputType, IconData icon, TextEditingController controller) {
+    return TextField(
+      controller: controller,
+      keyboardType: TextInputType.number,
+      style: TextStyle(fontSize: 15),
+      decoration: InputDecoration(
+        contentPadding: EdgeInsets.only(top: 5, bottom: 5, left: 20, right: 20),
+        border: OutlineInputBorder(
+          borderSide: const BorderSide(color: AppColors.colorPrimary, width: 1.5),
+          borderRadius: BorderRadius.circular(25.0),
+        ),
+        enabledBorder:OutlineInputBorder(
+          borderSide: const BorderSide(color: AppColors.colorPrimary, width: 1.5),
+          borderRadius: BorderRadius.circular(25.0),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: AppColors.colorPrimary, width: 1.5),
+          borderRadius: BorderRadius.circular(25.0),
+        ),
+        suffixIcon: Icon(icon, size: 20, color: AppColors.colorPrimary,),
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+        labelText:labelText,
+        labelStyle: TextStyle(color: AppColors.colorPrimary, fontFamily: 'Raleway', fontSize: 16),
+//                        hintText: 'Enter Bank Account Number'
+      ),
+    );
+  }
 
 
 }

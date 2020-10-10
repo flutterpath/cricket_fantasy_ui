@@ -34,7 +34,7 @@ class _TransactionHistoryScreenState extends State<TransactionHistoryScreen> {
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
                   centerTitle: false,
-                  title: Text("Recent Transection",
+                  title: Text("Recent Transaction",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16.0,
@@ -93,7 +93,7 @@ class _TransactionHistoryScreenState extends State<TransactionHistoryScreen> {
                                   width: 15.0,
                                   height: 15.0,
                                   decoration: BoxDecoration(
-                                    color: Colors.green,
+                                    color: AppColors.colorPrimary,
                                     shape: BoxShape.circle,
                                   ),
                                   child: FittedBox(
@@ -137,7 +137,7 @@ class _TransactionHistoryScreenState extends State<TransactionHistoryScreen> {
                                     "Sent",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.green,
+                                      color: AppColors.colorPrimary,
                                     ),
                                   ),
                                 ],

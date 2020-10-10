@@ -60,9 +60,9 @@ class _SplashScreenState extends State<SplashScreen> {
                   decoration: new BoxDecoration(
                     gradient: new LinearGradient(
                         colors: [
-                          const Color(0xFFF78B6B),
-                          const Color(0xFF7B422F),
-                          const Color(0xFF251707),
+                          AppColors.colorPrimary,
+                          AppColors.colorGradient,
+                          AppColors.colorSecondary,
                         ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
@@ -85,9 +85,9 @@ class _SplashScreenState extends State<SplashScreen> {
                   decoration: new BoxDecoration(
                     gradient: new LinearGradient(
                         colors: [
-                          const Color(0xFFF78B6B),
-                          const Color(0xFF7B422F),
-                          const Color(0xFF251707),
+                          AppColors.colorPrimary,
+                          AppColors.colorGradient,
+                          AppColors.colorSecondary,
                         ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
@@ -110,9 +110,9 @@ class _SplashScreenState extends State<SplashScreen> {
                   decoration: new BoxDecoration(
                     gradient: new LinearGradient(
                         colors: [
-                          const Color(0xFFF78B6B),
-                          const Color(0xFF7B422F),
-                          const Color(0xFF251707),
+                          AppColors.colorPrimary,
+                          AppColors.colorGradient,
+                          AppColors.colorSecondary,
                         ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
@@ -135,9 +135,9 @@ class _SplashScreenState extends State<SplashScreen> {
                   decoration: new BoxDecoration(
                     gradient: new LinearGradient(
                         colors: [
-                          const Color(0xFFF78B6B),
-                          const Color(0xFF7B422F),
-                          const Color(0xFF251707),
+                          AppColors.colorPrimary,
+                          AppColors.colorGradient,
+                          AppColors.colorSecondary,
                         ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),

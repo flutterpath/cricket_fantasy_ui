@@ -1,5 +1,6 @@
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/widgets/custom_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +61,7 @@ class MyProfileScreen extends StatelessWidget {
                           //color: Colors.deepPurple,
                           alignment: Alignment.center,
                           child: Text(
-                            "Team Name".toUpperCase(),
+                            team_name.toUpperCase(),
                             textDirection: TextDirection.ltr,
                             textAlign: TextAlign.left,
                             softWrap: true,
@@ -137,7 +138,7 @@ class MyProfileScreen extends StatelessWidget {
                       //color: Colors.deepPurple,
                       alignment: Alignment.center,
                       child: Text(
-                        "Name".toUpperCase(),
+                        name.toUpperCase(),
                         textDirection: TextDirection.ltr,
                         textAlign: TextAlign.left,
                         softWrap: true,
@@ -177,7 +178,7 @@ class MyProfileScreen extends StatelessWidget {
                       //color: Colors.deepPurple,
                       alignment: Alignment.center,
                       child: Text(
-                        "Email".toUpperCase(),
+                        email.toUpperCase(),
                         textDirection: TextDirection.ltr,
                         textAlign: TextAlign.left,
                         softWrap: true,
@@ -217,7 +218,7 @@ class MyProfileScreen extends StatelessWidget {
                       //color: Colors.deepPurple,
                       alignment: Alignment.center,
                       child: Text(
-                        "Mobile Number".toUpperCase(),
+                        mobile_number.toUpperCase(),
                         textDirection: TextDirection.ltr,
                         textAlign: TextAlign.left,
                         softWrap: true,
@@ -257,7 +258,7 @@ class MyProfileScreen extends StatelessWidget {
                       //color: Colors.deepPurple,
                       alignment: Alignment.center,
                       child: Text(
-                        "Date of Birth".toUpperCase(),
+                        date_of_birth.toUpperCase(),
                         textDirection: TextDirection.ltr,
                         textAlign: TextAlign.left,
                         softWrap: true,
@@ -297,7 +298,7 @@ class MyProfileScreen extends StatelessWidget {
                       //color: Colors.deepPurple,
                       alignment: Alignment.center,
                       child: Text(
-                        "Gender".toUpperCase(),
+                        gender.toUpperCase(),
                         textDirection: TextDirection.ltr,
                         textAlign: TextAlign.left,
                         softWrap: true,
@@ -337,7 +338,7 @@ class MyProfileScreen extends StatelessWidget {
                       //color: Colors.deepPurple,
                       alignment: Alignment.center,
                       child: Text(
-                        "City".toUpperCase(),
+                        city.toUpperCase(),
                         textDirection: TextDirection.ltr,
                         textAlign: TextAlign.left,
                         softWrap: true,

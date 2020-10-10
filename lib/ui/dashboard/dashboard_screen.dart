@@ -126,9 +126,9 @@ class DashboardScreenState extends State<DashboardScreen> {
             decoration: new BoxDecoration(
                 gradient: new LinearGradient(
                     colors: [
-                      const Color(0xFFF78B6B),
-                      const Color(0xFF7B422F),
-                      const Color(0xFF251707),
+                      AppColors.colorPrimary,
+                      AppColors.colorGradient,
+                      AppColors.colorSecondary,
                     ],
                     begin: const FractionalOffset(0.0, 0.0),
                     end: const FractionalOffset(0.0, 1.0),
@@ -191,7 +191,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                           /** ---- MY BALANCE ----- */
                           InkWell(
                             onTap: () {
-                              Navigator.of(context).pushNamed(AppRouters.MOBILE_SCREEN);
+                              Navigator.of(context).pushNamed(AppRouters.MY_BALANCE_SCREEN);
                             },
                             child: Row(
                               children: [
@@ -225,7 +225,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                           /** ---- NOTIFICATIONS ----- */
                           InkWell(
                             onTap: () {
-                              Navigator.of(context).pushNamed(AppRouters.MOBILE_SCREEN);
+                              Navigator.of(context).pushNamed(AppRouters.NOTIFICATIONS_SCREEN);
                             },
                             child: Row(
                               children: [
@@ -293,7 +293,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                           /** ---- MY INFO & SETTINGS ----- */
                           InkWell(
                             onTap: () {
-                              Navigator.of(context).pushNamed(AppRouters.MOBILE_SCREEN);
+                              Navigator.of(context).pushNamed(AppRouters.UPDATE_PROFILE_SCREEN);
                             },
                             child: Row(
                               children: [
@@ -437,9 +437,9 @@ class DashboardScreenState extends State<DashboardScreen> {
           decoration: new BoxDecoration(
             gradient: new LinearGradient(
                 colors: [
-                  const Color(0xFFF78B6B),
-                  const Color(0xFF7B422F),
-                  const Color(0xFF251707),
+                  AppColors.colorPrimary,
+                  AppColors.colorGradient,
+                  AppColors.colorSecondary,
                 ],
                 begin: const FractionalOffset(0.0, 0.0),
                 end: const FractionalOffset(1.0, 0.0),

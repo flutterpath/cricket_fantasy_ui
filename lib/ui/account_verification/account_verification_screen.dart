@@ -3,6 +3,7 @@ import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/ui/account_verification/verify_bank_account.dart';
 import 'package:fantasy_app/ui/account_verification/verify_pan_card.dart';
 import 'package:fantasy_app/ui/account_verification/verify_phone_email.dart';
+import 'package:fantasy_app/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class AccountVerificationScreen extends StatefulWidget {
@@ -11,8 +12,6 @@ class AccountVerificationScreen extends StatefulWidget {
 }
 
 class AccountVerificationState extends State<AccountVerificationScreen> with TickerProviderStateMixin {
-
-  TabController _tabController;
 
   var verifyTabs = <Tab>[
     Tab(text: 'Phone/Email'),
@@ -23,7 +22,6 @@ class AccountVerificationState extends State<AccountVerificationScreen> with Tic
   @override
   void initState() {
     super.initState();
-    _tabController = new TabController(vsync: this, length: verifyTabs.length);
   }
 
   @override
@@ -45,35 +43,9 @@ class AccountVerificationState extends State<AccountVerificationScreen> with Tic
               color: AppColors.colorGreyExtraLight,
               child: Column(
                 children: [
-                  Container(
-                    height: 50,
-                    color: AppColors.colorPrimary,
-                    child: Center(
-                      child: Stack(
-//                    mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
 
-                          Container(
-                            height: 50,
-                            child: Row(
-                              children: [
-                                SizedBox(width: 10,),
-                                Icon(Icons.close, color: Colors.white,),
-                              ],
-                            ),
-                          ),
+                  MyCustomAppBar().getAppBarWithTitle(accountVerification, Icons.arrow_back_ios),
 
-                          Container(
-                              child: Center(
-                                child: Text(accountVerification,
-                                  style: TextStyle(fontSize: 20, color: AppColors.colorWhite, fontWeight: FontWeight.bold),
-                                ),
-                              )
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
                   Container(
                     color: AppColors.colorWhite,
                     child: TabBar(
@@ -83,6 +55,7 @@ class AccountVerificationState extends State<AccountVerificationScreen> with Tic
                       tabs: verifyTabs,
                     ),
                   )
+
                 ],
               ),
             ),
@@ -95,15 +68,6 @@ class AccountVerificationState extends State<AccountVerificationScreen> with Tic
         ),
       ),
     );
-  }
-
-
-  Widget _getTabPage(Tab tab){
-    switch(tab.text){
-      case 'Phone/Email': return VerifyPhoneEmail();
-      case 'Pan Card': return VerifyPanCard();
-      case 'Bank Account': return VerifyBankAccount();
-    }
   }
 
 }

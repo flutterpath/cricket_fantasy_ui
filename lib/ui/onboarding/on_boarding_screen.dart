@@ -102,8 +102,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             done: Text('Done'.toUpperCase(), style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Raleway')),
             dotsDecorator: const DotsDecorator(
               size: Size(10.0, 10.0),
-              color: const Color(0xFF251707),
-              activeColor: const Color(0xFFF78B6B),
+              color: AppColors.colorSecondary,
+              activeColor: AppColors.colorPrimary,
               activeSize: Size(22.0, 10.0),
               activeShape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(25.0)),
@@ -122,9 +122,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 decoration: new BoxDecoration(
                   gradient: new LinearGradient(
                       colors: [
-                        const Color(0xFFF78B6B),
-                        const Color(0xFF7B422F),
-                        const Color(0xFF251707),
+                        AppColors.colorPrimary,
+                        AppColors.colorGradient,
+                        AppColors.colorSecondary,
                       ],
                       begin: const FractionalOffset(0.0, 0.0),
                       end: const FractionalOffset(0.0, 1.0),
@@ -147,9 +147,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 decoration: new BoxDecoration(
                   gradient: new LinearGradient(
                       colors: [
-                        const Color(0xFFF78B6B),
-                        const Color(0xFF7B422F),
-                        const Color(0xFF251707),
+                        AppColors.colorPrimary,
+                        AppColors.colorGradient,
+                        AppColors.colorSecondary,
                       ],
                       begin: const FractionalOffset(0.0, 0.0),
                       end: const FractionalOffset(0.0, 1.0),
@@ -172,9 +172,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 decoration: new BoxDecoration(
                   gradient: new LinearGradient(
                       colors: [
-                        const Color(0xFFF78B6B),
-                        const Color(0xFF7B422F),
-                        const Color(0xFF251707),
+                        AppColors.colorPrimary,
+                        AppColors.colorGradient,
+                        AppColors.colorSecondary,
                       ],
                       begin: const FractionalOffset(0.0, 0.0),
                       end: const FractionalOffset(0.0, 1.0),
@@ -197,9 +197,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 decoration: new BoxDecoration(
                   gradient: new LinearGradient(
                       colors: [
-                        const Color(0xFFF78B6B),
-                        const Color(0xFF7B422F),
-                        const Color(0xFF251707),
+                        AppColors.colorPrimary,
+                        AppColors.colorGradient,
+                        AppColors.colorSecondary,
                       ],
                       begin: const FractionalOffset(0.0, 0.0),
                       end: const FractionalOffset(0.0, 1.0),

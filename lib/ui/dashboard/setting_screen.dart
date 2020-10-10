@@ -2,7 +2,6 @@ import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/routers/routers.dart';
 import 'package:fantasy_app/widgets/custom_setting.dart';
-import 'package:fantasy_app/widgets/round_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -27,16 +26,20 @@ class _SettingScreenState extends State<SettingScreen> {
               CustomSettingPage(
                 title: invite_friends,
                 icon: Icons.person_add,
+                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
               ),
               CustomSettingPage(
                 title: CONTEST_INVITE_CODE,
                 icon: Icons.mail_outline,
+                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
                 child: ListTile(
                   contentPadding: EdgeInsets.symmetric(horizontal: 0.0),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed(AppRouters.ACCOUNT_VERIFICATION_SCREEN);
+                  },
                   leading: Container(
                     height: 40,
                     width: 40,
@@ -91,22 +94,27 @@ class _SettingScreenState extends State<SettingScreen> {
               CustomSettingPage(
                 title: FANTASY_POINTS_SYSTEM,
                 icon: Icons.ac_unit,
+                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
               ),
               CustomSettingPage(
                 title: HOW_TO_PLAY,
                 icon: Icons.find_in_page,
+                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
               ),
               CustomSettingPage(
                 title: ABOUT_US,
                 icon: Icons.group,
+                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
               ),
               CustomSettingPage(
                 title: LEGALITY,
                 icon: FontAwesomeIcons.shieldAlt,
+                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
               ),
               CustomSettingPage(
                 title: TERMS_AND_CONDITIONS,
                 icon: FontAwesomeIcons.fileAlt,
+                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
               ),
             ],
           ),

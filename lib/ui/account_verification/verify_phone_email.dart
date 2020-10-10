@@ -14,20 +14,17 @@ class VerifyPhoneEmail extends StatefulWidget {
 class VerifyPhoneEmailState extends State<VerifyPhoneEmail> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(10),
-      child: Column(
-        children: [
+    return ListView(
+      children: [
 
-          SizedBox(height: 20,),
-
-          Container(
-            width: MediaQuery.of(context).size.width-20,
+        Padding(
+          padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+          child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: Colors.white,
               boxShadow: [
-                BoxShadow(color: Colors.grey[200], spreadRadius: 2),
+                BoxShadow(color: AppColors.colorPrimaryLight, spreadRadius: 2, blurRadius: 10),
               ],
             ),
             child: Padding(
@@ -36,40 +33,47 @@ class VerifyPhoneEmailState extends State<VerifyPhoneEmail> {
                   children: [
                     Icon(Icons.email, size: 40, color: AppColors.colorPrimary,),
                     SizedBox(height: 10,),
-                    Text(verifyEmailAddress.toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                    Text(verifyEmailAddress.toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Raleway',),),
                     SizedBox(height: 5,),
                     Container(
                         width: MediaQuery.of(context).size.width-80,
                         child: Divider(height: 1, color: AppColors.colorGreyLight,)
                     ),
                     SizedBox(height: 5,),
-                    Text(verifyEmailAddressContent, style: TextStyle(fontSize: 15),),
+                    Text(verifyEmailAddressContent, style: TextStyle(fontSize: 14, fontFamily: 'Raleway',),),
                     SizedBox(height: 20,),
-                    RaisedButton(
-                      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                      textColor: Colors.white,
-                      color: AppColors.colorPrimary,
-                      shape: new RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(30.0),
+                    Container(
+                      padding: EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(25)),
+                        gradient: new LinearGradient(
+                            colors: [
+                              AppColors.colorPrimary,
+                              AppColors.colorGradient,
+                              AppColors.colorSecondary,
+                            ],
+                            begin: const FractionalOffset(0.0, 0.0),
+                            end: const FractionalOffset(1.0, 0.0),
+                            stops: [0.0, 0.7, 1.0],
+                            tileMode: TileMode.clamp),
                       ),
-                      child: Text(verify.toUpperCase()),
-                      onPressed: () {},
+                      child: Text(verify.toUpperCase(), style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                     ),
                     SizedBox(height: 20,),
                   ]
               ),
             ),
           ),
+        ),
 
-          SizedBox(height: 30,),
-
-          Container(
-            width: MediaQuery.of(context).size.width-20,
+        Padding(
+          padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
+          child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: Colors.white,
               boxShadow: [
-                BoxShadow(color: Colors.grey[200], spreadRadius: 2),
+                BoxShadow(color: AppColors.colorPrimaryLight, spreadRadius: 2, blurRadius: 10),
               ],
             ),
             child: Padding(
@@ -78,33 +82,40 @@ class VerifyPhoneEmailState extends State<VerifyPhoneEmail> {
                   children: [
                     Icon(Icons.phone, size: 40, color: AppColors.colorPrimary,),
                     SizedBox(height: 10,),
-                    Text(verifyPhoneNumber.toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                    Text(verifyPhoneNumber.toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Raleway',),),
                     SizedBox(height: 5,),
                     Container(
                         width: MediaQuery.of(context).size.width-80,
                         child: Divider(height: 1, color: AppColors.colorGreyLight,)
                     ),
                     SizedBox(height: 5,),
-                    Text(verifyPhoneNumberContent, style: TextStyle(fontSize: 15),),
+                    Text(verifyPhoneNumberContent, style: TextStyle(fontSize: 14, fontFamily: 'Raleway',),),
                     SizedBox(height: 20,),
-                    RaisedButton(
-                      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                      textColor: Colors.white,
-                      color: AppColors.colorPrimary,
-                      shape: new RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(30.0),
+                    Container(
+                      padding: EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(25)),
+                        gradient: new LinearGradient(
+                            colors: [
+                              AppColors.colorPrimary,
+                              AppColors.colorGradient,
+                              AppColors.colorSecondary,
+                            ],
+                            begin: const FractionalOffset(0.0, 0.0),
+                            end: const FractionalOffset(1.0, 0.0),
+                            stops: [0.0, 0.7, 1.0],
+                            tileMode: TileMode.clamp),
                       ),
-                      child: Text(verify.toUpperCase()),
-                      onPressed: () {},
+                      child: Text(verify.toUpperCase(), style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                     ),
                     SizedBox(height: 20,),
                   ]
               ),
             ),
           ),
+        ),
 
-        ],
-      )
+      ],
     );
   }
 

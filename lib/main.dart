@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Cricket Fantasy',
-      initialRoute: AppRouters.DASHBOARD_SCREEN,
+      initialRoute: AppRouters.SPLASH_SCREEN,
       onGenerateRoute: AppRouters.generateRoute,
     );
   }

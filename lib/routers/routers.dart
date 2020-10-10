@@ -2,10 +2,14 @@ import 'package:fantasy_app/ui/account_verification/account_verification_screen.
 import 'package:fantasy_app/ui/create_account/mobile_screen.dart';
 import 'package:fantasy_app/ui/create_account/otp_screen.dart';
 import 'package:fantasy_app/ui/dashboard/dashboard_screen.dart';
+import 'package:fantasy_app/ui/notifications/notifications_screen.dart';
 import 'package:fantasy_app/ui/onboarding/on_boarding_screen.dart';
+import 'package:fantasy_app/ui/profile/update_profile_screen.dart';
 import 'package:fantasy_app/ui/splash/splash_screen.dart';
 import 'package:fantasy_app/ui/wallet/add_money_screen.dart';
+import 'package:fantasy_app/ui/wallet/my_balance_screen.dart';
 import 'package:fantasy_app/ui/wallet/transaction_history_screen.dart';
+import 'package:fantasy_app/ui/wallet/withdraw_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouters {
@@ -19,6 +23,10 @@ class AppRouters {
   static const String DASHBOARD_SCREEN = 'dashboard_screen';
   static const String ADD_MONEY_SCREEN = 'AddMoneyScreen';
   static const String TRANSACTION_HISTORY_SCREEN = 'transaction_history';
+  static const String UPDATE_PROFILE_SCREEN = 'update_profile_screen';
+  static const String MY_BALANCE_SCREEN = 'my_balance_screen';
+  static const String NOTIFICATIONS_SCREEN = 'notifications_screen';
+  static const String WITHDRAW_SCREEN = 'withdraw_screen';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
 
@@ -41,6 +49,14 @@ class AppRouters {
         return MaterialPageRoute(builder: (context) => AddMoneyScreen());
       case TRANSACTION_HISTORY_SCREEN:
         return MaterialPageRoute(builder: (context) => TransactionHistoryScreen());
+      case UPDATE_PROFILE_SCREEN:
+        return MaterialPageRoute(builder: (context) => UpdateProfileScreen());
+      case MY_BALANCE_SCREEN:
+        return MaterialPageRoute(builder: (context) => MyBalanceScreen());
+      case NOTIFICATIONS_SCREEN:
+        return MaterialPageRoute(builder: (context) => NotificationsScreen());
+      case WITHDRAW_SCREEN:
+        return MaterialPageRoute(builder: (context) => WithdrawScreen());
       default:
         return _errorRoute();
     }

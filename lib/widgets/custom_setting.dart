@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 class CustomSettingPage extends StatelessWidget {
   final String title;
   final IconData icon;
+  final String routeName;
 
   CustomSettingPage({
     this.title,
-    this.icon
+    this.icon,
+    this.routeName
   });
 
   @override
@@ -19,7 +21,9 @@ class CustomSettingPage extends StatelessWidget {
           padding: const EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 0.0),
-            onTap: (){},
+            onTap: (){
+              Navigator.of(context).pushNamed(routeName);
+            },
             leading: Container(
               height: 40,
               width: 40,
