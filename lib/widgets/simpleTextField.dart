@@ -30,6 +30,7 @@ class SimpleTextField extends StatelessWidget {
   final double hintSize;
   final int maxLines;
   final void Function() onTap;
+  final TextCapitalization textCapitalization;
 
   const SimpleTextField({
     Key key,
@@ -61,11 +62,13 @@ class SimpleTextField extends StatelessWidget {
     this.maxLines,
     this.inputTextSize,
     this.textAlign,
+    this.textCapitalization
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      textCapitalization: textCapitalization,
       controller: textController,
       textDirection: textDirection,
       textAlignVertical: TextAlignVertical.center,
@@ -87,7 +90,7 @@ class SimpleTextField extends StatelessWidget {
       style: TextStyle(
         fontWeight: FontWeight.w400,
         color: inputTextColor ?? AppColors.colorSecondary,
-        fontSize: 16,
+        fontSize: inputTextSize,
         fontFamily: 'Raleway'
       ),
       decoration: InputDecoration(
@@ -117,7 +120,7 @@ class SimpleTextField extends StatelessWidget {
         errorStyle: Theme.of(context)
             .textTheme
             .bodyText2
-            .copyWith(color: Colors.red, fontSize: 12),
+            .copyWith(color: Colors.red, fontSize: 12,),
         counterText: '',
         //icon: this.isIcon ? Icon(this.icon, color: iconColor) : null
       ),

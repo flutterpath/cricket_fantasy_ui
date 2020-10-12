@@ -29,13 +29,13 @@ class _OtpScreenState extends State<OtpScreen> {
             children: [
 
               Positioned(
-                left: -300,
-                bottom: -80,
-                child: RotationTransition(
-                  turns: new AlwaysStoppedAnimation(45 / 360),
+                left: -50,
+                bottom: -60,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(100)),
                   child: Container(
-                    height: 500,
-                    width: 500,
+                    height: 200,
+                    width: 200,
                     decoration: new BoxDecoration(
                       gradient: new LinearGradient(
                           colors: [
@@ -44,19 +44,9 @@ class _OtpScreenState extends State<OtpScreen> {
                             AppColors.colorSecondary,
                           ],
                           begin: const FractionalOffset(0.0, 0.0),
-                          end: const FractionalOffset(1.0, 0.0),
+                          end: const FractionalOffset(0.0, 1.0),
                           stops: [0.0, 0.7, 1.0],
                           tileMode: TileMode.clamp),
-                    ),
-                    child: Center(
-                      child: Container(
-                        color: AppColors.colorWhite,
-                        height: 360,
-                        width: 350,
-                        child: Container(
-                          color: AppColors.colorPrimaryLight,
-                        ),
-                      ),
                     ),
 
                   ),
@@ -64,13 +54,13 @@ class _OtpScreenState extends State<OtpScreen> {
               ),
 
               Positioned(
-                right: -130,
-                top: 30,
-                child: RotationTransition(
-                  turns: new AlwaysStoppedAnimation(45 / 360),
+                top: -40,
+                right: -30,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(100)),
                   child: Container(
-                    height: 70,
-                    width: 700,
+                    height: 100,
+                    width: 100,
                     decoration: new BoxDecoration(
                       gradient: new LinearGradient(
                           colors: [
@@ -79,10 +69,61 @@ class _OtpScreenState extends State<OtpScreen> {
                             AppColors.colorSecondary,
                           ],
                           begin: const FractionalOffset(0.0, 0.0),
-                          end: const FractionalOffset(1.0, 0.0),
+                          end: const FractionalOffset(0.0, 1.0),
                           stops: [0.0, 0.7, 1.0],
                           tileMode: TileMode.clamp),
                     ),
+
+                  ),
+                ),
+              ),
+
+              Positioned(
+                bottom: 80,
+                right: -30,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(100)),
+                  child: Container(
+                    height: 130,
+                    width: 130,
+                    decoration: new BoxDecoration(
+                      gradient: new LinearGradient(
+                          colors: [
+                            AppColors.colorPrimary,
+                            AppColors.colorGradient,
+                            AppColors.colorSecondary,
+                          ],
+                          begin: const FractionalOffset(0.0, 0.0),
+                          end: const FractionalOffset(0.0, 1.0),
+                          stops: [0.0, 0.7, 1.0],
+                          tileMode: TileMode.clamp),
+                    ),
+
+                  ),
+                ),
+              ),
+
+              Positioned(
+                top: 80,
+                left: -30,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(100)),
+                  child: Container(
+                    height: 60,
+                    width: 60,
+                    decoration: new BoxDecoration(
+                      gradient: new LinearGradient(
+                          colors: [
+                            AppColors.colorPrimary,
+                            AppColors.colorGradient,
+                            AppColors.colorSecondary,
+                          ],
+                          begin: const FractionalOffset(0.0, 0.0),
+                          end: const FractionalOffset(0.0, 1.0),
+                          stops: [0.0, 0.7, 1.0],
+                          tileMode: TileMode.clamp),
+                    ),
+
                   ),
                 ),
               ),
@@ -136,18 +177,9 @@ class _OtpScreenState extends State<OtpScreen> {
                                                   horizontal: 30),
                                               child: PinCodeTextField(
                                                 appContext: context,
-                                                pastedTextStyle: TextStyle(
-                                                  color: Colors.white,
-                                                  fontWeight: FontWeight.bold,
-                                                    fontFamily: 'Raleway'
-                                                ),
+                                                pastedTextStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),
                                                 length: 4,
-                                                textStyle: TextStyle(
-                                                    color: AppColors.colorSecondary,
-                                                    fontWeight: FontWeight.bold,
-                                                    fontFamily: 'Raleway',
-                                                    fontSize: 23
-                                                ),
+                                                textStyle: TextStyle(color: AppColors.colorSecondary, fontWeight: FontWeight.bold, fontFamily: 'Raleway', fontSize: 23),
                                                 obscureText: false,
                                                 animationType: AnimationType.slide,
                                                 pinTheme: PinTheme(
@@ -185,7 +217,7 @@ class _OtpScreenState extends State<OtpScreen> {
 
                             Positioned(
                               bottom: -30,
-                              right: -30,
+                              right: 80,
                               child: Hero(
                                 tag: "arrow",
                                 child: RoundButton(

@@ -245,20 +245,3 @@ class MyBalanceScreen extends StatelessWidget {
     );
   }
 }
-
-class UpdateProfileHeaderContainer extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()..color = AppColors.colorSecondary;
-    Path path = Path()
-      ..relativeLineTo(0, 80)
-      ..quadraticBezierTo(size.width / 2, 180.0, size.width, 120)
-      ..relativeLineTo(0, -150)
-      ..close();
-
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) => false;
-}

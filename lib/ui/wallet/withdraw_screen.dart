@@ -1,7 +1,17 @@
+import 'package:fantasy_app/animation/fadeAnimation.dart';
+import 'package:fantasy_app/constants/color_constants.dart';
+import 'package:fantasy_app/constants/images_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/ui/contests/my_team.dart';
+import 'package:fantasy_app/widgets/custom_app_bar.dart';
+import 'package:fantasy_app/widgets/custom_widgets.dart';
+import 'package:fantasy_app/widgets/filled_button.dart';
+import 'package:fantasy_app/widgets/simpleTextField.dart';
+import 'package:fantasy_app/widgets/textWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class WithdrawScreen extends StatefulWidget {
 
@@ -11,224 +21,144 @@ class WithdrawScreen extends StatefulWidget {
 
 class WithdrawScreenState extends State<WithdrawScreen> {
 
-  @override
-  void initState() {
-    super.initState();
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown,]);
-  }
-
-  @override
-  dispose(){
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown,]);
-    super.dispose();
-  }
+  TextEditingController _moneyController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
-      appBar: AppBar(
-
-        leading: IconButton(
-          icon: Icon(
-            Icons.close,
-            color: Colors.white,
-          ),
-          onPressed: (){
-            Navigator.pop(context);
-          },
-        ),
-
-        title: Text(
-          "Withdraw",
-          textDirection: TextDirection.ltr,
-          softWrap: true,
-          textAlign: TextAlign.left,
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.normal,
-            fontStyle: FontStyle.italic,
-            fontSize: 24.0,
-          ),
-        ),
-        centerTitle: true,
-
-      ),
-
-      body: ListView(
-        shrinkWrap: true,
-        scrollDirection: Axis.vertical,
-        children: <Widget>[
-
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            textDirection: TextDirection.ltr,
-            children: <Widget>[
-
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Container(
-                    //color: Colors.deepPurple,
-                    alignment: Alignment.centerLeft,
-                    height: MediaQuery.of(context).size.height/14,
-                    width: MediaQuery.of(context).size.width,
-                    child: Text(
-                      "Your Winnings",
-                      textDirection: TextDirection.ltr,
-                      textAlign: TextAlign.left,
-                      softWrap: true,
-                      style: TextStyle(
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.black45,
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              children: <Widget>[
+                Container(
+                  height: height*0.7,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30),bottomRight: Radius.circular(30)),
+                  ),
+                  child: Stack(
+                    children: <Widget>[
+                      Container(
+                        child: MyCustomAppBar().getTransparentAppBarWithTitle(withdraw_money, Icons.arrow_back_ios),
                       ),
-                    ),
-                  ),
-                ),
-              ),
-
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Container(
-                    //color: Colors.deepOrange,
-                    alignment: Alignment.centerRight,
-                    height: MediaQuery.of(context).size.height/14,
-                    width: MediaQuery.of(context).size.width,
-                    child: Text(
-                      "\$0",
-                      textDirection: TextDirection.ltr,
-                      textAlign: TextAlign.left,
-                      softWrap: true,
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                      Positioned(
+                          top: 0,
+                          left: 10,
+                          right: 10,
+                          child: FadeAnimation(1.4, Container(
+                            margin: EdgeInsets.only(top: height*0.1),
+                            height: height*0.07,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(Radius.circular(30)),
+                            ),
+                            child: Row(
+                              children: [
+                                SizedBox(width: width*0.03,),
+                                AppWidgets.getCircularAvatar(height*0.05, AppImages.userAvatar),
+                                SizedBox(width: width*0.02,),
+                                Container(
+                                  width: width*0.7,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      TextWidget(
+                                        data: "Winning Amount",
+                                        fontSize: 15,
+                                        color: AppColors.colorGreyDark,
+                                      ),
+                                      TextWidgetBold(
+                                        data: "\$500",
+                                        fontSize: 18,
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),)
                       ),
-                    ),
+                      Positioned(
+                        child: FadeAnimation(1.6, Container(
+                          margin: EdgeInsets.only(top: 50),
+                          child: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  TextWidget(
+                                    data: "Withdraw Money from Wallet",
+                                    style: TextStyle(color: AppColors.colorGreyExtraLight, fontSize: 18, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),
+                                  ),
+                                  SizedBox(height: 10,),
+                                  SimpleTextField(
+                                    textAlign: TextAlign.center,
+                                    inputType: TextInputType.number,
+                                    textController: _moneyController,
+                                    hint: "\$0",
+                                    hintSize: 70,
+                                    maxLength: 6,
+                                    maxLines: null,
+                                    readOnly: false,
+                                    inputTextColor: Colors.white,
+                                    textDirection: TextDirection.rtl,
+                                    inputTextSize: 70,
+                                  ),
+
+                                ],
+                              )
+                          ),
+                        )),
+                      ),
+                      Positioned(
+                          bottom: 10,
+                          left: 20,
+                          child: FadeAnimation(1.8, Container(
+                            width: width,
+                            child: Text('*Min ₹200 and max ₹10,000 allowed per day', style: TextStyle(fontFamily: 'Raleway', fontSize: 13, color: AppColors.colorWhite),),
+                          ),
+                          )
+                      )
+                    ],
                   ),
                 ),
-              ),
 
-
-
-            ],
-          ),
-
-          Divider(
-            thickness: 2,
-            color: Colors.grey[400],
-          ),
-
-          Container(
-            //color: Colors.orange,
-            height: MediaQuery.of(context).size.height/14,
-            width: MediaQuery.of(context).size.width,
-
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: TextField(
-                autofocus: true,
-                keyboardType: TextInputType.number,
-                textAlign: TextAlign.left,
-                textDirection: TextDirection.ltr,
-                enabled: true,
-                cursorColor: Theme.of(context).primaryColor,
-                style: TextStyle(
-                  fontSize: 18,
-                ),
-                decoration: InputDecoration(
-                    labelText: "",
-                    /*labelStyle: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      color: Colors.black54,
-                      fontSize: 20,
-                    ),*/
-                    //hintText: "Add Amount",
-                    prefix: Text("\$"),
-                    fillColor: Colors.deepPurpleAccent
-                ),
-              ),
+              ],
             ),
           ),
-
-          Container(
-            alignment: Alignment.centerLeft,
-            //color: Colors.red,
-            height: MediaQuery.of(context).size.height/22,
-            width: MediaQuery.of(context).size.width,
-            padding: const EdgeInsets.symmetric(horizontal: 10.0, ),
-            child: Text(
-              "min \$40 & max \$200 allowed per day",
-              textDirection: TextDirection.ltr,
-              textAlign: TextAlign.left,
-              softWrap: true,
-              style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.normal,
-                color: Colors.black45,
-              ),
-            ),
-          ),
-
-          Container(
-            //color: Colors.orange,
-            alignment: Alignment.center,
-            height: MediaQuery.of(context).size.height/9,
-            width: MediaQuery.of(context).size.width,
-            child: MaterialButton(
-              height: 50,
-              minWidth: MediaQuery.of(context).size.width*0.8,
-              elevation: 6.0,
-              color: Theme.of(context).primaryColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(8.0),),
-              ),
-              child: Text(
-                "ADD CASH",
-                textDirection: TextDirection.ltr,
-                textAlign: TextAlign.center,
-                softWrap: true,
-                style: TextStyle(
-                  color: Colors.white,
+        ),
+        bottomSheet: FadeAnimation(1, Container(
+          color: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MaterialButton(
+                    color: AppColors.colorBlack,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(25))),
+                    onPressed: (){},
+                    padding: EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
+                    child: Row(
+                      children: [
+                        Icon(FontAwesomeIcons.moneyCheck, color: Colors.white, size: 20,),
+                        SizedBox(width: 20,),
+                        TextWidget(
+                          data: "Withdraw Money",
+                          style: TextStyle(color: AppColors.colorGreyExtraLight, fontSize: 18, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),
+                        ),
+                      ],
+                    )
                 ),
-              ),
-              onPressed: (){
-                Navigator.push(
-                  context,
-                  PageRouteBuilder(
-
-                    transitionDuration: Duration(seconds: 1),
-                    transitionsBuilder: (BuildContext context,
-                        Animation<double> animation,
-                        Animation<double> secAnimation,
-                        Widget child) {
-                      animation = CurvedAnimation(parent: animation, curve: Curves.bounceInOut);
-
-                      return ScaleTransition(
-                        alignment: Alignment.bottomCenter,
-                        child: child,
-                        scale: animation,
-                      );
-                    },
-
-                    pageBuilder: (BuildContext context,
-                        Animation<double> animation,
-                        Animation<double> secAnimation) {
-                      return MyTeam();
-                    },
-                  ),
-                );
-              },
+              ],
             ),
           ),
-
-        ],
+        ),
+        ),
       ),
-
     );
   }
 }

@@ -36,7 +36,7 @@ const upcomingMatches = 'Upcoming Matches';
 // SETTING SCREEN STRINGS
 const SETTING = "Setting";
 const invite_friends = "Invite Friends";
-const CONTEST_INVITE_CODE = "Contest invite code";
+const CONTEST_INVITE_CODE = "Contest Invite Code";
 const KYC = "KYC";
 const STATUS = "Status:";
 const VERIFIED = "Verified";
@@ -59,7 +59,7 @@ const state = 'State';
 const update = 'Update';
 
 // NOTIFICATIONS PAGE STRINGS
-const your_notifications = "Your Notifications";
+const my_notifications = "My Notifications";
 const notification_success_text = "Success! You are a create a team in the AUS vs IND match";
 const date27aug2019 = "27 Aug 2019";
 const you_have_login_successfully = "You Have Login Successfully";
@@ -69,3 +69,26 @@ const my_wallet = 'My Wallet';
 const my_transactions = 'My Transactions';
 const add_money = 'Add Money';
 const withdraw_money = 'Withdraw Money';
+
+// ERROR STRINGS
+const invitation_error = "Please enter valid invitation code";
+const contest_name_error = "Please enter valid contest name";
+const twining_amount_error = "Please enter valid amount";
+const contest_size_error = "Please enter valid contest size";
+
+// INVITATION PAGE STRINGS
+const enter_invitation_code = "Please enter your invitation code to join this contest";
+const invite_code = "Invite Code";
+const join_this_contest = "Join This Contest";
+const invitation_code = "Invitation Code";
+
+// HOW TO PLAY PAGE STRINGS
+const how_to_play = "How To Play";
+const introduction = "Introduction";
+const Create_your_team = "Create your Team";
+const managing_your_team = "Managing Your Team";
+const fantasy_cricket_points_system = "Fantasy Cricket Points System";
+const account_balance = "Account Balance";
+const faqs = "FAQs";
+const fantasy_season_challenge = "Fantasy Season Challenge";
+const dummy_string = "Dummy String";

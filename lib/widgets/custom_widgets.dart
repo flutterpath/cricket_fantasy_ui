@@ -53,7 +53,7 @@ class AppWidgets {
           borderRadius: BorderRadius.circular(25.0),
         ),
         suffixIcon: Icon(icon, size: 20, color: AppColors.colorPrimary,),
-        floatingLabelBehavior: FloatingLabelBehavior.always,
+        floatingLabelBehavior: FloatingLabelBehavior.auto,
         labelText:labelText,
         labelStyle: TextStyle(color: AppColors.colorPrimary, fontFamily: 'Raleway', fontSize: 16),
 //                        hintText: 'Enter Bank Account Number'
