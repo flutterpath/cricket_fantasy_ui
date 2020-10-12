@@ -513,7 +513,7 @@ class DashboardScreenState extends State<DashboardScreen> {
               borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0)),
               color: Colors.white,
               boxShadow: [
-                BoxShadow(color: AppColors.colorPrimary, spreadRadius: 2, blurRadius: 10),
+                BoxShadow(color: AppColors.colorGrey, spreadRadius: 2, blurRadius: 10),
               ],
             ),
 

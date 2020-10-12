@@ -26,12 +26,12 @@ class _SettingScreenState extends State<SettingScreen> {
               CustomSettingPage(
                 title: invite_friends,
                 icon: Icons.person_add,
-                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
+                routeName: AppRouters.INVITE_FRIENDS_SCREEN,
               ),
               CustomSettingPage(
                 title: CONTEST_INVITE_CODE,
                 icon: Icons.mail_outline,
-                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
+                routeName: AppRouters.INVITE_CODE_SCREEN,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
@@ -99,7 +99,7 @@ class _SettingScreenState extends State<SettingScreen> {
               CustomSettingPage(
                 title: HOW_TO_PLAY,
                 icon: Icons.find_in_page,
-                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
+                routeName: AppRouters.HOW_TO_PLAY_SCREEN,
               ),
               CustomSettingPage(
                 title: ABOUT_US,
