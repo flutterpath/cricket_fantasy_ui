@@ -2,7 +2,7 @@ import 'package:fantasy_app/animation/fadeAnimation.dart';
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
 import 'package:fantasy_app/constants/strings.dart';
-import 'package:fantasy_app/ui/contests/my_team.dart';
+import 'package:fantasy_app/ui/contests/my_team_screen.dart';
 import 'package:fantasy_app/widgets/custom_app_bar.dart';
 import 'package:fantasy_app/widgets/custom_widgets.dart';
 import 'package:fantasy_app/widgets/filled_button.dart';

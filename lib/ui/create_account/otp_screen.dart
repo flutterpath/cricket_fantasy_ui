@@ -41,7 +41,7 @@ class _OtpScreenState extends State<OtpScreen> {
                           colors: [
                             AppColors.colorPrimary,
                             AppColors.colorGradient,
-                            AppColors.colorSecondary,
+                            AppColors.colorGradient2,
                           ],
                           begin: const FractionalOffset(0.0, 0.0),
                           end: const FractionalOffset(0.0, 1.0),
@@ -66,7 +66,7 @@ class _OtpScreenState extends State<OtpScreen> {
                           colors: [
                             AppColors.colorPrimary,
                             AppColors.colorGradient,
-                            AppColors.colorSecondary,
+                            AppColors.colorGradient2,
                           ],
                           begin: const FractionalOffset(0.0, 0.0),
                           end: const FractionalOffset(0.0, 1.0),
@@ -91,7 +91,7 @@ class _OtpScreenState extends State<OtpScreen> {
                           colors: [
                             AppColors.colorPrimary,
                             AppColors.colorGradient,
-                            AppColors.colorSecondary,
+                            AppColors.colorGradient2,
                           ],
                           begin: const FractionalOffset(0.0, 0.0),
                           end: const FractionalOffset(0.0, 1.0),
@@ -116,7 +116,7 @@ class _OtpScreenState extends State<OtpScreen> {
                           colors: [
                             AppColors.colorPrimary,
                             AppColors.colorGradient,
-                            AppColors.colorSecondary,
+                            AppColors.colorGradient2,
                           ],
                           begin: const FractionalOffset(0.0, 0.0),
                           end: const FractionalOffset(0.0, 1.0),
@@ -134,7 +134,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     padding: const EdgeInsets.only(right: 30, bottom: 50, top: 100),
                     child: Container(
 
-                        height: height*0.45,
+                        height: 350,
                         decoration: BoxDecoration(boxShadow: [BoxShadow(color: AppColors.colorGreyLight, spreadRadius: 1, blurRadius: 10),],
                           color: AppColors.colorWhite,
                           borderRadius: BorderRadius.only(topRight: Radius.circular(25), bottomRight: Radius.circular(25)),

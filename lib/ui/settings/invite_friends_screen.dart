@@ -1,8 +1,9 @@
+import 'package:clipboard_manager/clipboard_manager.dart';
+import 'package:dotted_border/dotted_border.dart';
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
 import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/widgets/custom_app_bar.dart';
-import 'package:fantasy_app/widgets/simpleTextField.dart';
 import 'package:flutter/material.dart';
 
 class InviteFriendsScreen extends StatefulWidget {
@@ -20,6 +21,7 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
     var width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
+
 
         body: Stack(
           children: [
@@ -82,29 +84,49 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
                         ),),
 
                         Padding(
-                          padding: const EdgeInsets.only(top: 50, bottom: 30),
+                          padding: const EdgeInsets.only(top: 30, bottom: 30),
                           child: Align(
                             alignment: Alignment.center,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Image.asset(AppImages.imageBannerReferFriend, height: 90)
+                                Image.asset(AppImages.imageBannerReferFriend,)
                               ],
                             ),
                           ),
                         ),
 
                         Container(
-                          //color: Colors.deepPurple,
-                          padding: EdgeInsets.only(top: 5, left: 60, right: 60, bottom: 30),
-                          child: SimpleTextField(
-                            onTap: () {},
-                            readOnly: false,
-                            inputType: TextInputType.name,
-                            hint: "Enter Invite Code",
-                            textAlign: TextAlign.center,
-                            maxLength: 15,
-                            textCapitalization: TextCapitalization.characters,
+                          alignment: Alignment.center,
+                          padding: EdgeInsets.only(left: 50, right: 50),
+                          child: DottedBorder(
+                            color: AppColors.colorPrimary,
+                            borderType: BorderType.RRect,
+                            padding: EdgeInsets.only(top: 30, bottom: 30),
+                            dashPattern: [8, 4],
+                            strokeWidth: 2,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text('FAN_4BFR74H8', style: TextStyle(fontSize:20 , color: AppColors.colorPrimary, fontFamily: 'Raleway'),),
+                                SizedBox(width: 20,),
+                                InkWell(
+                                  onTap: () {
+                                    ClipboardManager.copyToClipBoard("FAN_4BFR74H8").then((result) {
+                                      final snackBar = SnackBar(
+                                        content: Text('Copied to Clipboard'),
+                                        action: SnackBarAction(
+                                          label: 'Undo',
+                                          onPressed: () {},
+                                        ),
+                                      );
+                                      Scaffold.of(context).showSnackBar(snackBar);
+                                    });
+                                  },
+                                    child: Icon(Icons.content_copy, size: 30, color: AppColors.colorPrimary,)
+                                )
+                              ],
+                            ),
                           ),
                         ),
 
@@ -113,7 +135,7 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
 //                            Navigator.of(context).pushNamed(AppRouters.WITHDRAW_SCREEN);
                           },
                           child: Container(
-                            margin: EdgeInsets.only(left: 50, right: 50, top: 20, bottom: 30),
+                            margin: EdgeInsets.only(left: 50, right: 50, top: 40, bottom: 30),
                             padding: EdgeInsets.only(left: 30, right: 30, top: 15, bottom: 15),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.all(Radius.circular(25)),

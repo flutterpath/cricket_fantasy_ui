@@ -1,26 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
-class MyTeam extends StatefulWidget {
+class MyTeamScreen extends StatefulWidget {
 
   @override
-  _MyTeam createState() => _MyTeam();
+  MyTeamScreenState createState() => MyTeamScreenState();
 }
 
-class _MyTeam extends State<MyTeam> {
+class MyTeamScreenState extends State<MyTeamScreen> {
 
-  @override
-  void initState() {
-    super.initState();
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown,]);
-  }
 
-  @override
-  dispose(){
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown,]);
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {

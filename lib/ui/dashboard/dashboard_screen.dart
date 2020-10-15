@@ -124,16 +124,7 @@ class DashboardScreenState extends State<DashboardScreen> {
         drawer: Drawer(
           child: Container(
             decoration: new BoxDecoration(
-                gradient: new LinearGradient(
-                    colors: [
-                      AppColors.colorPrimary,
-                      AppColors.colorGradient,
-                      AppColors.colorSecondary,
-                    ],
-                    begin: const FractionalOffset(0.0, 0.0),
-                    end: const FractionalOffset(0.0, 1.0),
-                    stops: [0.0, 0.85, 1.0],
-                    tileMode: TileMode.clamp),
+                color: AppColors.colorWhite,
               ),
             child: CustomPaint(
               painter: HeaderCurvedContainer(),
@@ -167,17 +158,17 @@ class DashboardScreenState extends State<DashboardScreen> {
                                 Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: Colors.white, style: BorderStyle.solid)
+                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
                                   ),
                                   child: Padding(
                                       padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorWhite,))
+                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
                                   ),
                                 ),
 
                                 SizedBox(width: 20,),
 
-                                Text(myProfile.toUpperCase(), style: TextStyle(color: Colors.white, fontSize: 15),)
+                                Text(myProfile.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
 
                               ],
                             ),
@@ -185,7 +176,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
                           Padding(
                             padding: const EdgeInsets.only(top: 10, bottom: 10, left: 50,),
-                            child: Divider(height: 1,color: AppColors.colorGreyExtraLight,),
+                            child: Divider(height: 1,color: AppColors.colorGreyDark,),
                           ),
 
                           /** ---- MY BALANCE ----- */
@@ -201,17 +192,17 @@ class DashboardScreenState extends State<DashboardScreen> {
                                 Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: Colors.white, style: BorderStyle.solid)
+                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
                                   ),
                                   child: Padding(
                                       padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorWhite,))
+                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
                                   ),
                                 ),
 
                                 SizedBox(width: 20,),
 
-                                Text(myBalance.toUpperCase(), style: TextStyle(color: Colors.white, fontSize: 15),)
+                                Text(myBalance.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
 
                               ],
                             ),
@@ -219,7 +210,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
                           Padding(
                             padding: const EdgeInsets.only(top: 10, bottom: 10, left: 50,),
-                            child: Divider(height: 1,color: AppColors.colorGreyExtraLight,),
+                            child: Divider(height: 1,color: AppColors.colorGreyDark,),
                           ),
 
                           /** ---- NOTIFICATIONS ----- */
@@ -235,17 +226,17 @@ class DashboardScreenState extends State<DashboardScreen> {
                                 Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: Colors.white, style: BorderStyle.solid)
+                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
                                   ),
                                   child: Padding(
                                       padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorWhite,))
+                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
                                   ),
                                 ),
 
                                 SizedBox(width: 20,),
 
-                                Text(notifications.toUpperCase(), style: TextStyle(color: Colors.white, fontSize: 15),)
+                                Text(notifications.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
 
                               ],
                             ),
@@ -253,7 +244,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
                           Padding(
                             padding: const EdgeInsets.only(top: 10, bottom: 10, left: 50,),
-                            child: Divider(height: 1,color: AppColors.colorGreyExtraLight,),
+                            child: Divider(height: 1,color: AppColors.colorGreyDark,),
                           ),
 
                           /** ---- MY REFERRALS ----- */
@@ -269,17 +260,17 @@ class DashboardScreenState extends State<DashboardScreen> {
                                 Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: Colors.white, style: BorderStyle.solid)
+                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
                                   ),
                                   child: Padding(
                                       padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorWhite,))
+                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
                                   ),
                                 ),
 
                                 SizedBox(width: 20,),
 
-                                Text(myReferrals.toUpperCase(), style: TextStyle(color: Colors.white, fontSize: 15),)
+                                Text(myReferrals.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
 
                               ],
                             ),
@@ -287,7 +278,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
                           Padding(
                             padding: const EdgeInsets.only(top: 10, bottom: 10, left: 50,),
-                            child: Divider(height: 1,color: AppColors.colorGreyExtraLight,),
+                            child: Divider(height: 1,color: AppColors.colorGreyDark,),
                           ),
 
                           /** ---- MY INFO & SETTINGS ----- */
@@ -303,17 +294,17 @@ class DashboardScreenState extends State<DashboardScreen> {
                                 Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: Colors.white, style: BorderStyle.solid)
+                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
                                   ),
                                   child: Padding(
                                       padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorWhite,))
+                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
                                   ),
                                 ),
 
                                 SizedBox(width: 20,),
 
-                                Text(infoAndSettings.toUpperCase(), style: TextStyle(color: Colors.white, fontSize: 15),)
+                                Text(infoAndSettings.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
 
                               ],
                             ),
@@ -321,7 +312,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
                           Padding(
                             padding: const EdgeInsets.only(top: 10, bottom: 10, left: 50,),
-                            child: Divider(height: 1,color: AppColors.colorGreyExtraLight,),
+                            child: Divider(height: 1,color: AppColors.colorGreyDark,),
                           ),
 
                           /** ---- POINT SYSTEM ----- */
@@ -337,17 +328,17 @@ class DashboardScreenState extends State<DashboardScreen> {
                                 Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: Colors.white, style: BorderStyle.solid)
+                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
                                   ),
                                   child: Padding(
                                       padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorWhite,))
+                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
                                   ),
                                 ),
 
                                 SizedBox(width: 20,),
 
-                                Text(pointSystem.toUpperCase(), style: TextStyle(color: Colors.white, fontSize: 15),)
+                                Text(pointSystem.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
 
                               ],
                             ),
@@ -355,7 +346,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
                           Padding(
                             padding: const EdgeInsets.only(top: 10, bottom: 10, left: 50,),
-                            child: Divider(height: 1,color: AppColors.colorGreyExtraLight,),
+                            child: Divider(height: 1,color: AppColors.colorGreyDark,),
                           ),
 
                           /** ---- SETTINGS ----- */
@@ -373,17 +364,17 @@ class DashboardScreenState extends State<DashboardScreen> {
                                 Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: Colors.white, style: BorderStyle.solid)
+                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
                                   ),
                                   child: Padding(
                                       padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorWhite,))
+                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
                                   ),
                                 ),
 
                                 SizedBox(width: 20,),
 
-                                Text(settings.toUpperCase(), style: TextStyle(color: Colors.white, fontSize: 15),)
+                                Text(settings.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
 
                               ],
                             ),
@@ -391,39 +382,29 @@ class DashboardScreenState extends State<DashboardScreen> {
 
                           Padding(
                             padding: const EdgeInsets.only(top: 10, bottom: 10, left: 50,),
-                            child: Divider(height: 1,color: AppColors.colorGreyExtraLight,),
+                            child: Divider(height: 1,color: AppColors.colorGreyDark,),
                           ),
+
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              RaisedButton(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(25.0),
+                                    side: BorderSide(color: AppColors.colorBlack),
+                                ),
+                                color: Colors.white,
+                                child: Text(logOut.toUpperCase(), style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontWeight: FontWeight.bold),),
+                                padding: EdgeInsets.only(left: 25, right: 25, top: 10, bottom: 10),
+                                onPressed: () {
+
+                                },
+                              ),
+                            ],
+                          )
 
                         ],
                       ),
-                    ),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(25)),
-                              border: Border.all(width: 2, color: Colors.white, style: BorderStyle.solid)
-                          ),
-                          child: Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: InkWell(
-                                child: Row(
-                                  children: [
-                                    SizedBox(width: 15,),
-                                    Text(logOut.toUpperCase(), style: TextStyle(fontSize: 15, color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
-                                    SizedBox(width: 15,),
-                                  ],
-                                ),
-                                onTap: () {},
-                              )
-                          ),
-                        ),
-                      ],
                     ),
                   ),
 
@@ -435,16 +416,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
         body: Container(
           decoration: new BoxDecoration(
-            gradient: new LinearGradient(
-                colors: [
-                  AppColors.colorPrimary,
-                  AppColors.colorGradient,
-                  AppColors.colorSecondary,
-                ],
-                begin: const FractionalOffset(0.0, 0.0),
-                end: const FractionalOffset(1.0, 0.0),
-                stops: [0.0, 0.7, 1.0],
-                tileMode: TileMode.clamp),
+            color: AppColors.colorPrimary
           ),
 
           child: Container(
@@ -586,12 +558,37 @@ class DashboardScreenState extends State<DashboardScreen> {
     }
   }
 
+  getSideMenuItemDesign() {
+    return Row(
+      children: [
+
+        SizedBox(width: 10,),
+
+        Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(25)),
+              border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
+          ),
+          child: Padding(
+              padding: const EdgeInsets.all(5),
+              child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
+          ),
+        ),
+
+        SizedBox(width: 20,),
+
+        Text(myProfile.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
+
+      ],
+    );
+  }
+
 }
 
 class HeaderCurvedContainer extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()..color = AppColors.colorSecondary;
+    Paint paint = Paint()..color = AppColors.colorPrimary;
     Path path = Path()
       ..relativeLineTo(0, 150)
       ..quadraticBezierTo(size.width / 2, 250.0, size.width, 150)

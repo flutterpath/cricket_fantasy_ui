@@ -124,7 +124,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       colors: [
                         AppColors.colorPrimary,
                         AppColors.colorGradient,
-                        AppColors.colorSecondary,
+                        AppColors.colorGradient2,
                       ],
                       begin: const FractionalOffset(0.0, 0.0),
                       end: const FractionalOffset(0.0, 1.0),
@@ -149,7 +149,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       colors: [
                         AppColors.colorPrimary,
                         AppColors.colorGradient,
-                        AppColors.colorSecondary,
+                        AppColors.colorGradient2,
                       ],
                       begin: const FractionalOffset(0.0, 0.0),
                       end: const FractionalOffset(0.0, 1.0),
@@ -174,7 +174,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       colors: [
                         AppColors.colorPrimary,
                         AppColors.colorGradient,
-                        AppColors.colorSecondary,
+                        AppColors.colorGradient2,
                       ],
                       begin: const FractionalOffset(0.0, 0.0),
                       end: const FractionalOffset(0.0, 1.0),
@@ -199,7 +199,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       colors: [
                         AppColors.colorPrimary,
                         AppColors.colorGradient,
-                        AppColors.colorSecondary,
+                        AppColors.colorGradient2,
                       ],
                       begin: const FractionalOffset(0.0, 0.0),
                       end: const FractionalOffset(0.0, 1.0),

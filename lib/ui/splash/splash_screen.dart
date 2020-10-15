@@ -62,11 +62,11 @@ class _SplashScreenState extends State<SplashScreen> {
                         colors: [
                           AppColors.colorPrimary,
                           AppColors.colorGradient,
-                          AppColors.colorSecondary,
+                          AppColors.colorGradient2,
                         ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
-                        stops: [0.0, 0.7, 1.0],
+                        stops: [0.0, 0.5, 1.0],
                         tileMode: TileMode.clamp),
                   ),
 
@@ -87,11 +87,11 @@ class _SplashScreenState extends State<SplashScreen> {
                         colors: [
                           AppColors.colorPrimary,
                           AppColors.colorGradient,
-                          AppColors.colorSecondary,
+                          AppColors.colorGradient2,
                         ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
-                        stops: [0.0, 0.7, 1.0],
+                        stops: [0.0, 0.5, 1.0],
                         tileMode: TileMode.clamp),
                   ),
 
@@ -112,11 +112,11 @@ class _SplashScreenState extends State<SplashScreen> {
                         colors: [
                           AppColors.colorPrimary,
                           AppColors.colorGradient,
-                          AppColors.colorSecondary,
+                          AppColors.colorGradient2,
                         ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
-                        stops: [0.0, 0.7, 1.0],
+                        stops: [0.0, 0.5, 1.0],
                         tileMode: TileMode.clamp),
                   ),
 
@@ -137,11 +137,11 @@ class _SplashScreenState extends State<SplashScreen> {
                         colors: [
                           AppColors.colorPrimary,
                           AppColors.colorGradient,
-                          AppColors.colorSecondary,
+                          AppColors.colorGradient2,
                         ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
-                        stops: [0.0, 0.7, 1.0],
+                        stops: [0.0, 0.5, 1.0],
                         tileMode: TileMode.clamp),
                   ),
 

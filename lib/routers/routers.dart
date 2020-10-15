@@ -1,5 +1,6 @@
 import 'package:fantasy_app/ui/account_verification/account_verification_screen.dart';
 import 'package:fantasy_app/ui/contests/contest_dashboard_screen.dart';
+import 'package:fantasy_app/ui/contests/my_team_screen.dart';
 import 'package:fantasy_app/ui/create_account/mobile_screen.dart';
 import 'package:fantasy_app/ui/create_account/otp_screen.dart';
 import 'package:fantasy_app/ui/dashboard/dashboard_screen.dart';
@@ -70,7 +71,7 @@ class AppRouters {
       case HOW_TO_PLAY_SCREEN:
         return MaterialPageRoute(builder: (context) => HowToPlayScreen());
       case CONTESTS_DASHBOARD_SCREEN:
-        return MaterialPageRoute(builder: (context) => ContestScreen());
+        return MaterialPageRoute(builder: (context) => ContestDashboardScreen());
       case INVITE_FRIENDS_SCREEN:
         return MaterialPageRoute(builder: (context) => InviteFriendsScreen());
       default:
