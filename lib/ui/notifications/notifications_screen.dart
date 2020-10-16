@@ -56,7 +56,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
 class NotificationsContainer extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()..color = AppColors.colorSecondary;
+    Paint paint = Paint()..color = AppColors.colorPrimary;
     Path path = Path()
       ..relativeLineTo(0, 80)
       ..quadraticBezierTo(size.width / 2, 180.0, size.width, 120)

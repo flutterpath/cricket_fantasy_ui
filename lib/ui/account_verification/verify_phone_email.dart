@@ -1,5 +1,6 @@
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/strings.dart';
+import 'package:fantasy_app/widgets/custom_widgets.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/color_constants.dart';
@@ -45,16 +46,7 @@ class VerifyPhoneEmailState extends State<VerifyPhoneEmail> {
                     padding: EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(25)),
-                      gradient: new LinearGradient(
-                          colors: [
-                            AppColors.colorPrimary,
-                            AppColors.colorGradient,
-                            AppColors.colorSecondary,
-                          ],
-                          begin: const FractionalOffset(0.0, 0.0),
-                          end: const FractionalOffset(1.0, 0.0),
-                          stops: [0.0, 0.7, 1.0],
-                          tileMode: TileMode.clamp),
+                      gradient: AppWidgets.getCustomGradient(),
                     ),
                     child: Text(verify.toUpperCase(), style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                   ),
@@ -93,16 +85,7 @@ class VerifyPhoneEmailState extends State<VerifyPhoneEmail> {
                       padding: EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(25)),
-                        gradient: new LinearGradient(
-                            colors: [
-                              AppColors.colorPrimary,
-                              AppColors.colorGradient,
-                              AppColors.colorSecondary,
-                            ],
-                            begin: const FractionalOffset(0.0, 0.0),
-                            end: const FractionalOffset(1.0, 0.0),
-                            stops: [0.0, 0.7, 1.0],
-                            tileMode: TileMode.clamp),
+                        gradient: AppWidgets.getCustomGradient(),
                       ),
                       child: Text(verify.toUpperCase(), style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                     ),

@@ -36,7 +36,7 @@ class _MatchListBuilderScreenState extends State<MatchListBuilderScreen> {
                         Center(
                           child: Container(
                             width: double.maxFinite,
-                            margin: EdgeInsets.only(left: 50, right: 50),
+                            margin: EdgeInsets.only(left: 35, right: 35),
                             padding: EdgeInsets.only(left: 30, right: 30, top: 20, bottom: 20),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),

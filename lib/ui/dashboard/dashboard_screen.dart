@@ -150,28 +150,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                               activeIndex = 2;
                               pageController.jumpToPage(activeIndex/*, duration: Duration(seconds: 1), curve: Curves.easeInOut*/);
                             },
-                            child: Row(
-                              children: [
-
-                                SizedBox(width: 10,),
-
-                                Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
-                                  ),
-                                  child: Padding(
-                                      padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
-                                  ),
-                                ),
-
-                                SizedBox(width: 20,),
-
-                                Text(myProfile.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
-
-                              ],
-                            ),
+                            child: getSideMenuItemDesign(myProfile),
                           ),
 
                           Padding(
@@ -184,28 +163,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                             onTap: () {
                               Navigator.of(context).pushNamed(AppRouters.MY_BALANCE_SCREEN);
                             },
-                            child: Row(
-                              children: [
-
-                                SizedBox(width: 10,),
-
-                                Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
-                                  ),
-                                  child: Padding(
-                                      padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
-                                  ),
-                                ),
-
-                                SizedBox(width: 20,),
-
-                                Text(myBalance.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
-
-                              ],
-                            ),
+                            child: getSideMenuItemDesign(myBalance)
                           ),
 
                           Padding(
@@ -218,96 +176,21 @@ class DashboardScreenState extends State<DashboardScreen> {
                             onTap: () {
                               Navigator.of(context).pushNamed(AppRouters.NOTIFICATIONS_SCREEN);
                             },
-                            child: Row(
-                              children: [
-
-                                SizedBox(width: 10,),
-
-                                Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
-                                  ),
-                                  child: Padding(
-                                      padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
-                                  ),
-                                ),
-
-                                SizedBox(width: 20,),
-
-                                Text(notifications.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
-
-                              ],
-                            ),
+                            child: getSideMenuItemDesign(notifications),
                           ),
 
                           Padding(
                             padding: const EdgeInsets.only(top: 10, bottom: 10, left: 50,),
                             child: Divider(height: 1,color: AppColors.colorGreyDark,),
                           ),
-
-                          /** ---- MY REFERRALS ----- */
-                          InkWell(
-                            onTap: () {
-                              Navigator.of(context).pushNamed(AppRouters.MOBILE_SCREEN);
-                            },
-                            child: Row(
-                              children: [
-
-                                SizedBox(width: 10,),
-
-                                Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
-                                  ),
-                                  child: Padding(
-                                      padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
-                                  ),
-                                ),
-
-                                SizedBox(width: 20,),
-
-                                Text(myReferrals.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
-
-                              ],
-                            ),
-                          ),
-
-                          Padding(
-                            padding: const EdgeInsets.only(top: 10, bottom: 10, left: 50,),
-                            child: Divider(height: 1,color: AppColors.colorGreyDark,),
-                          ),
+                          
 
                           /** ---- MY INFO & SETTINGS ----- */
                           InkWell(
                             onTap: () {
                               Navigator.of(context).pushNamed(AppRouters.UPDATE_PROFILE_SCREEN);
                             },
-                            child: Row(
-                              children: [
-
-                                SizedBox(width: 10,),
-
-                                Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
-                                  ),
-                                  child: Padding(
-                                      padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
-                                  ),
-                                ),
-
-                                SizedBox(width: 20,),
-
-                                Text(infoAndSettings.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
-
-                              ],
-                            ),
+                            child: getSideMenuItemDesign(infoAndSettings),
                           ),
 
                           Padding(
@@ -318,30 +201,9 @@ class DashboardScreenState extends State<DashboardScreen> {
                           /** ---- POINT SYSTEM ----- */
                           InkWell(
                             onTap: () {
-                              Navigator.of(context).pushNamed(AppRouters.MOBILE_SCREEN);
+                              Navigator.of(context).pushNamed(AppRouters.POINT_SYSTEM_SCREEN);
                             },
-                            child: Row(
-                              children: [
-
-                                SizedBox(width: 10,),
-
-                                Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
-                                  ),
-                                  child: Padding(
-                                      padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
-                                  ),
-                                ),
-
-                                SizedBox(width: 20,),
-
-                                Text(pointSystem.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
-
-                              ],
-                            ),
+                            child: getSideMenuItemDesign(pointSystem),
                           ),
 
                           Padding(
@@ -354,30 +216,9 @@ class DashboardScreenState extends State<DashboardScreen> {
                             onTap: () {
                               Navigator.of(context).pop();
                               activeIndex = 3;
-                              pageController.jumpToPage(activeIndex/*, duration: Duration(seconds: 1), curve: Curves.easeInOut*/);
+                              pageController.jumpToPage(activeIndex);
                             },
-                            child: Row(
-                              children: [
-
-                                SizedBox(width: 10,),
-
-                                Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(25)),
-                                      border: Border.all(width: 1, color: AppColors.colorBlack, style: BorderStyle.solid)
-                                  ),
-                                  child: Padding(
-                                      padding: const EdgeInsets.all(5),
-                                      child: SizedBox(width: 30, height: 30, child: Icon(Icons.person, color: AppColors.colorBlack,))
-                                  ),
-                                ),
-
-                                SizedBox(width: 20,),
-
-                                Text(settings.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
-
-                              ],
-                            ),
+                            child: getSideMenuItemDesign(settings),
                           ),
 
                           Padding(
@@ -558,7 +399,7 @@ class DashboardScreenState extends State<DashboardScreen> {
     }
   }
 
-  getSideMenuItemDesign() {
+  getSideMenuItemDesign(String title) {
     return Row(
       children: [
 
@@ -577,7 +418,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
         SizedBox(width: 20,),
 
-        Text(myProfile.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
+        Text(title.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15),)
 
       ],
     );

@@ -36,6 +36,11 @@ class AppRouters {
   static const String HOW_TO_PLAY_SCREEN = 'how_to_play_screen';
   static const String CONTESTS_DASHBOARD_SCREEN = 'contest_dashboard_screen';
   static const String INVITE_FRIENDS_SCREEN = 'invite_friends_screen';
+  static const String FANTASY_POINT_SYSTEM_SCREEN = 'fantasy_point_system_screen';
+  static const String ABOUT_US_SCREEN = 'about_us_screen';
+  static const String LEGALITY_SCREEN = 'legality_screen';
+  static const String TERMS_AND_CONDITIONS_SCREEN = 'terms_and_conditions_screen';
+  static const String POINT_SYSTEM_SCREEN = 'point_system_screen';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
 

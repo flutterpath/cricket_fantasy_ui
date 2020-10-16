@@ -2,6 +2,7 @@ import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
 import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/widgets/custom_app_bar.dart';
+import 'package:fantasy_app/widgets/custom_widgets.dart';
 import 'package:fantasy_app/widgets/simpleTextField.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +41,7 @@ class _InviteCodeScreenState extends State<InviteCodeScreen> {
                 child: Container(
                   height: 500,
                   width: 550,
-                  color: AppColors.colorSecondary,
+                  color: AppColors.colorPrimary,
 
                 ),
               ),
@@ -53,8 +54,6 @@ class _InviteCodeScreenState extends State<InviteCodeScreen> {
                 Container(
                   child: MyCustomAppBar().getTransparentAppBarWithTitle(CONTEST_INVITE_CODE, Icons.arrow_back_ios),
                 ),
-
-
 
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20, top: 80),
@@ -127,7 +126,7 @@ class _InviteCodeScreenState extends State<InviteCodeScreen> {
                             padding: EdgeInsets.only(left: 30, right: 30, top: 15, bottom: 15),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.all(Radius.circular(25)),
-                                color: AppColors.colorSecondary
+                                gradient: AppWidgets.getCustomGradient(),
                             ),
                             child: Text('Join This Contest'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                           ),

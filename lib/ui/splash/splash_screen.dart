@@ -4,6 +4,7 @@ import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
 import 'package:fantasy_app/routers/routers.dart';
 import 'package:fantasy_app/ui/onboarding/on_boarding_screen.dart';
+import 'package:fantasy_app/widgets/custom_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -58,16 +59,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 200,
                   width: 200,
                   decoration: new BoxDecoration(
-                    gradient: new LinearGradient(
-                        colors: [
-                          AppColors.colorPrimary,
-                          AppColors.colorGradient,
-                          AppColors.colorGradient2,
-                        ],
-                        begin: const FractionalOffset(0.0, 0.0),
-                        end: const FractionalOffset(0.0, 1.0),
-                        stops: [0.0, 0.5, 1.0],
-                        tileMode: TileMode.clamp),
+                    gradient: AppWidgets.getCustomGradient(),
                   ),
 
                 ),
@@ -83,16 +75,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 100,
                   width: 100,
                   decoration: new BoxDecoration(
-                    gradient: new LinearGradient(
-                        colors: [
-                          AppColors.colorPrimary,
-                          AppColors.colorGradient,
-                          AppColors.colorGradient2,
-                        ],
-                        begin: const FractionalOffset(0.0, 0.0),
-                        end: const FractionalOffset(0.0, 1.0),
-                        stops: [0.0, 0.5, 1.0],
-                        tileMode: TileMode.clamp),
+                    gradient: AppWidgets.getCustomGradient(),
                   ),
 
                 ),
@@ -108,16 +91,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 130,
                   width: 130,
                   decoration: new BoxDecoration(
-                    gradient: new LinearGradient(
-                        colors: [
-                          AppColors.colorPrimary,
-                          AppColors.colorGradient,
-                          AppColors.colorGradient2,
-                        ],
-                        begin: const FractionalOffset(0.0, 0.0),
-                        end: const FractionalOffset(0.0, 1.0),
-                        stops: [0.0, 0.5, 1.0],
-                        tileMode: TileMode.clamp),
+                    gradient: AppWidgets.getCustomGradient(),
                   ),
 
                 ),
@@ -133,16 +107,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 60,
                   width: 60,
                   decoration: new BoxDecoration(
-                    gradient: new LinearGradient(
-                        colors: [
-                          AppColors.colorPrimary,
-                          AppColors.colorGradient,
-                          AppColors.colorGradient2,
-                        ],
-                        begin: const FractionalOffset(0.0, 0.0),
-                        end: const FractionalOffset(0.0, 1.0),
-                        stops: [0.0, 0.5, 1.0],
-                        tileMode: TileMode.clamp),
+                    gradient: AppWidgets.getCustomGradient(),
                   ),
 
                 ),

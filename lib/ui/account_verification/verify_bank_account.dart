@@ -105,35 +105,35 @@ class VerifyBankAccountState extends State<VerifyBankAccount> {
 
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(bankAccountNumber, TextInputType.number, Icons.account_balance, controllerPanNumber),
+                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(bankAccountNumber, TextInputType.number, Icons.account_balance),
                   ),
 
                   SizedBox(height: 20,),
 
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(accountName, TextInputType.name, Icons.account_balance, controllerPanNumber),
+                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(accountName, TextInputType.name, Icons.account_balance),
                   ),
 
                   SizedBox(height: 20,),
 
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(bankName, TextInputType.name, Icons.account_balance, controllerPanNumber),
+                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(bankName, TextInputType.name, Icons.account_balance),
                   ),
 
                   SizedBox(height: 20,),
 
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(ifscCode, TextInputType.number, Icons.account_balance, controllerPanNumber),
+                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(ifscCode, TextInputType.number, Icons.account_balance),
                   ),
 
                   SizedBox(height: 20,),
 
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(address, TextInputType.streetAddress, Icons.account_balance, controllerPanNumber),
+                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(address, TextInputType.streetAddress, Icons.account_balance),
                   ),
 
                   SizedBox(height: 20,),
@@ -142,16 +142,7 @@ class VerifyBankAccountState extends State<VerifyBankAccount> {
                     padding: EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(25)),
-                      gradient: new LinearGradient(
-                          colors: [
-                            AppColors.colorPrimary,
-                            AppColors.colorGradient,
-                            AppColors.colorSecondary,
-                          ],
-                          begin: const FractionalOffset(0.0, 0.0),
-                          end: const FractionalOffset(1.0, 0.0),
-                          stops: [0.0, 0.7, 1.0],
-                          tileMode: TileMode.clamp),
+                      gradient: AppWidgets.getCustomGradient(),
                     ),
                     child: Text(submit.toUpperCase(), style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                   ),

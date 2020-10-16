@@ -32,7 +32,7 @@ class _AddMoneyScreenState extends State<AddMoneyScreen> {
                   Container(
                     height: height*0.7,
                     decoration: BoxDecoration(
-                      color: Colors.black,
+                      color: AppColors.colorPrimary,
                       borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30),bottomRight: Radius.circular(30)),
                     ),
                     child: Stack(
@@ -41,8 +41,8 @@ class _AddMoneyScreenState extends State<AddMoneyScreen> {
                           child: MyCustomAppBar().getTransparentAppBarWithTitle(add_money, Icons.arrow_back_ios),
                         ),
                         Positioned(
-                          top: 0,
-                          left: 10,
+                            top: 0,
+                            left: 10,
                             right: 10,
                             child: FadeAnimation(1.4, Container(
                               margin: EdgeInsets.only(top: height*0.1),
@@ -102,6 +102,7 @@ class _AddMoneyScreenState extends State<AddMoneyScreen> {
                                     textAlign: TextAlign.center,
                                     inputType: TextInputType.number,
                                     textController: _moneyController,
+                                    hintColor: AppColors.colorGreyExtraLight,
                                     hint: "\$0",
                                     hintSize: 70,
                                     maxLength: 6,
@@ -193,7 +194,7 @@ class _AddMoneyScreenState extends State<AddMoneyScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MaterialButton(
-                  color: AppColors.colorBlack,
+                  color: AppColors.colorPrimary,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(25))),
                   onPressed: (){},
                     padding: EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),

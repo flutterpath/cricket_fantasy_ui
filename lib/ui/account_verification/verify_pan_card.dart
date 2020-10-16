@@ -106,14 +106,14 @@ class VerifyPanCardState extends State<VerifyPanCard> {
 
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(pancardNumber, TextInputType.name, FontAwesomeIcons.creditCard, controllerPanNumber),
+                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(pancardNumber, TextInputType.name, FontAwesomeIcons.creditCard),
                   ),
 
                   SizedBox(height: 20,),
 
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(pancardName, TextInputType.name, FontAwesomeIcons.solidUser, controllerPanCardName),
+                    child: AppWidgets.getTextFieldFloatLabelWithInBorder(pancardName, TextInputType.name, FontAwesomeIcons.solidUser),
                   ),
 
                   SizedBox(height: 20,),
@@ -122,16 +122,7 @@ class VerifyPanCardState extends State<VerifyPanCard> {
                     padding: EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(25)),
-                      gradient: new LinearGradient(
-                          colors: [
-                            AppColors.colorPrimary,
-                            AppColors.colorGradient,
-                            AppColors.colorSecondary,
-                          ],
-                          begin: const FractionalOffset(0.0, 0.0),
-                          end: const FractionalOffset(1.0, 0.0),
-                          stops: [0.0, 0.7, 1.0],
-                          tileMode: TileMode.clamp),
+                      gradient: AppWidgets.getCustomGradient(),
                     ),
                     child: Text(submit.toUpperCase(), style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                   ),

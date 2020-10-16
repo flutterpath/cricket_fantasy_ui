@@ -72,56 +72,56 @@ class _UpdateProfile extends State<UpdateProfileScreen> {
 
                     Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(team_name, TextInputType.name, Icons.group, controllerPanNumber),
+                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(team_name, TextInputType.name, Icons.group),
                     ),
 
                     SizedBox(height: 20,),
 
                     Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(name, TextInputType.name, Icons.person, controllerPanNumber),
+                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(name, TextInputType.name, Icons.person),
                     ),
 
                     SizedBox(height: 20,),
 
                     Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(email, TextInputType.emailAddress, Icons.email, controllerPanNumber),
+                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(email, TextInputType.emailAddress, Icons.email),
                     ),
 
                     SizedBox(height: 20,),
 
                     Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(mobile_number, TextInputType.number, Icons.phone_iphone, controllerPanNumber),
+                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(mobile_number, TextInputType.number, Icons.phone_iphone),
                     ),
 
                     SizedBox(height: 20,),
 
                     Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(date_of_birth, TextInputType.name, Icons.all_inclusive, controllerPanNumber),
+                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(date_of_birth, TextInputType.name, Icons.all_inclusive),
                     ),
 
                     SizedBox(height: 20,),
 
                     Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(gender, TextInputType.name, Icons.ac_unit, controllerPanNumber),
+                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(gender, TextInputType.name, Icons.ac_unit),
                     ),
 
                     SizedBox(height: 20,),
 
                     Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(city, TextInputType.name, Icons.location_city, controllerPanNumber),
+                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(city, TextInputType.name, Icons.location_city),
                     ),
 
                     SizedBox(height: 20,),
 
                     Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(state, TextInputType.name, Icons.location_on, controllerPanNumber),
+                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(state, TextInputType.name, Icons.location_on),
                     ),
 
                     SizedBox(height: 20,),
@@ -132,16 +132,7 @@ class _UpdateProfile extends State<UpdateProfileScreen> {
                         padding: EdgeInsets.only(top: 15, bottom: 15),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(25)),
-                          gradient: new LinearGradient(
-                              colors: [
-                                AppColors.colorPrimary,
-                                AppColors.colorGradient,
-                                AppColors.colorSecondary,
-                              ],
-                              begin: const FractionalOffset(0.0, 0.0),
-                              end: const FractionalOffset(1.0, 0.0),
-                              stops: [0.0, 0.7, 1.0],
-                              tileMode: TileMode.clamp),
+                          gradient: AppWidgets.getCustomGradient(),
                         ),
                         child: Text(update.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                       ),
@@ -165,7 +156,7 @@ class _UpdateProfile extends State<UpdateProfileScreen> {
 class ProfileHeaderContainer extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()..color = AppColors.colorSecondary;
+    Paint paint = Paint()..color = AppColors.colorPrimary;
     Path path = Path()
       ..relativeLineTo(0, 80)
       ..quadraticBezierTo(size.width / 2, 180.0, size.width, 120)

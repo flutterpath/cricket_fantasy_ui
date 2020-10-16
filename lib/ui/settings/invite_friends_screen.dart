@@ -4,6 +4,7 @@ import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
 import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/widgets/custom_app_bar.dart';
+import 'package:fantasy_app/widgets/custom_widgets.dart';
 import 'package:flutter/material.dart';
 
 class InviteFriendsScreen extends StatefulWidget {
@@ -34,7 +35,7 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
                 child: Container(
                   height: 500,
                   width: 550,
-                  color: AppColors.colorSecondary,
+                  color: AppColors.colorPrimary,
 
                 ),
               ),
@@ -110,21 +111,22 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
                               children: [
                                 Text('FAN_4BFR74H8', style: TextStyle(fontSize:20 , color: AppColors.colorPrimary, fontFamily: 'Raleway'),),
                                 SizedBox(width: 20,),
-                                InkWell(
-                                  onTap: () {
-                                    ClipboardManager.copyToClipBoard("FAN_4BFR74H8").then((result) {
-                                      final snackBar = SnackBar(
-                                        content: Text('Copied to Clipboard'),
-                                        action: SnackBarAction(
-                                          label: 'Undo',
-                                          onPressed: () {},
-                                        ),
-                                      );
-                                      Scaffold.of(context).showSnackBar(snackBar);
-                                    });
+                                Builder(
+                                  builder: (BuildContext context) {
+                                    return InkWell(
+                                        onTap: () {
+                                          ClipboardManager.copyToClipBoard("FAN_4BFR74H8").then((result) {
+                                            final snackBar = SnackBar(
+                                              content: Text('Copied to Clipboard'),
+                                              backgroundColor: AppColors.colorPrimary,
+                                            );
+                                            Scaffold.of(context).showSnackBar(snackBar);
+                                          });
+                                        },
+                                        child: Icon(Icons.content_copy, size: 30, color: AppColors.colorPrimary,)
+                                    );
                                   },
-                                    child: Icon(Icons.content_copy, size: 30, color: AppColors.colorPrimary,)
-                                )
+                                ),
                               ],
                             ),
                           ),
@@ -132,14 +134,14 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
 
                         InkWell(
                           onTap: () {
-//                            Navigator.of(context).pushNamed(AppRouters.WITHDRAW_SCREEN);
+
                           },
                           child: Container(
                             margin: EdgeInsets.only(left: 50, right: 50, top: 40, bottom: 30),
                             padding: EdgeInsets.only(left: 30, right: 30, top: 15, bottom: 15),
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(25)),
-                                color: AppColors.colorSecondary
+                              borderRadius: BorderRadius.all(Radius.circular(25)),
+                              gradient: AppWidgets.getCustomGradient(),
                             ),
                             child: Text('Join This Contest'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                           ),

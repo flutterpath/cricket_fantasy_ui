@@ -94,7 +94,7 @@ class _SettingScreenState extends State<SettingScreen> {
               CustomSettingPage(
                 title: FANTASY_POINTS_SYSTEM,
                 icon: Icons.ac_unit,
-                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
+                routeName: AppRouters.FANTASY_POINT_SYSTEM_SCREEN,
               ),
               CustomSettingPage(
                 title: HOW_TO_PLAY,
@@ -104,17 +104,17 @@ class _SettingScreenState extends State<SettingScreen> {
               CustomSettingPage(
                 title: ABOUT_US,
                 icon: Icons.group,
-                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
+                routeName: AppRouters.ABOUT_US_SCREEN,
               ),
               CustomSettingPage(
                 title: LEGALITY,
                 icon: FontAwesomeIcons.shieldAlt,
-                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
+                routeName: AppRouters.LEGALITY_SCREEN,
               ),
               CustomSettingPage(
                 title: TERMS_AND_CONDITIONS,
                 icon: FontAwesomeIcons.fileAlt,
-                routeName: AppRouters.UPDATE_PROFILE_SCREEN,
+                routeName: AppRouters.TERMS_AND_CONDITIONS_SCREEN,
               ),
             ],
           ),

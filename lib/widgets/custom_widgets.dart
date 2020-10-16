@@ -33,9 +33,9 @@ class AppWidgets {
     );
   }
 
-  static getTextFieldFloatLabelWithInBorder(String labelText, TextInputType inputType, IconData icon, TextEditingController controller) {
+  static getTextFieldFloatLabelWithInBorder(String labelText, TextInputType inputType, IconData icon, [TextEditingController controller]) {
     return TextField(
-      controller: controller,
+      controller: controller ?? TextEditingController(),
       keyboardType: TextInputType.number,
       style: TextStyle(fontSize: 15),
       decoration: InputDecoration(
@@ -52,7 +52,7 @@ class AppWidgets {
           borderSide: const BorderSide(color: AppColors.colorPrimary, width: 1.5),
           borderRadius: BorderRadius.circular(25.0),
         ),
-        suffixIcon: Icon(icon, size: 20, color: AppColors.colorPrimary,),
+        prefixIcon: Icon(icon, size: 20, color: AppColors.colorPrimary,),
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         labelText:labelText,
         labelStyle: TextStyle(color: AppColors.colorPrimary, fontFamily: 'Raleway', fontSize: 16),
@@ -61,5 +61,17 @@ class AppWidgets {
     );
   }
 
+  static getCustomGradient() {
+    return new LinearGradient(
+        colors: [
+          AppColors.colorPrimary,
+          AppColors.colorGradient,
+          AppColors.colorGradient2,
+        ],
+        begin: const FractionalOffset(0.0, 0.0),
+        end: const FractionalOffset(1.0, 0.0),
+        stops: [0.0, 0.7, 1.0],
+        tileMode: TileMode.clamp);
+  }
 
 }

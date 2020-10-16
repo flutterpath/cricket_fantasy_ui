@@ -1,4 +1,5 @@
 import 'package:fantasy_app/constants/color_constants.dart';
+import 'package:fantasy_app/widgets/custom_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +35,7 @@ class CustomNotifications extends StatelessWidget {
               height: 120,
               alignment: Alignment.center,
               decoration: new BoxDecoration(
-              color: AppColors.colorSecondary
+                gradient: AppWidgets.getCustomGradient(),
               ),
               child: Image.asset(iconData, height: 25, width: 25,),
             ),

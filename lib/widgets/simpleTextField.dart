@@ -103,16 +103,13 @@ class SimpleTextField extends StatelessWidget {
 
         ),
         contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-        enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.black, width: .5),
-        ),
-        focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.black, width: .5),
-        ),
+        border: InputBorder.none,
+        enabledBorder: InputBorder.none,
+        focusedBorder: InputBorder.none,
         hintText: this.hint,
         hintStyle:TextStyle(
           fontWeight: FontWeight.w400,
-          color: Colors.grey,
+          color: hintColor,
           fontSize: hintSize ?? 16,
             fontFamily: 'Raleway'
         ),

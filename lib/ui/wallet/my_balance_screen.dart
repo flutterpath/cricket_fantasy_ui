@@ -3,6 +3,8 @@ import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/routers/routers.dart';
 import 'package:fantasy_app/widgets/custom_app_bar.dart';
 import 'package:fantasy_app/widgets/custom_setting.dart';
+import 'package:fantasy_app/widgets/custom_widgets.dart';
+import 'package:fantasy_app/widgets/filled_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -23,7 +25,7 @@ class MyBalanceScreen extends StatelessWidget {
                 child: Container(
                   height: 500,
                   width: 550,
-                  color: AppColors.colorSecondary,
+                  color: AppColors.colorPrimary,
 
                 ),
               ),
@@ -119,7 +121,7 @@ class MyBalanceScreen extends StatelessWidget {
                           padding: const EdgeInsets.only(left: 20, right: 20),
                           child: Divider(
                             thickness: 1,
-                            color: AppColors.colorGreyLight,
+                            color: AppColors.colorGreyExtraLight,
                           ),
                         ),
 
@@ -153,7 +155,7 @@ class MyBalanceScreen extends StatelessWidget {
                           padding: const EdgeInsets.only(left: 20, right: 20),
                           child: Divider(
                             thickness: 1,
-                            color: AppColors.colorGreyLight,
+                            color: AppColors.colorGreyExtraLight,
                           ),
                         ),
 
@@ -194,7 +196,7 @@ class MyBalanceScreen extends StatelessWidget {
                             padding: EdgeInsets.only(left: 30, right: 30, top: 15, bottom: 15),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(Radius.circular(25)),
-                              color: AppColors.colorSecondary
+                              gradient: AppWidgets.getCustomGradient(),
                             ),
                             child: Text(add_money.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                           ),
@@ -211,7 +213,7 @@ class MyBalanceScreen extends StatelessWidget {
                             padding: EdgeInsets.only(left: 30, right: 30, top: 15, bottom: 15),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(Radius.circular(25)),
-                              color: AppColors.colorSecondary
+                              gradient: AppWidgets.getCustomGradient(),
                             ),
                             child: Text(withdraw_money.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                           ),

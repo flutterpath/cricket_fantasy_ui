@@ -37,7 +37,7 @@ class WithdrawScreenState extends State<WithdrawScreen> {
                 Container(
                   height: height*0.7,
                   decoration: BoxDecoration(
-                    color: Colors.black,
+                    color: AppColors.colorPrimary,
                     borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30),bottomRight: Radius.circular(30)),
                   ),
                   child: Stack(
@@ -100,6 +100,7 @@ class WithdrawScreenState extends State<WithdrawScreen> {
                                     textController: _moneyController,
                                     hint: "\$0",
                                     hintSize: 70,
+                                    hintColor: AppColors.colorGreyExtraLight,
                                     maxLength: 6,
                                     maxLines: null,
                                     readOnly: false,
@@ -138,7 +139,7 @@ class WithdrawScreenState extends State<WithdrawScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MaterialButton(
-                    color: AppColors.colorBlack,
+                    color: AppColors.colorPrimary,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(25))),
                     onPressed: (){},
                     padding: EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
