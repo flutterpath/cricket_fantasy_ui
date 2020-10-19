@@ -92,3 +92,10 @@ const account_balance = "Account Balance";
 const faqs = "FAQs";
 const fantasy_season_challenge = "Fantasy Season Challenge";
 const dummy_string = "Dummy String";
+
+//CONTESTS SCREEN STRINGS
+const contests = 'Contests';
+const my_contests = 'My Contests';
+const my_teams = 'My Teams';
+const enter_contest_code = 'Enter Contest Code';
+const create_contest = 'Create Contest';

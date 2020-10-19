@@ -21,6 +21,7 @@ class AppColors {
 
   static const colorGradient = Color(0xFFD67D5D);
   static const colorGradient2 = Color(0xFFFEA07E);
+  static const colorGradient3 = Color(0xFFFEBCA4);
 
 }
 
