@@ -67,7 +67,7 @@ class ContestsListBuilderScreenState extends State<ContestsListBuilderScreen> {
 
                                         InkWell(
                                           onTap: () {
-                                            Navigator.of(context).pushNamed(AppRouters.ADD_MONEY_SCREEN);
+
                                           },
                                           child: Container(
                                             padding: EdgeInsets.only(left: 30, right: 30, top: 5, bottom: 5),
@@ -190,9 +190,6 @@ class ContestsListBuilderScreenState extends State<ContestsListBuilderScreen> {
 
                         ),
                       ),
-
-
-
 
                     ],
                   ),

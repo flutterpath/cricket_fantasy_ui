@@ -37,6 +37,7 @@ dependencies:
   flutter_staggered_animations: ^0.1.2
   introduction_screen: ^1.0.9
   clipboard_manager: ^0.0.4
+  step_progress_indicator: ^0.2.4+7
 
 dev_dependencies:
   flutter_test:

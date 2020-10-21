@@ -74,13 +74,11 @@ class MyProfileScreen extends StatelessWidget {
                           ),
                         ),
 
-                        Padding(
-                          padding: EdgeInsets.only(top: 5, bottom: 2),
-                          child: Container(
-                            width: 150,
-                            height: 1 ,
-                            color: AppColors.colorWhite,
-                          ),
+                        Container(
+                          margin: EdgeInsets.only(top: 5, bottom: 2),
+                          width: 150,
+                          height: 1 ,
+                          color: AppColors.colorWhite,
                         ),
 
                         Container(
@@ -114,23 +112,21 @@ class MyProfileScreen extends StatelessWidget {
                   scrollDirection: Axis.vertical,
                   children: <Widget>[
 
-                    Padding(
-                      padding: const EdgeInsets.only(right: 150, bottom: 20),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: AppColors.colorSecondary,
-                            borderRadius: BorderRadius.only(topRight: Radius.circular(30), bottomRight: Radius.circular(30))
-                        ),
-                        height: 45,
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20, top: 5, bottom: 5, right: 15),
-                              child: Image.asset(AppImages.iconUser, height: 25, width: 25,),
-                            ),
-                            Text('User Details'.toUpperCase(), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'Raleway', color: AppColors.colorWhite),)
-                          ],
-                        ),
+                    Container(
+                      margin: const EdgeInsets.only(right: 150, bottom: 20),
+                      decoration: BoxDecoration(
+                          color: AppColors.colorSecondary,
+                          borderRadius: BorderRadius.only(topRight: Radius.circular(30), bottomRight: Radius.circular(30))
+                      ),
+                      height: 45,
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20, top: 5, bottom: 5, right: 15),
+                            child: Image.asset(AppImages.iconUser, height: 25, width: 25,),
+                          ),
+                          Text('User Details'.toUpperCase(), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'Raleway', color: AppColors.colorWhite),)
+                        ],
                       ),
                     ),
 
@@ -408,42 +404,40 @@ class MyProfileScreen extends StatelessWidget {
                       children: <Widget>[
 
                         Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  color: AppColors.colorPrimaryLight,
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(15.0),
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      "400".toUpperCase(),
-                                      textAlign: TextAlign.center,
-                                      softWrap: true,
-                                      style: TextStyle(
-                                          fontSize: 20.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: AppColors.colorSecondary,
-                                          fontFamily: 'Raleway'
-                                      ),
+                          child: Container(
+                            margin: const EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
+                            decoration: BoxDecoration(
+                                color: AppColors.colorPrimaryLight,
+                                borderRadius: BorderRadius.all(Radius.circular(10))
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "400".toUpperCase(),
+                                    textAlign: TextAlign.center,
+                                    softWrap: true,
+                                    style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.colorSecondary,
+                                        fontFamily: 'Raleway'
                                     ),
-                                    SizedBox(height: 10,),
-                                    Text(
-                                      "Contests".toUpperCase(),
-                                      textAlign: TextAlign.center,
-                                      softWrap: true,
-                                      style: TextStyle(
-                                          fontSize: 12.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: AppColors.colorGreyDark,
-                                          fontFamily: 'Raleway'
-                                      ),
+                                  ),
+                                  SizedBox(height: 10,),
+                                  Text(
+                                    "Contests".toUpperCase(),
+                                    textAlign: TextAlign.center,
+                                    softWrap: true,
+                                    style: TextStyle(
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.colorGreyDark,
+                                        fontFamily: 'Raleway'
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -452,42 +446,40 @@ class MyProfileScreen extends StatelessWidget {
                         Container(height: 80, width: 1, color: AppColors.colorGreyLight,),
 
                         Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  color: AppColors.colorPrimaryLight,
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(15.0),
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      "70".toUpperCase(),
-                                      textAlign: TextAlign.center,
-                                      softWrap: true,
-                                      style: TextStyle(
-                                          fontSize: 20.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: AppColors.colorSecondary,
-                                          fontFamily: 'Raleway'
-                                      ),
+                          child: Container(
+                            margin: const EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
+                            decoration: BoxDecoration(
+                                color: AppColors.colorPrimaryLight,
+                                borderRadius: BorderRadius.all(Radius.circular(10))
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "70".toUpperCase(),
+                                    textAlign: TextAlign.center,
+                                    softWrap: true,
+                                    style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.colorSecondary,
+                                        fontFamily: 'Raleway'
                                     ),
-                                    SizedBox(height: 10,),
-                                    Text(
-                                      "Matches".toUpperCase(),
-                                      textAlign: TextAlign.center,
-                                      softWrap: true,
-                                      style: TextStyle(
-                                          fontSize: 12.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: AppColors.colorGreyDark,
-                                          fontFamily: 'Raleway'
-                                      ),
+                                  ),
+                                  SizedBox(height: 10,),
+                                  Text(
+                                    "Matches".toUpperCase(),
+                                    textAlign: TextAlign.center,
+                                    softWrap: true,
+                                    style: TextStyle(
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.colorGreyDark,
+                                        fontFamily: 'Raleway'
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -512,42 +504,40 @@ class MyProfileScreen extends StatelessWidget {
                       children: <Widget>[
 
                         Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  color: AppColors.colorPrimaryLight,
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(15.0),
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      "15".toUpperCase(),
-                                      textAlign: TextAlign.center,
-                                      softWrap: true,
-                                      style: TextStyle(
-                                          fontSize: 20.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: AppColors.colorSecondary,
-                                          fontFamily: 'Raleway'
-                                      ),
+                          child: Container(
+                            margin: const EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
+                            decoration: BoxDecoration(
+                                color: AppColors.colorPrimaryLight,
+                                borderRadius: BorderRadius.all(Radius.circular(10))
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "15".toUpperCase(),
+                                    textAlign: TextAlign.center,
+                                    softWrap: true,
+                                    style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.colorSecondary,
+                                        fontFamily: 'Raleway'
                                     ),
-                                    SizedBox(height: 10,),
-                                    Text(
-                                      "Series".toUpperCase(),
-                                      textAlign: TextAlign.center,
-                                      softWrap: true,
-                                      style: TextStyle(
-                                          fontSize: 12.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: AppColors.colorGreyDark,
-                                          fontFamily: 'Raleway'
-                                      ),
+                                  ),
+                                  SizedBox(height: 10,),
+                                  Text(
+                                    "Series".toUpperCase(),
+                                    textAlign: TextAlign.center,
+                                    softWrap: true,
+                                    style: TextStyle(
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.colorGreyDark,
+                                        fontFamily: 'Raleway'
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -556,42 +546,40 @@ class MyProfileScreen extends StatelessWidget {
                         Container(height: 80, width: 1, color: AppColors.colorGreyLight,),
 
                         Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  color: AppColors.colorPrimaryLight,
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(15.0),
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      "10".toUpperCase(),
-                                      textAlign: TextAlign.center,
-                                      softWrap: true,
-                                      style: TextStyle(
-                                          fontSize: 20.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: AppColors.colorSecondary,
-                                          fontFamily: 'Raleway'
-                                      ),
+                          child: Container(
+                            margin: const EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
+                            decoration: BoxDecoration(
+                                color: AppColors.colorPrimaryLight,
+                                borderRadius: BorderRadius.all(Radius.circular(10))
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "10".toUpperCase(),
+                                    textAlign: TextAlign.center,
+                                    softWrap: true,
+                                    style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.colorSecondary,
+                                        fontFamily: 'Raleway'
                                     ),
-                                    SizedBox(height: 10,),
-                                    Text(
-                                      "Wins".toUpperCase(),
-                                      textAlign: TextAlign.center,
-                                      softWrap: true,
-                                      style: TextStyle(
-                                          fontSize: 12.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: AppColors.colorGreyDark,
-                                          fontFamily: 'Raleway'
-                                      ),
+                                  ),
+                                  SizedBox(height: 10,),
+                                  Text(
+                                    "Wins".toUpperCase(),
+                                    textAlign: TextAlign.center,
+                                    softWrap: true,
+                                    style: TextStyle(
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.colorGreyDark,
+                                        fontFamily: 'Raleway'
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),

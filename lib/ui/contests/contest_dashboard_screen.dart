@@ -2,7 +2,6 @@ import 'package:fantasy_app/constants/images_constants.dart';
 import 'package:fantasy_app/routers/routers.dart';
 import 'package:fantasy_app/ui/contests/contest_list_builder.dart';
 import 'package:fantasy_app/ui/contests/my_teams_list_builder.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/widgets/custom_app_bar.dart';
@@ -38,6 +37,7 @@ class _ContestDashboardScreenState extends State<ContestDashboardScreen> with Si
     return SafeArea(
       child: Scaffold(
         body: Stack(
+          alignment: Alignment.center,
           children: [
 
             Positioned(
@@ -208,6 +208,7 @@ class _ContestDashboardScreenState extends State<ContestDashboardScreen> with Si
                                     MyTeamsListBuilderScreen(),
                                   ]),
                                 ),
+
                               ],
                             ),
                           ),
@@ -220,6 +221,28 @@ class _ContestDashboardScreenState extends State<ContestDashboardScreen> with Si
                 ],
               ),
             ),
+
+            Positioned(
+              bottom: 0,
+              child: InkWell(
+                onTap: () {
+                  Navigator.of(context).pushNamed(AppRouters.CREATE_TEAM_SCREEN);
+                },
+                child: Container(
+                  height: 40,
+                  padding: EdgeInsets.only(top: 10, bottom: 10, left: 40, right: 40),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+                      color: AppColors.colorPrimary,
+                      boxShadow: [
+                        BoxShadow(color: AppColors.colorGreyLight, spreadRadius: 1, blurRadius: 3)
+                      ]
+                  ),
+                  child: Text(create_team.toUpperCase(), style: TextStyle(fontSize: 15, color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),),
+                ),
+              ),
+            )
+
           ],
         ),
 

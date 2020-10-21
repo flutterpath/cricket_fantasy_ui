@@ -2,8 +2,11 @@ import 'package:fantasy_app/ui/account_verification/account_verification_screen.
 import 'package:fantasy_app/ui/contests/contest_dashboard_screen.dart';
 import 'package:fantasy_app/ui/contests/create_contest_screen.dart';
 import 'package:fantasy_app/ui/contests/my_team_screen.dart';
+import 'package:fantasy_app/ui/contests/team_preview_screen.dart';
 import 'package:fantasy_app/ui/create_account/mobile_screen.dart';
 import 'package:fantasy_app/ui/create_account/otp_screen.dart';
+import 'package:fantasy_app/ui/create_team/captain_vice_captain_screen.dart';
+import 'package:fantasy_app/ui/create_team/create_team_dashboard_screen.dart';
 import 'package:fantasy_app/ui/dashboard/dashboard_screen.dart';
 import 'package:fantasy_app/ui/notifications/notifications_screen.dart';
 import 'package:fantasy_app/ui/onboarding/on_boarding_screen.dart';
@@ -43,6 +46,9 @@ class AppRouters {
   static const String TERMS_AND_CONDITIONS_SCREEN = 'terms_and_conditions_screen';
   static const String POINT_SYSTEM_SCREEN = 'point_system_screen';
   static const String CREATE_CONTEST_SCREEN = 'create_contest_screen';
+  static const String TEAM_PREVIEW_SCREEN = 'team_preview_screen';
+  static const String CREATE_TEAM_SCREEN = 'create_team_screen';
+  static const String CAPTAIN_VICE_CAPTAIN_SCREEN = 'captain_vice_captain_screen';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
 
@@ -83,6 +89,12 @@ class AppRouters {
         return MaterialPageRoute(builder: (context) => InviteFriendsScreen());
       case CREATE_CONTEST_SCREEN:
         return MaterialPageRoute(builder: (context) => CreateContestScreen());
+      case TEAM_PREVIEW_SCREEN:
+        return MaterialPageRoute(builder: (context) => TeamPreviewScreen());
+      case CREATE_TEAM_SCREEN:
+        return MaterialPageRoute(builder: (context) => CreateTeamDashboardScreen());
+      case CAPTAIN_VICE_CAPTAIN_SCREEN:
+        return MaterialPageRoute(builder: (context) => CaptainViceCaptainScreen());
       default:
         return _errorRoute();
     }

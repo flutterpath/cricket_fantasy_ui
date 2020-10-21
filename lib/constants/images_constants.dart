@@ -15,4 +15,6 @@ class AppImages {
   static String imageBannerReferFriend = 'assets/images/img_banner_refer_friend.jpg';
   static String imageFlagIndia = 'assets/images/img_flag_india.png';
   static String imageFlagAustralia = 'assets/images/img_flag_australia.jpg';
+  static String iconAvatarPlayer = 'assets/images/ic_avatar_player.png';
+  static String imagePreviewGround = 'assets/images/img_preview_ground.png';
 }

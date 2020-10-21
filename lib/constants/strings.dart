@@ -108,3 +108,6 @@ const min2 = "min 2";
 const entry_per_team = "Entry Per Team";
 const entry_text = "Entry is calculated based on total prize amount & contest size.";
 const dummy_date = "Mon, 9 Sep";
+
+//CREATE TEAM SCREEN STRINGS
+const create_team = 'Create Team';
