@@ -31,6 +31,7 @@ class SimpleTextField extends StatelessWidget {
   final int maxLines;
   final void Function() onTap;
   final TextCapitalization textCapitalization;
+  final InputBorder inputBorder;
 
   const SimpleTextField({
     Key key,
@@ -62,7 +63,8 @@ class SimpleTextField extends StatelessWidget {
     this.maxLines,
     this.inputTextSize,
     this.textAlign,
-    this.textCapitalization
+    this.textCapitalization,
+    this.inputBorder
   }) : super(key: key);
 
   @override
@@ -103,9 +105,9 @@ class SimpleTextField extends StatelessWidget {
 
         ),
         contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-        border: InputBorder.none,
-        enabledBorder: InputBorder.none,
-        focusedBorder: InputBorder.none,
+        border: inputBorder ?? InputBorder.none,
+        enabledBorder: inputBorder ?? InputBorder.none,
+        focusedBorder: inputBorder ?? InputBorder.none,
         hintText: this.hint,
         hintStyle:TextStyle(
           fontWeight: FontWeight.w400,

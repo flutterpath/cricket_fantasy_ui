@@ -110,6 +110,7 @@ class _InviteCodeScreenState extends State<InviteCodeScreen> {
                             onTap: () {},
                             readOnly: false,
                             inputType: TextInputType.name,
+                            inputBorder: UnderlineInputBorder(borderSide: new BorderSide(color: AppColors.colorGreyLight)),
                             hint: "Enter Invite Code",
                             textAlign: TextAlign.center,
                             maxLength: 15,

@@ -31,7 +31,7 @@ class _SettingScreenState extends State<SettingScreen> {
               CustomSettingPage(
                 title: CONTEST_INVITE_CODE,
                 icon: Icons.mail_outline,
-                routeName: AppRouters.INVITE_CODE_SCREEN,
+                routeName: AppRouters.CONTEST_CODE_SCREEN,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),

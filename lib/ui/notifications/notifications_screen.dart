@@ -59,7 +59,7 @@ class NotificationsContainer extends CustomPainter {
     Paint paint = Paint()..color = AppColors.colorPrimary;
     Path path = Path()
       ..relativeLineTo(0, 80)
-      ..quadraticBezierTo(size.width / 2, 180.0, size.width, 120)
+      ..quadraticBezierTo(size.width / 2, 170.0, size.width, 150)
       ..relativeLineTo(0, -150)
       ..close();
 

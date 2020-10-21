@@ -1,5 +1,6 @@
 import 'package:fantasy_app/ui/account_verification/account_verification_screen.dart';
 import 'package:fantasy_app/ui/contests/contest_dashboard_screen.dart';
+import 'package:fantasy_app/ui/contests/create_contest_screen.dart';
 import 'package:fantasy_app/ui/contests/my_team_screen.dart';
 import 'package:fantasy_app/ui/create_account/mobile_screen.dart';
 import 'package:fantasy_app/ui/create_account/otp_screen.dart';
@@ -32,7 +33,7 @@ class AppRouters {
   static const String MY_BALANCE_SCREEN = 'my_balance_screen';
   static const String NOTIFICATIONS_SCREEN = 'notifications_screen';
   static const String WITHDRAW_SCREEN = 'withdraw_screen';
-  static const String INVITE_CODE_SCREEN = 'invite_code_screen';
+  static const String CONTEST_CODE_SCREEN = 'contest_code_screen';
   static const String HOW_TO_PLAY_SCREEN = 'how_to_play_screen';
   static const String CONTESTS_DASHBOARD_SCREEN = 'contest_dashboard_screen';
   static const String INVITE_FRIENDS_SCREEN = 'invite_friends_screen';
@@ -41,6 +42,7 @@ class AppRouters {
   static const String LEGALITY_SCREEN = 'legality_screen';
   static const String TERMS_AND_CONDITIONS_SCREEN = 'terms_and_conditions_screen';
   static const String POINT_SYSTEM_SCREEN = 'point_system_screen';
+  static const String CREATE_CONTEST_SCREEN = 'create_contest_screen';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
 
@@ -71,7 +73,7 @@ class AppRouters {
         return MaterialPageRoute(builder: (context) => NotificationsScreen());
       case WITHDRAW_SCREEN:
         return MaterialPageRoute(builder: (context) => WithdrawScreen());
-      case INVITE_CODE_SCREEN:
+      case CONTEST_CODE_SCREEN:
         return MaterialPageRoute(builder: (context) => InviteCodeScreen());
       case HOW_TO_PLAY_SCREEN:
         return MaterialPageRoute(builder: (context) => HowToPlayScreen());
@@ -79,6 +81,8 @@ class AppRouters {
         return MaterialPageRoute(builder: (context) => ContestDashboardScreen());
       case INVITE_FRIENDS_SCREEN:
         return MaterialPageRoute(builder: (context) => InviteFriendsScreen());
+      case CREATE_CONTEST_SCREEN:
+        return MaterialPageRoute(builder: (context) => CreateContestScreen());
       default:
         return _errorRoute();
     }

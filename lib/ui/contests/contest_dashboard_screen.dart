@@ -1,5 +1,7 @@
 import 'package:fantasy_app/constants/images_constants.dart';
+import 'package:fantasy_app/routers/routers.dart';
 import 'package:fantasy_app/ui/contests/contest_list_builder.dart';
+import 'package:fantasy_app/ui/contests/my_teams_list_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fantasy_app/constants/color_constants.dart';
@@ -123,7 +125,7 @@ class _ContestDashboardScreenState extends State<ContestDashboardScreen> with Si
                                        child: Text(enter_contest_code.toUpperCase(), style: TextStyle(fontSize: 11, color: AppColors.colorPrimary, fontWeight: FontWeight.w400),),
                                        padding: EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
                                        onPressed: () {
-
+                                         Navigator.of(context).pushNamed(AppRouters.CONTEST_CODE_SCREEN);
                                        },
                                      ),
                                    ),
@@ -140,7 +142,7 @@ class _ContestDashboardScreenState extends State<ContestDashboardScreen> with Si
                                        child: Text(create_contest.toUpperCase(), style: TextStyle(fontSize: 11, color: AppColors.colorPrimary, fontWeight: FontWeight.w400),),
                                        padding: EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
                                        onPressed: () {
-
+                                         Navigator.of(context).pushNamed(AppRouters.CREATE_CONTEST_SCREEN);
                                        },
                                      ),
                                    ),
@@ -203,7 +205,7 @@ class _ContestDashboardScreenState extends State<ContestDashboardScreen> with Si
                                   child: TabBarView(controller: _tabController, children: [
                                     ContestsListBuilderScreen(),
                                     ContestsListBuilderScreen(),
-                                    Container(child: Text('My Teams Design'),),
+                                    MyTeamsListBuilderScreen(),
                                   ]),
                                 ),
                               ],
