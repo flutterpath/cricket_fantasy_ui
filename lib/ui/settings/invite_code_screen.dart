@@ -52,93 +52,97 @@ class _InviteCodeScreenState extends State<InviteCodeScreen> {
               children: [
 
                 Container(
-                  child: MyCustomAppBar().getTransparentAppBarWithTitle(CONTEST_INVITE_CODE, Icons.arrow_back_ios),
+                  child: MyCustomAppBar().getTransparentAppBarWithTitle(CONTEST_INVITE_CODE, Icons.arrow_back_ios, () {
+                    Navigator.of(context).pop();
+                  }),
                 ),
 
-                Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20, top: 80),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(25)),
-                        color: AppColors.colorWhite,
-                        boxShadow: [
-                          BoxShadow(color: AppColors.colorGreyLight, spreadRadius: 2, blurRadius: 10),
-                        ]
-                    ),
-                    child: ListView(
-                      scrollDirection: Axis.vertical,
-                      shrinkWrap: true,
-                      children: <Widget>[
-
-                        SizedBox(height: 30,),
-
-                        Container(
-                          child: Text(
-                            'Join Your Contest'.toUpperCase(),
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold,
-                                color: AppColors.colorBlack,
-                                fontFamily: 'Raleway'
-                            ),
+                Expanded(
+                  child: ListView(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20, right: 20, top: 80),
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(25)),
+                              color: AppColors.colorWhite,
+                              boxShadow: [
+                                BoxShadow(color: AppColors.colorGreyLight, spreadRadius: 2, blurRadius: 10),
+                              ]
                           ),
-                        ),
+                          child: Column(
+                            children: [
+                              SizedBox(height: 30,),
 
-                        Center(child: Padding(
-                          padding: const EdgeInsets.only(left: 60, right: 60, top: 10, bottom: 10),
-                          child: Divider(height: 1, color: AppColors.colorGrey,),
-                        ),),
+                              Container(
+                                child: Text(
+                                  'Join Your Contest'.toUpperCase(),
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.bold,
+                                      color: AppColors.colorBlack,
+                                      fontFamily: 'Raleway'
+                                  ),
+                                ),
+                              ),
 
-                        Padding(
-                          padding: const EdgeInsets.only(top: 50, bottom: 30),
-                          child: Align(
-                            alignment: Alignment.center,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Image.asset(AppImages.iconInvite, height: 80, width: 80,)
-                              ],
-                            ),
-                          ),
-                        ),
+                              Center(child: Padding(
+                                padding: const EdgeInsets.only(left: 60, right: 60, top: 10, bottom: 10),
+                                child: Divider(height: 1, color: AppColors.colorGrey,),
+                              ),),
 
-                        Container(
-                          //color: Colors.deepPurple,
-                          padding: EdgeInsets.only(top: 5, left: 60, right: 60, bottom: 30),
-                          child: SimpleTextField(
-                            onTap: () {},
-                            readOnly: false,
-                            inputType: TextInputType.name,
-                            inputBorder: UnderlineInputBorder(borderSide: new BorderSide(color: AppColors.colorGreyLight)),
-                            hint: "Enter Invite Code",
-                            textAlign: TextAlign.center,
-                            maxLength: 15,
-                            textCapitalization: TextCapitalization.characters,
-                          ),
-                        ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 50, bottom: 30),
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Image.asset(AppImages.iconInvite, height: 80, width: 80,)
+                                    ],
+                                  ),
+                                ),
+                              ),
 
-                        InkWell(
-                          onTap: () {
+                              Container(
+                                //color: Colors.deepPurple,
+                                padding: EdgeInsets.only(top: 5, left: 60, right: 60, bottom: 30),
+                                child: SimpleTextField(
+                                  onTap: () {},
+                                  readOnly: false,
+                                  inputType: TextInputType.name,
+                                  inputBorder: UnderlineInputBorder(borderSide: new BorderSide(color: AppColors.colorGreyLight)),
+                                  hint: "Enter Invite Code",
+                                  textAlign: TextAlign.center,
+                                  maxLength: 15,
+                                  textCapitalization: TextCapitalization.characters,
+                                ),
+                              ),
+
+                              InkWell(
+                                onTap: () {
 //                            Navigator.of(context).pushNamed(AppRouters.WITHDRAW_SCREEN);
-                          },
-                          child: Container(
-                            margin: EdgeInsets.only(left: 50, right: 50, top: 20, bottom: 30),
-                            padding: EdgeInsets.only(left: 30, right: 30, top: 15, bottom: 15),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(25)),
-                                gradient: AppWidgets.getCustomGradient(),
-                            ),
-                            child: Text('Join This Contest'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
+                                },
+                                child: Container(
+                                  margin: EdgeInsets.only(left: 50, right: 50, top: 20, bottom: 30),
+                                  padding: EdgeInsets.only(left: 30, right: 30, top: 15, bottom: 15),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.all(Radius.circular(25)),
+                                    gradient: AppWidgets.getCustomGradient(),
+                                  ),
+                                  child: Text('Join This Contest'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
+                                ),
+                              ),
+
+                              SizedBox(height: 30,)
+                            ],
                           ),
                         ),
-
-                        SizedBox(height: 30,)
-
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ),
+                )
 
               ],
             ),

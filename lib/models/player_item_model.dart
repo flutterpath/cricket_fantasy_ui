@@ -7,6 +7,7 @@ class PlayerItemModel {
   double points;
   double credits;
   bool isSelected;
+  String playerTypeComplete;
 
   PlayerItemModel(
       this.playerName,
@@ -16,5 +17,6 @@ class PlayerItemModel {
       this.playingStatus,
       this.points,
       this.credits,
-      {this.isSelected:false});
+      {this.isSelected:false,
+      this.playerTypeComplete:''});
 }

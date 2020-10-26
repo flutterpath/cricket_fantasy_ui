@@ -41,6 +41,7 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
     return SafeArea(
       child: Scaffold(
         body: Stack(
+          alignment: Alignment.center,
           children: [
 
             Positioned(
@@ -63,7 +64,9 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                 children: [
 
                   Container(
-                    child: MyCustomAppBar().getTransparentAppBarWithTitle(create_team, Icons.arrow_back_ios),
+                    child: MyCustomAppBar().getTransparentAppBarWithTitle(create_team, Icons.arrow_back_ios, () {
+                      Navigator.of(context).pop();
+                    }),
                   ),
 
                   Expanded(
@@ -135,7 +138,7 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                                     selectedColor: AppColors.colorPrimary,
                                     unselectedColor: AppColors.colorGrey,
                                     roundedEdges: Radius.circular(10),
-                                    selectedGradientColor: AppWidgets.getCustomGradient(),
+                                    selectedGradientColor: AppWidgets.getCustomGradient2(),
                                     unselectedGradientColor: LinearGradient(
                                       begin: Alignment.topLeft,
                                       end: Alignment.bottomRight,
@@ -174,28 +177,28 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                                             child: Text(
                                               'WK($selectedWicketKeeper)',
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.bold, fontSize: 16),
+                                                  fontWeight: FontWeight.w500, fontSize: 14),
                                             ),
                                           ),
                                           Tab(
                                             child: Text(
                                               'BAT($selectedBatsmen)',
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.bold, fontSize: 16),
+                                                  fontWeight: FontWeight.w500, fontSize: 14),
                                             ),
                                           ),
                                           Tab(
                                             child: Text(
                                               'AR($selectedAllRounders)',
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.bold, fontSize: 16),
+                                                  fontWeight: FontWeight.w500, fontSize: 14),
                                             ),
                                           ),
                                           Tab(
                                             child: Text(
                                               'BOWL($selectedBowlers)',
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.bold, fontSize: 16),
+                                                  fontWeight: FontWeight.w500, fontSize: 14),
                                             ),
                                           ),
                                         ]),
@@ -332,7 +335,7 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
             Positioned(
               bottom: 80,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   InkWell(
                     onTap: () {
@@ -340,15 +343,17 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                     },
                     child: Container(
                       height: 40,
-                      padding: EdgeInsets.only(top: 10, bottom: 10, left: 40, right: 40),
+                      width: MediaQuery.of(context).size.width*0.4,
+                      padding: EdgeInsets.only(top: 10, bottom: 10, left: 15, right: 15),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(30)),
-                          color: AppColors.colorGradient2,
+                          color: AppColors.colorWhite,
                           boxShadow: [
                             BoxShadow(color: AppColors.colorGreyLight, spreadRadius: 1, blurRadius: 3)
-                          ]
+                          ],
+                        border: new Border.all(width: 2.0, color: AppColors.colorPrimary,),
                       ),
-                      child: Text('Team Preview'.toUpperCase(), style: TextStyle(fontSize: 15, color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),),
+                      child: Text('Team Preview'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontSize: 15, color: AppColors.colorPrimary, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),),
                     ),
                   ),
                   SizedBox(width: 20,),
@@ -358,7 +363,8 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                     },
                     child: Container(
                       height: 40,
-                      padding: EdgeInsets.only(top: 10, bottom: 10, left: 40, right: 40),
+                      width: MediaQuery.of(context).size.width*0.4,
+                      padding: EdgeInsets.only(top: 10, bottom: 10, left: 15, right: 15),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(30)),
                           color: AppColors.colorPrimary,
@@ -366,7 +372,7 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                             BoxShadow(color: AppColors.colorGreyLight, spreadRadius: 1, blurRadius: 3)
                           ]
                       ),
-                      child: Text('Continue'.toUpperCase(), style: TextStyle(fontSize: 15, color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),),
+                      child: Text('Continue'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontSize: 15, color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),),
                     ),
                   )
                 ],
@@ -379,7 +385,6 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
       ),
     );
   }
-
 
   addPlayers() {
     //Wicket Keepers

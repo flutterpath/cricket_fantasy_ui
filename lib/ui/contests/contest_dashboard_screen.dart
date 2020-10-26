@@ -60,7 +60,9 @@ class _ContestDashboardScreenState extends State<ContestDashboardScreen> with Si
                 children: [
 
                   Container(
-                    child: MyCustomAppBar().getTransparentAppBarWithTitle(contests, Icons.arrow_back_ios),
+                    child: MyCustomAppBar().getTransparentAppBarWithTitle(contests, Icons.arrow_back_ios, () {
+                      Navigator.of(context).pop();
+                    }),
                   ),
 
                   Align(

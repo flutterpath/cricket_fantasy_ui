@@ -13,6 +13,7 @@ class AccountVerificationScreen extends StatefulWidget {
 
 class AccountVerificationState extends State<AccountVerificationScreen> with TickerProviderStateMixin {
 
+  TabController _tabController;
   var verifyTabs = <Tab>[
     Tab(text: 'Phone/Email'),
     Tab(text: 'Pan Card'),
@@ -22,6 +23,13 @@ class AccountVerificationState extends State<AccountVerificationScreen> with Tic
   @override
   void initState() {
     super.initState();
+    _tabController = new TabController(vsync: this, length: verifyTabs.length);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
   }
 
   @override
@@ -34,38 +42,50 @@ class AccountVerificationState extends State<AccountVerificationScreen> with Tic
     ];
 
     return SafeArea(
-      child: DefaultTabController(
-        length: verifyTabs.length,
-        child: Scaffold(
-          appBar: PreferredSize(
-            preferredSize: Size.fromHeight(100.0),
-            child: Container(
-              color: AppColors.colorGreyExtraLight,
-              child: Column(
-                children: [
+      child: Scaffold(
+        body: Container(
+          color: AppColors.colorPrimary,
+          child: ListView(
+            children: [
 
-                  MyCustomAppBar().getAppBarWithTitle(accountVerification, Icons.arrow_back_ios),
-
-                  Container(
-                    color: AppColors.colorWhite,
-                    child: TabBar(
-                      indicatorColor: AppColors.colorPrimary,
-                      indicatorSize: TabBarIndicatorSize.tab,
-                      labelColor: AppColors.colorPrimary,
-                      tabs: verifyTabs,
-                    ),
-                  )
-
-                ],
+              Container(
+                child: MyCustomAppBar().getTransparentAppBarWithTitle(accountVerification, Icons.arrow_back_ios, () {
+                  Navigator.of(context).pop();
+                }),
               ),
-            ),
-          ),
 
-          body: TabBarView(
-            children: tabPages,
+              Container(
+                height: MediaQuery.of(context).size.height-50,
+                decoration: BoxDecoration(
+                  color: AppColors.colorWhite,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+                ),
+                  child: Column(
+                    children: [
+                      Container(
+                        child: TabBar(
+                          controller: _tabController,
+                          indicatorColor: AppColors.colorSecondary,
+                          indicatorSize: TabBarIndicatorSize.tab,
+                          labelColor: AppColors.colorSecondary,
+                          unselectedLabelColor: AppColors.colorGreyDark,
+                          tabs: verifyTabs,
+                        ),
+                      ),
+                      Expanded(
+                        child: TabBarView(
+                          controller: _tabController,
+                          children: tabPages,
+                        ),
+                      ),
+                    ],
+                  )
+              ),
+            ],
           ),
-
         ),
+
       ),
     );
   }

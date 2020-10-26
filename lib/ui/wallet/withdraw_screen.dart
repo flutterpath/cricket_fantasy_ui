@@ -2,10 +2,8 @@ import 'package:fantasy_app/animation/fadeAnimation.dart';
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
 import 'package:fantasy_app/constants/strings.dart';
-import 'package:fantasy_app/ui/contests/my_team_screen.dart';
 import 'package:fantasy_app/widgets/custom_app_bar.dart';
 import 'package:fantasy_app/widgets/custom_widgets.dart';
-import 'package:fantasy_app/widgets/filled_button.dart';
 import 'package:fantasy_app/widgets/simpleTextField.dart';
 import 'package:fantasy_app/widgets/textWidget.dart';
 import 'package:flutter/cupertino.dart';
@@ -43,7 +41,9 @@ class WithdrawScreenState extends State<WithdrawScreen> {
                   child: Stack(
                     children: <Widget>[
                       Container(
-                        child: MyCustomAppBar().getTransparentAppBarWithTitle(withdraw_money, Icons.arrow_back_ios),
+                        child: MyCustomAppBar().getTransparentAppBarWithTitle(withdraw_money, Icons.arrow_back_ios, () {
+                          Navigator.of(context).pop();
+                        }),
                       ),
                       Positioned(
                           top: 0,

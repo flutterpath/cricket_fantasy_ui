@@ -1,5 +1,7 @@
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
+import 'package:fantasy_app/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class TeamPreviewScreen extends StatefulWidget {
@@ -23,37 +25,22 @@ class TeamPreviewScreenState extends State<TeamPreviewScreen> {
                 decoration: BoxDecoration(
                   image: DecorationImage(image: AssetImage(AppImages.imagePreviewGround), fit: BoxFit.fill)
                 ),
-                child: Stack(
-                  alignment: Alignment.topCenter,
+                child: ListView(
                   children: [
-                    Positioned(
-                      top: 0,
-                      left: 0,
-                      child: IconButton(
-                        icon: Icon(Icons.close, color: AppColors.colorWhite,),
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                      ),
+
+                    Container(
+                      child: MyCustomAppBar().getTransparentAppBarWithTitle('MyTeam (TEAM 1)', Icons.close, () {
+                        Navigator.of(context).pop();
+                      }),
                     ),
 
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        players(1, 'WICKET - KEEPER'),
-                        SizedBox(height: MediaQuery.of(context).size.height*0.05,),
-                        players(5, 'BATSMEN'),
-                        SizedBox(height: MediaQuery.of(context).size.height*0.05,),
-                        players(2, 'ALL - ROUNDERS'),
-                        SizedBox(height: MediaQuery.of(context).size.height*0.05,),
-                        players(3, 'BOWLERS'),
-                      ],
-                    ),
-
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text('MyTeam (TEAM 1)', style: TextStyle(fontSize: 18, color: AppColors.colorWhite, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
-                    ),
+                    players(1, 'WICKET - KEEPER'),
+                    SizedBox(height: MediaQuery.of(context).size.height*0.03,),
+                    players(5, 'BATSMEN'),
+                    SizedBox(height: MediaQuery.of(context).size.height*0.03,),
+                    players(2, 'ALL - ROUNDERS'),
+                    SizedBox(height: MediaQuery.of(context).size.height*0.03,),
+                    players(3, 'BOWLERS'),
                   ],
                 ),
               ),
@@ -179,7 +166,7 @@ class TeamPreviewScreenState extends State<TeamPreviewScreen> {
               color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),
         ),
         SizedBox(
-          height: 10,
+          height: 5,
         ),
         Container(
           alignment: Alignment.center,

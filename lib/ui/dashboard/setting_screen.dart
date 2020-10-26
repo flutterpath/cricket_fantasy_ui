@@ -21,7 +21,7 @@ class _SettingScreenState extends State<SettingScreen> {
           padding: const EdgeInsets.symmetric(
             horizontal: 10,
           ),
-          child: Column(
+          child: ListView(
             children: [
               CustomSettingPage(
                 title: invite_friends,

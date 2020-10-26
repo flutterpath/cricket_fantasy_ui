@@ -38,7 +38,9 @@ class _AddMoneyScreenState extends State<AddMoneyScreen> {
                     child: Stack(
                       children: <Widget>[
                         Container(
-                          child: MyCustomAppBar().getTransparentAppBarWithTitle(add_money, Icons.arrow_back_ios),
+                          child: MyCustomAppBar().getTransparentAppBarWithTitle(add_money, Icons.arrow_back_ios, () {
+                            Navigator.of(context).pop();
+                          }),
                         ),
                         Positioned(
                             top: 0,

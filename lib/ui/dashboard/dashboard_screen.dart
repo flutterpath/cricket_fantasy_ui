@@ -128,20 +128,22 @@ class DashboardScreenState extends State<DashboardScreen> {
               ),
             child: CustomPaint(
               painter: HeaderCurvedContainer(),
-              child: Column(
-                children: [
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  children: [
 
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Column(
+                    AppWidgets.getCircularAvatar(80, AppImages.userAvatar),
+                    SizedBox(height: 30,),
+                    Text("UserName", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: AppColors.colorWhite),),
+                    SizedBox(height: 5,),
+                    Text("useremail@gmail.com", style: TextStyle(fontSize: 14, color: AppColors.colorWhite),),
+                    SizedBox(height: 40,),
+
+                    Expanded(
+                      child: ListView(
                         children: [
-                          AppWidgets.getCircularAvatar(80, AppImages.userAvatar),
-                          SizedBox(height: 30,),
-                          Text("UserName", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: AppColors.colorWhite),),
-                          SizedBox(height: 5,),
-                          Text("useremail@gmail.com", style: TextStyle(fontSize: 14, color: AppColors.colorWhite),),
-                          SizedBox(height: 80,),
+                          SizedBox(height: 40,),
 
                           /** ---- PROFILE ----- */
                           InkWell(
@@ -160,10 +162,11 @@ class DashboardScreenState extends State<DashboardScreen> {
 
                           /** ---- MY BALANCE ----- */
                           InkWell(
-                            onTap: () {
-                              Navigator.of(context).pushNamed(AppRouters.MY_BALANCE_SCREEN);
-                            },
-                            child: getSideMenuItemDesign(myBalance)
+                              onTap: () {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).pushNamed(AppRouters.MY_BALANCE_SCREEN);
+                              },
+                              child: getSideMenuItemDesign(myBalance)
                           ),
 
                           Padding(
@@ -174,6 +177,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                           /** ---- NOTIFICATIONS ----- */
                           InkWell(
                             onTap: () {
+                              Navigator.of(context).pop();
                               Navigator.of(context).pushNamed(AppRouters.NOTIFICATIONS_SCREEN);
                             },
                             child: getSideMenuItemDesign(notifications),
@@ -183,11 +187,12 @@ class DashboardScreenState extends State<DashboardScreen> {
                             padding: const EdgeInsets.only(top: 10, bottom: 10, left: 50,),
                             child: Divider(height: 1,color: AppColors.colorGreyDark,),
                           ),
-                          
+
 
                           /** ---- MY INFO & SETTINGS ----- */
                           InkWell(
                             onTap: () {
+                              Navigator.of(context).pop();
                               Navigator.of(context).pushNamed(AppRouters.UPDATE_PROFILE_SCREEN);
                             },
                             child: getSideMenuItemDesign(infoAndSettings),
@@ -201,6 +206,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                           /** ---- POINT SYSTEM ----- */
                           InkWell(
                             onTap: () {
+                              Navigator.of(context).pop();
                               Navigator.of(context).pushNamed(AppRouters.POINT_SYSTEM_SCREEN);
                             },
                             child: getSideMenuItemDesign(pointSystem),
@@ -231,8 +237,8 @@ class DashboardScreenState extends State<DashboardScreen> {
                             children: [
                               RaisedButton(
                                 shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(25.0),
-                                    side: BorderSide(color: AppColors.colorBlack),
+                                  borderRadius: BorderRadius.circular(25.0),
+                                  side: BorderSide(color: AppColors.colorBlack),
                                 ),
                                 color: Colors.white,
                                 child: Text(logOut.toUpperCase(), style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontWeight: FontWeight.bold),),
@@ -243,78 +249,72 @@ class DashboardScreenState extends State<DashboardScreen> {
                               ),
                             ],
                           )
-
                         ],
                       ),
                     ),
-                  ),
-
-                ],
+                  ],
+                ),
               ),
             ),
           ),
         ),
 
         body: Container(
-          decoration: new BoxDecoration(
-            color: AppColors.colorPrimary
-          ),
+            color: AppColors.colorPrimary,
 
-          child: Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
 
-                /**  ------ APP BAR ------  */
-                Container(
-                  height: 70,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 15, bottom: 15, left: 10, right: 10),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        InkWell(
-                          child: Image.asset(AppImages.iconMenu, width: 35, height: 35,),
-                          onTap: () {
-                            scaffoldKey.currentState.openDrawer();
-                          },
-                        ),
-                        SizedBox(width: 10,),
+              /**  ------ APP BAR ------  */
+              Container(
+                height: 70,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 15, bottom: 15, left: 10, right: 10),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      InkWell(
+                        child: Image.asset(AppImages.iconMenu, width: 35, height: 35,),
+                        onTap: () {
+                          scaffoldKey.currentState.openDrawer();
+                        },
+                      ),
+                      SizedBox(width: 10,),
 //                        AppWidgets.getCircularAvatar(35, AppImages.userAvatar),
 //                        SizedBox(width: 10,),
-                        Text(appBarTitle, style: TextStyle(fontSize: 20, color: AppColors.colorWhite),)
-                      ],
-                    ),
+                      Text(appBarTitle, style: TextStyle(fontSize: 20, color: AppColors.colorWhite),)
+                    ],
                   ),
                 ),
+              ),
 
 
-                /**  ------ BODY  ------  */
-                Expanded(
-                  child: Container(
+              /**  ------ BODY  ------  */
+              Expanded(
+                child: Container(
 
-                    width: width,
+                  width: width,
 
-                    child: PageView(
-                      controller: pageController,
-                      children: [
-                        HomeScreen(),
-                        MyMatchesScreen(),
-                        MyProfileScreen(),
-                        SettingScreen()
-                      ],
-                      onPageChanged: (pageIndex) {
-                        setState(() {
-                          activeIndex = pageIndex;
-                        });
-                      },
-                    ),
+                  child: PageView(
+                    controller: pageController,
+                    children: [
+                      HomeScreen(),
+                      MyMatchesScreen(),
+                      MyProfileScreen(),
+                      SettingScreen()
+                    ],
+                    onPageChanged: (pageIndex) {
+                      setState(() {
+                        activeIndex = pageIndex;
+                      });
+                    },
                   ),
                 ),
+              ),
 
-              ],
-            ),
+            ],
           ),
         ),
 

@@ -30,7 +30,9 @@ class _UpdateProfile extends State<UpdateProfileScreen> {
             children: [
 
               Container(
-                child: MyCustomAppBar().getTransparentAppBarWithTitle(update_profile, Icons.arrow_back_ios),
+                child: MyCustomAppBar().getTransparentAppBarWithTitle(update_profile, Icons.arrow_back_ios, () {
+                  Navigator.of(context).pop();
+                }),
               ),
 
               SizedBox(height: 20.0,),
@@ -159,7 +161,7 @@ class ProfileHeaderContainer extends CustomPainter {
     Paint paint = Paint()..color = AppColors.colorPrimary;
     Path path = Path()
       ..relativeLineTo(0, 80)
-      ..quadraticBezierTo(size.width / 2, 180.0, size.width, 120)
+      ..quadraticBezierTo(size.width / 2, 180.0, size.width, 150)
       ..relativeLineTo(0, -150)
       ..close();
 

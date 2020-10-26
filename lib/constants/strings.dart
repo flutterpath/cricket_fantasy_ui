@@ -97,6 +97,7 @@ const dummy_string = "Dummy String";
 const contests = 'Contests';
 const my_contests = 'My Contests';
 const my_teams = 'My Teams';
+const my_team = 'My Team';
 const enter_contest_code = 'Enter Contest Code';
 const create_contest = 'Create Contest';
 const create_own_contest = 'Create Your Own Contest';

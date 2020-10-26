@@ -1,7 +1,6 @@
 import 'package:fantasy_app/ui/account_verification/account_verification_screen.dart';
 import 'package:fantasy_app/ui/contests/contest_dashboard_screen.dart';
 import 'package:fantasy_app/ui/contests/create_contest_screen.dart';
-import 'package:fantasy_app/ui/contests/my_team_screen.dart';
 import 'package:fantasy_app/ui/contests/team_preview_screen.dart';
 import 'package:fantasy_app/ui/create_account/mobile_screen.dart';
 import 'package:fantasy_app/ui/create_account/otp_screen.dart';

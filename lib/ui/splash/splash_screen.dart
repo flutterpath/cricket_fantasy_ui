@@ -114,18 +114,16 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
 
-            Expanded(
-              child: Container(
-                child: Column(
-                  children: [
-                    SizedBox(height: 80,),
-                    Image.asset(AppImages.imageSplashScreen,width: (MediaQuery.of(context).size.width)),
-                    SizedBox(height: 30,),
-                    Text("Cricket Fantasy", textScaleFactor: 2.5, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorSecondary, fontFamily: 'Raleway'),),
-                    SizedBox(height: 10),
-                    CircularProgressIndicator(backgroundColor: AppColors.colorPrimary, strokeWidth: 5.0, valueColor: new AlwaysStoppedAnimation<Color>(AppColors.colorSecondary),),
-                  ],
-                ),
+            Container(
+              child: Column(
+                children: [
+                  SizedBox(height: 80,),
+                  Image.asset(AppImages.imageSplashScreen,width: (MediaQuery.of(context).size.width)),
+                  SizedBox(height: 30,),
+                  Text("Cricket Fantasy", textScaleFactor: 2.5, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorSecondary, fontFamily: 'Raleway'),),
+                  SizedBox(height: 10),
+                  CircularProgressIndicator(backgroundColor: AppColors.colorPrimary, strokeWidth: 5.0, valueColor: new AlwaysStoppedAnimation<Color>(AppColors.colorSecondary),),
+                ],
               ),
             ),
 

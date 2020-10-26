@@ -15,7 +15,9 @@ class HowToPlayScreen extends StatelessWidget {
             children: [
 
               Container(
-                child: MyCustomAppBar().getTransparentAppBarWithTitle(how_to_play, Icons.arrow_back_ios),
+                child: MyCustomAppBar().getTransparentAppBarWithTitle(how_to_play, Icons.arrow_back_ios, () {
+                  Navigator.of(context).pop();
+                }),
               ),
 
               SizedBox(height: 50,),

@@ -74,4 +74,17 @@ class AppWidgets {
         tileMode: TileMode.clamp);
   }
 
+  static getCustomGradient2() {
+    return new LinearGradient(
+        colors: [
+          AppColors.colorGradient2,
+          AppColors.colorGradient,
+          AppColors.colorPrimary,
+        ],
+        begin: const FractionalOffset(0.0, 0.0),
+        end: const FractionalOffset(1.0, 0.0),
+        stops: [0.0, 0.7, 1.0],
+        tileMode: TileMode.clamp);
+  }
+
 }

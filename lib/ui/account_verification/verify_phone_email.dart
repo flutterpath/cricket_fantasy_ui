@@ -94,6 +94,8 @@ class VerifyPhoneEmailState extends State<VerifyPhoneEmail> {
           ),
         ),
 
+        SizedBox(height: 30,),
+
       ],
     );
   }

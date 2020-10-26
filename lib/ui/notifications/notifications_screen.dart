@@ -21,7 +21,9 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             children: [
 
               Container(
-                child: MyCustomAppBar().getTransparentAppBarWithTitle(my_notifications, Icons.arrow_back_ios),
+                child: MyCustomAppBar().getTransparentAppBarWithTitle(my_notifications, Icons.arrow_back_ios, () {
+                  Navigator.of(context).pop();
+                }),
               ),
 
               SizedBox(height: 30,),

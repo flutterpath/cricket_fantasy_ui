@@ -149,6 +149,8 @@ class VerifyBankAccountState extends State<VerifyBankAccount> {
           ),
         ),
 
+        SizedBox(height: 30,),
+
       ],
     );
   }
@@ -158,7 +160,7 @@ class VerifyBankAccountState extends State<VerifyBankAccount> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-              title: Text("From where do you want to take the photo?"),
+              title: Text("Select your image pick option:"),
               content: SingleChildScrollView(
                 child: ListBody(
                   children: <Widget>[

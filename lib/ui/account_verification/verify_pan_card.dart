@@ -129,8 +129,9 @@ class VerifyPanCardState extends State<VerifyPanCard> {
               ],
             ),
           ),
-        )
+        ),
 
+        SizedBox(height: 30,),
       ],
     );
   }
@@ -140,7 +141,7 @@ class VerifyPanCardState extends State<VerifyPanCard> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-              title: Text("Pick your image pick option:"),
+              title: Text("Select your image pick option:"),
               content: SingleChildScrollView(
                 child: ListBody(
                   children: <Widget>[
