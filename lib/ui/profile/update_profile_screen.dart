@@ -18,6 +18,8 @@ class _UpdateProfile extends State<UpdateProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
 
@@ -39,8 +41,8 @@ class _UpdateProfile extends State<UpdateProfileScreen> {
 
               Container(
                 //color: Colors.orange,
-                height: MediaQuery.of(context).size.height/6,
-                width: MediaQuery.of(context).size.width,
+                height: height/6,
+                width: width,
                 alignment: Alignment.center,
                 child: Stack(
                   children: <Widget>[

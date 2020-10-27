@@ -34,6 +34,8 @@ class _ContestDashboardScreenState extends State<ContestDashboardScreen> with Si
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -203,7 +205,7 @@ class _ContestDashboardScreenState extends State<ContestDashboardScreen> with Si
                                 ),
                                 Divider(height: 1, color: AppColors.colorGreyLight,),
                                 Container(
-                                  height: MediaQuery.of(context).size.height-245,
+                                  height: height-245,
                                   child: TabBarView(controller: _tabController, children: [
                                     ContestsListBuilderScreen(),
                                     ContestsListBuilderScreen(),

@@ -22,13 +22,15 @@ class VerifyBankAccountState extends State<VerifyBankAccount> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return ListView(
       children: [
 
         Container(
           margin: const EdgeInsets.all(20.0),
           padding: const EdgeInsets.all(10.0),
-          width: MediaQuery.of(context).size.width-20,
+          width: width-20,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Colors.white,
@@ -45,7 +47,7 @@ class VerifyBankAccountState extends State<VerifyBankAccount> {
               SizedBox(height: 5,),
 
               Container(
-                  width: MediaQuery.of(context).size.width-80,
+                  width: width-80,
                   child: Divider(height: 1, color: AppColors.colorGreyLight,)
               ),
 

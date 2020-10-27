@@ -12,6 +12,8 @@ class MyBalanceScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -44,7 +46,7 @@ class MyBalanceScreen extends StatelessWidget {
                 Expanded(
                   child: ListView(
                     children: [
-                      SizedBox(height: MediaQuery.of(context).size.height*0.03,),
+                      SizedBox(height: height*0.03,),
 
                       Padding(
                         padding: const EdgeInsets.only(bottom: 30, left: 90),
@@ -91,7 +93,7 @@ class MyBalanceScreen extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
 
-                            SizedBox(height: MediaQuery.of(context).size.height*0.02,),
+                            SizedBox(height: height*0.02,),
 
                             Padding(
                               padding: const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 20),
@@ -221,13 +223,13 @@ class MyBalanceScreen extends StatelessWidget {
                               ),
                             ),
 
-                            SizedBox(height: MediaQuery.of(context).size.height*0.04,),
+                            SizedBox(height: height*0.04,),
 
                           ],
                         ),
                       ),
 
-                      SizedBox(height: MediaQuery.of(context).size.height*0.06,),
+                      SizedBox(height: height*0.06,),
 
                       Divider(
                         height: 3,
@@ -240,7 +242,7 @@ class MyBalanceScreen extends StatelessWidget {
                         routeName: AppRouters.TRANSACTION_HISTORY_SCREEN,
                       ),
 
-                      SizedBox(height: MediaQuery.of(context).size.height*0.08,),
+                      SizedBox(height: height*0.08,),
                     ],
                   ),
                 )

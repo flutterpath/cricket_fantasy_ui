@@ -32,22 +32,16 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
         color: AppColors.colorPrimaryLight,
         width: double.infinity,
-        height: MediaQuery.of(context).size.height,
-//        decoration: BoxDecoration(
-//            gradient: LinearGradient(
-//              colors: [Colors.deepPurpleAccent, Colors.purple],
-//              begin: Alignment.topLeft,
-//              end: Alignment.bottomRight,
-//            )
-//        ),
+        height: height,
+
         child: Stack(
-//          mainAxisAlignment: MainAxisAlignment.center,
-//          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
 
             Positioned(
@@ -59,7 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 200,
                   width: 200,
                   decoration: new BoxDecoration(
-                    gradient: AppWidgets.getCustomGradient(),
+                    gradient: AppWidgets.getCustomGradientLight(),
                   ),
 
                 ),
@@ -75,7 +69,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 100,
                   width: 100,
                   decoration: new BoxDecoration(
-                    gradient: AppWidgets.getCustomGradient(),
+                    gradient: AppWidgets.getCustomGradientLight(),
                   ),
 
                 ),
@@ -91,7 +85,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 130,
                   width: 130,
                   decoration: new BoxDecoration(
-                    gradient: AppWidgets.getCustomGradient(),
+                    gradient: AppWidgets.getCustomGradientLight(),
                   ),
 
                 ),
@@ -107,7 +101,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 60,
                   width: 60,
                   decoration: new BoxDecoration(
-                    gradient: AppWidgets.getCustomGradient(),
+                    gradient: AppWidgets.getCustomGradientLight(),
                   ),
 
                 ),
@@ -118,7 +112,12 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Column(
                 children: [
                   SizedBox(height: 80,),
-                  Image.asset(AppImages.imageSplashScreen,width: (MediaQuery.of(context).size.width)),
+                  Container(
+                    width: width,
+                    height: width,
+                    alignment: Alignment.center,
+                    child: Image.asset(AppImages.iconLogo, width: width/2,),
+                  ),
                   SizedBox(height: 30,),
                   Text("Cricket Fantasy", textScaleFactor: 2.5, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorSecondary, fontFamily: 'Raleway'),),
                   SizedBox(height: 10),

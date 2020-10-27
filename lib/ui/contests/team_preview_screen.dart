@@ -15,6 +15,8 @@ class TeamPreviewScreenState extends State<TeamPreviewScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         body: Column(
@@ -35,11 +37,11 @@ class TeamPreviewScreenState extends State<TeamPreviewScreen> {
                     ),
 
                     players(1, 'WICKET - KEEPER'),
-                    SizedBox(height: MediaQuery.of(context).size.height*0.03,),
+                    SizedBox(height: height*0.03,),
                     players(5, 'BATSMEN'),
-                    SizedBox(height: MediaQuery.of(context).size.height*0.03,),
+                    SizedBox(height: height*0.03,),
                     players(2, 'ALL - ROUNDERS'),
-                    SizedBox(height: MediaQuery.of(context).size.height*0.03,),
+                    SizedBox(height: height*0.03,),
                     players(3, 'BOWLERS'),
                   ],
                 ),

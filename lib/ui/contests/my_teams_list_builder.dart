@@ -11,6 +11,8 @@ class MyTeamsListBuilderScreen extends StatefulWidget {
 class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.only(top: 10, bottom: 10),
       child: ListView.builder(
@@ -32,7 +34,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                         children: [
                           Container(
                             height: 50,
-                            width: MediaQuery.of(context).size.width*0.6,
+                            width: width*0.6,
                             padding: EdgeInsets.only(left: 40),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -72,7 +74,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                           SizedBox(height: 20,),
                           Container(
                             height: 50,
-                            width: MediaQuery.of(context).size.width*0.6,
+                            width: width*0.6,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(topRight: Radius.circular(20), bottomRight: Radius.circular(20)),
                               color: AppColors.colorWhite,
@@ -114,7 +116,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                     Positioned(
                       left: 5,
                       child: Container(
-                        width: MediaQuery.of(context).size.width*0.48,
+                        width: width*0.48,
                         height: 140,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(5)),
@@ -127,7 +129,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                           children: [
 
                             Container(
-                              width: MediaQuery.of(context).size.width*0.48,
+                              width: width*0.48,
                               height: 30,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5)),

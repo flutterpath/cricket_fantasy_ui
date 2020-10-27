@@ -24,6 +24,8 @@ class VerifyPanCardState extends State<VerifyPanCard> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return ListView(
       children: [
 
@@ -47,7 +49,7 @@ class VerifyPanCardState extends State<VerifyPanCard> {
                 SizedBox(height: 5,),
 
                 Container(
-                    width: MediaQuery.of(context).size.width-80,
+                    width: width-80,
                     child: Divider(height: 1, color: AppColors.colorGreyLight,)
                 ),
 

@@ -18,6 +18,8 @@ class CreateContestScreenState extends State<CreateContestScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         body: CustomPaint(
@@ -33,7 +35,7 @@ class CreateContestScreenState extends State<CreateContestScreen> {
                 child: ListView(
                   children: [
                     SizedBox(
-                      height: MediaQuery.of(context).size.height*0.05,
+                      height: height*0.05,
                     ),
                     Stack(
                       overflow: Overflow.visible,
@@ -92,7 +94,7 @@ class CreateContestScreenState extends State<CreateContestScreen> {
                               ),
 
                               Container(
-                                  width: MediaQuery.of(context).size.width-80,
+                                  width: width-80,
                                   padding: EdgeInsets.only(top: 10, bottom: 20),
                                   child: Divider(height: 1, color: AppColors.colorGrey,)
                               ),
@@ -153,7 +155,7 @@ class CreateContestScreenState extends State<CreateContestScreen> {
 
                               Center(
                                 child: Container(
-                                    width: MediaQuery.of(context).size.width-80,
+                                    width: width-80,
                                     padding: EdgeInsets.only(top: 10, bottom: 20),
                                     child: Divider(height: 1, color: AppColors.colorGrey,)
                                 ),

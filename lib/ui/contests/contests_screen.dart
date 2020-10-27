@@ -9,6 +9,8 @@ class ContestsScreen extends StatefulWidget {
 class ContestsScreenState extends State<ContestsScreen> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.purple[50],
@@ -66,8 +68,8 @@ class ContestsScreenState extends State<ContestsScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          height: MediaQuery.of(context).size.height*0.04,
-                          width: MediaQuery.of(context).size.width*0.45,
+                          height: height*0.04,
+                          width: width*0.45,
                           child: RaisedButton(
                             textColor: Colors.blue,
                             color: Colors.white,
@@ -80,8 +82,8 @@ class ContestsScreenState extends State<ContestsScreen> {
                         ),
 
                         Container(
-                          height: MediaQuery.of(context).size.height*0.04,
-                          width: MediaQuery.of(context).size.width*0.45,
+                          height: height*0.04,
+                          width: width*0.45,
                           child: RaisedButton(
                             textColor: Colors.blue,
                             color: Colors.white,

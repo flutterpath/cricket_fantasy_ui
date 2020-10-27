@@ -13,6 +13,8 @@ class ContestsListBuilderScreen extends StatefulWidget {
 class ContestsListBuilderScreenState extends State<ContestsListBuilderScreen> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.only(top: 10, bottom: 10),
       child: ListView.builder(
@@ -25,7 +27,7 @@ class ContestsListBuilderScreenState extends State<ContestsListBuilderScreen> {
 //                  Navigator.of(context).pushNamed(AppRouters.CONTESTS_DASHBOARD_SCREEN);
                 },
                 child: Container(
-                  width: MediaQuery.of(context).size.width-20,
+                  width: width-20,
 
                   child: Stack(
                     children: [

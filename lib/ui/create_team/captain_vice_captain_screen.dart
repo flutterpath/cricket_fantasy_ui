@@ -26,6 +26,8 @@ class CaptainViceCaptainScreenState extends State<CaptainViceCaptainScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -52,7 +54,7 @@ class CaptainViceCaptainScreenState extends State<CaptainViceCaptainScreen> {
                   }),
                 ),
 
-                Container(height: 1, width: MediaQuery.of(context).size.width*0.4, color: AppColors.colorGreyExtraLight, margin: EdgeInsets.only(top: 5, bottom: 10),),
+                Container(height: 1, width: width*0.4, color: AppColors.colorGreyExtraLight, margin: EdgeInsets.only(top: 5, bottom: 10),),
 
                 Center(
                   child: Text(
@@ -145,7 +147,7 @@ class CaptainViceCaptainScreenState extends State<CaptainViceCaptainScreen> {
                                           mainAxisAlignment: MainAxisAlignment.center,
                                           children: [
 
-                                              Container(color: AppColors.colorPrimary, height: 1.5, width: MediaQuery.of(context).size.width*0.2,),
+                                              Container(color: AppColors.colorPrimary, height: 1.5, width: width*0.2,),
 
                                               Container(
                                                 height: 30,
@@ -162,7 +164,7 @@ class CaptainViceCaptainScreenState extends State<CaptainViceCaptainScreen> {
                                                 child: Text(selectedPlayers[index].playerTypeComplete, textAlign: TextAlign.center, style: TextStyle(fontSize: 13, color: AppColors.colorWhite, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
                                               ),
 
-                                              Container(color: AppColors.colorPrimary, height: 1.5, width: MediaQuery.of(context).size.width*0.2,),
+                                              Container(color: AppColors.colorPrimary, height: 1.5, width: width*0.2,),
 
                                           ],
                                         ),

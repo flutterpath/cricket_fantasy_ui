@@ -1,4 +1,3 @@
-import 'package:clipboard_manager/clipboard_manager.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
@@ -54,7 +53,7 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
                 Expanded(
                   child: ListView(
                     children: [
-                      SizedBox(height: MediaQuery.of(context).size.height*0.08,),
+                      SizedBox(height: height*0.08,),
 
                       Padding(
                         padding: const EdgeInsets.only(left: 20, right: 20),
@@ -69,7 +68,7 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
                           child: Column(
                             children: <Widget>[
 
-                              SizedBox(height: MediaQuery.of(context).size.height*0.04,),
+                              SizedBox(height: height*0.04,),
 
                               Container(
                                 child: Text(
@@ -89,19 +88,22 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
                                 child: Divider(height: 1, color: AppColors.colorGrey,),
                               ),),
 
-                              SizedBox(height: MediaQuery.of(context).size.height*0.02,),
+                              SizedBox(height: height*0.02,),
 
                               Align(
                                 alignment: Alignment.center,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Image.asset(AppImages.imageBannerReferFriend,)
+                                    ColorFiltered(
+                                        colorFilter: ColorFilter.mode(AppColors.colorPrimary, BlendMode.hue),
+                                        child: Image.asset(AppImages.imageBannerReferFriend,)
+                                    )
                                   ],
                                 ),
                               ),
 
-                              SizedBox(height: MediaQuery.of(context).size.height*0.04,),
+                              SizedBox(height: height*0.04,),
 
                               Container(
                                 alignment: Alignment.center,
@@ -109,7 +111,7 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
                                 child: DottedBorder(
                                   color: AppColors.colorPrimary,
                                   borderType: BorderType.RRect,
-                                  padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.04, bottom: MediaQuery.of(context).size.height*0.04),
+                                  padding: EdgeInsets.only(top: height*0.04, bottom: height*0.04),
                                   dashPattern: [8, 4],
                                   strokeWidth: 2,
                                   child: Row(
@@ -121,13 +123,7 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
                                         builder: (BuildContext context) {
                                           return InkWell(
                                               onTap: () {
-                                                ClipboardManager.copyToClipBoard("FAN_4BFR74H8").then((result) {
-                                                  final snackBar = SnackBar(
-                                                    content: Text('Copied to Clipboard'),
-                                                    backgroundColor: AppColors.colorPrimary,
-                                                  );
-                                                  Scaffold.of(context).showSnackBar(snackBar);
-                                                });
+                                                //copy to clipboard code
                                               },
                                               child: Icon(Icons.content_copy, size: 30, color: AppColors.colorPrimary,)
                                           );
@@ -139,7 +135,7 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
                               ),
 
 
-                              SizedBox(height: MediaQuery.of(context).size.height*0.04,),
+                              SizedBox(height: height*0.04,),
 
                               InkWell(
                                 onTap: () {
@@ -157,14 +153,14 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
                               ),
 
 
-                              SizedBox(height: MediaQuery.of(context).size.height*0.06,),
+                              SizedBox(height: height*0.06,),
 
                             ],
                           ),
                         ),
                       ),
 
-                      SizedBox(height: MediaQuery.of(context).size.height*0.08,),
+                      SizedBox(height: height*0.08,),
                     ],
                   ),
                 ),

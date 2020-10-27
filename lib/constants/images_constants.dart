@@ -6,6 +6,8 @@ class AppImages {
   static String iconHome = 'assets/images/ic_home.png';
   static String imageOtpScreen = 'assets/images/img_otp.gif';
   static String imageBannerIntro = 'assets/images/img_banner_intro.png';
+  static String imageBannerIntro1 = 'assets/images/img_banner_intro1.png';
+  static String imageBannerIntro2 = 'assets/images/img_banner_intro2.png';
   static String imageSplashScreen = 'assets/images/img_splash.png';
   static String iconLogo = 'assets/images/ic_logo.png';
   static String iconUpcomingMatch = 'assets/images/ic_upcoming_match.png';

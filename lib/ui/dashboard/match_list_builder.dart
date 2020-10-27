@@ -11,6 +11,8 @@ class MatchListBuilderScreen extends StatefulWidget {
 class _MatchListBuilderScreenState extends State<MatchListBuilderScreen> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.only(top: 10, bottom: 10),
       child: ListView.builder(
@@ -28,7 +30,7 @@ class _MatchListBuilderScreenState extends State<MatchListBuilderScreen> {
                 child: Opacity(
                   opacity: (index % 3 == 0) ? 0.4 : 1.0,
                   child: Container(
-                    width: MediaQuery.of(context).size.width-20,
+                    width: width-20,
 
                     child: Stack(
                       children: [

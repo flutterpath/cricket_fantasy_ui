@@ -15,6 +15,8 @@ class VerifyPhoneEmail extends StatefulWidget {
 class VerifyPhoneEmailState extends State<VerifyPhoneEmail> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return ListView(
       children: [
 
@@ -36,7 +38,7 @@ class VerifyPhoneEmailState extends State<VerifyPhoneEmail> {
                   Text(verifyEmailAddress.toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Raleway',),),
                   SizedBox(height: 5,),
                   Container(
-                      width: MediaQuery.of(context).size.width-80,
+                      width: width-80,
                       child: Divider(height: 1, color: AppColors.colorGreyLight,)
                   ),
                   SizedBox(height: 5,),
@@ -74,7 +76,7 @@ class VerifyPhoneEmailState extends State<VerifyPhoneEmail> {
                   Text(verifyPhoneNumber.toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Raleway',),),
                   SizedBox(height: 5,),
                   Container(
-                      width: MediaQuery.of(context).size.width-80,
+                      width: width-80,
                       child: Divider(height: 1, color: AppColors.colorGreyLight,)
                   ),
                   SizedBox(height: 5,),

@@ -34,6 +34,8 @@ class AccountVerificationState extends State<AccountVerificationScreen> with Tic
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
 
     final tabPages = <Widget> [
       VerifyPhoneEmail(),
@@ -55,7 +57,7 @@ class AccountVerificationState extends State<AccountVerificationScreen> with Tic
               ),
 
               Container(
-                height: MediaQuery.of(context).size.height-50,
+                height: height-50,
                 decoration: BoxDecoration(
                   color: AppColors.colorWhite,
                   borderRadius: BorderRadius.only(

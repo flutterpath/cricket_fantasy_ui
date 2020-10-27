@@ -41,7 +41,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 PageViewModel(
                   title: "Select A Match",
                   body: "Select any of the upcoming matches from any of the current or upcoming cricket series",
-                  image: Image.asset(AppImages.imageBannerIntro),
+                  image: Image.asset(AppImages.imageBannerIntro1),
                   decoration: pageDecoration,
                 ),
 
@@ -55,7 +55,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 PageViewModel(
                   title: "Create Your Team",
                   body: "Use your sports knowledge and showcase your skills to create your team within a budget of 100 credits",
-                  image: Image.asset(AppImages.imageBannerIntro),
+                  image: Image.asset(AppImages.imageBannerIntro2),
                   decoration: pageDecoration,
                 ),
 

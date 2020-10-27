@@ -9,6 +9,8 @@ class MyProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return Container(
 //      color: AppColors.colorWhite,
       child: Stack(
@@ -18,8 +20,8 @@ class MyProfileScreen extends StatelessWidget {
             top: 350,
             child: Container(
               color: AppColors.colorWhite,
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.height,
+              height: height,
+              width: width,
             ),
           ),
 
