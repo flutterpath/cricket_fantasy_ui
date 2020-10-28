@@ -4,6 +4,7 @@ import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/ui/wallet/withdraw_screen.dart';
 import 'package:fantasy_app/widgets/custom_app_bar.dart';
 import 'package:fantasy_app/widgets/custom_widgets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class UpdateProfileScreen extends StatefulWidget {
@@ -111,7 +112,47 @@ class _UpdateProfile extends State<UpdateProfileScreen> {
 
                     Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(gender, TextInputType.name, Icons.ac_unit),
+                      child: AppWidgets.getTextFieldFloatLabelWithInBorder(gender, TextInputType.name, Icons.ac_unit, showCursor: false, readOnly: true, onTap: () {
+                        showModalBottomSheet(
+                          context: context,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20),),),
+                          builder: (BuildContext context) {
+                            return SizedBox(
+                              height: 180,
+                              child: CupertinoPicker(
+                                  magnification: 1.3,
+                                  itemExtent: 50.0,
+                                  onSelectedItemChanged: (index) {
+
+                                  },
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 15, bottom: 15),
+                                      child: Text(
+                                        "Male",
+                                        style: TextStyle(fontSize: 15, fontFamily: 'Raleway'),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 15, bottom: 15),
+                                      child: Text(
+                                        "Female",
+                                        style: TextStyle(fontSize: 15, fontFamily: 'Raleway'),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 15, bottom: 15),
+                                      child: Text(
+                                        "Other",
+                                        style: TextStyle(fontSize: 15, fontFamily: 'Raleway'),
+                                      ),
+                                    ),
+                                  ]
+                              ),
+                            );
+                          }
+                        );
+                      }),
                     ),
 
                     SizedBox(height: 20,),

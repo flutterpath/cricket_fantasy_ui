@@ -33,10 +33,12 @@ class AppWidgets {
     );
   }
 
-  static getTextFieldFloatLabelWithInBorder(String labelText, TextInputType inputType, IconData icon, [TextEditingController controller]) {
+  static getTextFieldFloatLabelWithInBorder(String labelText, TextInputType inputType, IconData icon, {TextEditingController controller, VoidCallback onTap, bool showCursor:true, bool readOnly:false}) {
     return TextField(
       controller: controller ?? TextEditingController(),
       keyboardType: TextInputType.number,
+      showCursor: showCursor,
+      readOnly: readOnly,
       style: TextStyle(fontSize: 15),
       decoration: InputDecoration(
         contentPadding: EdgeInsets.only(top: 5, bottom: 5, left: 20, right: 20),
@@ -56,8 +58,8 @@ class AppWidgets {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         labelText:labelText,
         labelStyle: TextStyle(color: AppColors.colorPrimary, fontFamily: 'Raleway', fontSize: 16),
-//                        hintText: 'Enter Bank Account Number'
       ),
+      onTap: onTap,
     );
   }
 

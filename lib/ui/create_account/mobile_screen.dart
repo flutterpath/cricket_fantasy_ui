@@ -36,25 +36,28 @@ class _MobileScreenState extends State<MobileScreen> {
   void _openFilteredCupertinoCountryPicker() => showCupertinoModalPopup<void>(
       context: context,
       builder: (BuildContext context) {
-        return CountryPickerCupertino(
-          backgroundColor: AppColors.colorWhite,
+        return ClipRRect(
+          borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+          child: CountryPickerCupertino(
+            backgroundColor: AppColors.colorWhite,
 //          textStyle: TextStyle(color: AppColors.colorWhite, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),
-          itemBuilder: _buildCupertinoSelectedItem,
-          pickerSheetHeight: 300.0,
-          pickerItemHeight: 40,
-          initialCountry: _selectedFilteredCupertinoCountry,
-          useMagnifier: true,
-          diameterRatio: 2,
-          onValuePicked: (Country country) =>
-              setState(() {
-                countryCode = "+${country.phoneCode}";
-                _countryCode.text = "(+${country.phoneCode})"+" "+country.name;
-                _selectedFilteredCupertinoCountry = country;
-              } ),
-          priorityList: [
-            CountryPickerUtils.getCountryByIsoCode('IN'),
-            CountryPickerUtils.getCountryByIsoCode('US'),
-          ],
+            itemBuilder: _buildCupertinoSelectedItem,
+            pickerSheetHeight: 250.0,
+            pickerItemHeight: 50,
+            initialCountry: _selectedFilteredCupertinoCountry,
+            useMagnifier: true,
+            diameterRatio: 2,
+            onValuePicked: (Country country) =>
+                setState(() {
+                  countryCode = "+${country.phoneCode}";
+                  _countryCode.text = "(+${country.phoneCode})"+" "+country.name;
+                  _selectedFilteredCupertinoCountry = country;
+                } ),
+            priorityList: [
+              CountryPickerUtils.getCountryByIsoCode('IN'),
+              CountryPickerUtils.getCountryByIsoCode('US'),
+            ],
+          ),
         );
       });
 

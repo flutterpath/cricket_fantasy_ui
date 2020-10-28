@@ -39,9 +39,12 @@ class _TransactionHistoryScreenState extends State<TransactionHistoryScreen> {
                         color: Colors.white,
                         fontSize: 16.0,
                       )),
-                  background: Image.network(
-                    "https://cdni.iconscout.com/illustration/premium/thumb/add-money-to-wallet-2523246-2117422.png",
-                    fit: BoxFit.contain,
+                  background: Padding(
+                    padding: const EdgeInsets.all(45),
+                    child: ColorFiltered(
+                        colorFilter: ColorFilter.mode(AppColors.colorPrimary, BlendMode.hue),
+                        child: Image.asset(AppImages.imageTransaction)
+                    ),
                   )),
             ),
           ];

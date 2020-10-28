@@ -424,6 +424,54 @@ class DashboardScreenState extends State<DashboardScreen> {
     );
   }
 
+  Future<void> _showLogOutDialog(BuildContext context) {
+    return showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return Dialog(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10))
+            ),
+            child: Container(
+              height: 200,
+              width: 300,
+              child: Column(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                    child: Container(
+                      height: 50,
+                      width: 300,
+                      alignment: Alignment.center,
+                      color: AppColors.colorPrimary,
+                      child: Text("Select Image Option:", style: TextStyle(fontSize: 18, color: AppColors.colorWhite, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
+                    ),
+                  ),
+                  SizedBox(height: 30,),
+                  GestureDetector(
+                    child: Text("Gallery", style: TextStyle(fontSize: 16, color: AppColors.colorGreyDark, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
+                    onTap: () {
+
+                    },
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(20),
+                    child: Divider(color: AppColors.colorGreyLight, height: 1, thickness: 1,),
+                  ),
+                  GestureDetector(
+                    child: Text("Camera", style: TextStyle(fontSize: 16, color: AppColors.colorGreyDark, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
+                    onTap: () {
+
+                    },
+                  ),
+                  SizedBox(height: 30,),
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
 }
 
 class HeaderCurvedContainer extends CustomPainter {

@@ -142,27 +142,47 @@ class VerifyPanCardState extends State<VerifyPanCard> {
     return showDialog(
         context: context,
         builder: (BuildContext context) {
-          return AlertDialog(
-              title: Text("Select your image pick option:"),
-              content: SingleChildScrollView(
-                child: ListBody(
-                  children: <Widget>[
+          return Dialog(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10))
+            ),
+              child: Container(
+                height: 200,
+                width: 300,
+                child: Column(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                      child: Container(
+                        height: 50,
+                        width: 300,
+                        alignment: Alignment.center,
+                        color: AppColors.colorPrimary,
+                        child: Text("Select Image Option:", style: TextStyle(fontSize: 18, color: AppColors.colorWhite, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
+                      ),
+                    ),
+                    SizedBox(height: 30,),
                     GestureDetector(
-                      child: Text("Gallery"),
+                      child: Text("Gallery", style: TextStyle(fontSize: 16, color: AppColors.colorGreyDark, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
                       onTap: () {
                         _openGallery(context);
                       },
                     ),
-                    Padding(padding: EdgeInsets.all(8.0)),
+                    Padding(
+                      padding: EdgeInsets.all(20),
+                      child: Divider(color: AppColors.colorGreyLight, height: 1, thickness: 1,),
+                    ),
                     GestureDetector(
-                      child: Text("Camera"),
+                      child: Text("Camera", style: TextStyle(fontSize: 16, color: AppColors.colorGreyDark, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
                       onTap: () {
                         _openCamera(context);
                       },
-                    )
+                    ),
+                    SizedBox(height: 30,),
                   ],
                 ),
-              ));
+              ),
+          );
         });
   }
 

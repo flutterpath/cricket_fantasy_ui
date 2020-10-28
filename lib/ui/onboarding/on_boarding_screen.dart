@@ -34,7 +34,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           children: [
 
             IntroductionScreen(
-
               key: introKey,
               pages: [
 

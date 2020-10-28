@@ -5,11 +5,12 @@ import 'package:fantasy_app/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class CustomExpansionTile extends StatelessWidget {
-  final String title, description;
+  final String title, description, image;
 
     CustomExpansionTile({
     this.title,
     this.description,
+      this.image
   });
 
   @override
@@ -31,7 +32,7 @@ class CustomExpansionTile extends StatelessWidget {
                 BoxShadow(color: AppColors.colorGrey, spreadRadius: 1, blurRadius: 10),
               ],
             ),
-            child: Image.asset(AppImages.iconAppScreenshot),
+            child: Image.asset(image),
           ),
 
           Positioned(
