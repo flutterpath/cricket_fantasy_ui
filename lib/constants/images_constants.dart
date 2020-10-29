@@ -15,9 +15,11 @@ class AppImages {
   static String iconAvatarPlayer = 'assets/images/ic_avatar_player.png';
   static String imagePreviewGround = 'assets/images/img_preview_ground.png';
   static String imageTransaction = 'assets/images/img_transaction.png';
+  static String imageSplash = 'assets/images/img_splash.png';
   static String screenshot1 = 'assets/images/screenshot1.jpg';
   static String screenshot2 = 'assets/images/screenshot2.jpg';
   static String screenshot3 = 'assets/images/screenshot3.jpg';
   static String screenshot4 = 'assets/images/screenshot4.jpg';
   static String screenshot5 = 'assets/images/screenshot5.jpg';
+  static String iconAppName = 'assets/images/ic_app_name.png';
 }

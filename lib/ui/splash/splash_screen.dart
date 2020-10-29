@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
 import 'package:fantasy_app/routers/routers.dart';
-import 'package:fantasy_app/ui/onboarding/on_boarding_screen.dart';
 import 'package:fantasy_app/widgets/custom_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
-        color: AppColors.colorPrimaryLight,
+        color: AppColors.colorPrimary,
         width: double.infinity,
         height: height,
 
@@ -110,18 +109,16 @@ class _SplashScreenState extends State<SplashScreen> {
 
             Container(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(height: 80,),
-                  Container(
-                    width: width,
-                    height: width,
-                    alignment: Alignment.center,
-                    child: Image.asset(AppImages.iconLogo, width: width/2,),
+                  ColorFiltered(
+                      colorFilter: ColorFilter.mode(AppColors.colorPrimary, BlendMode.hue),
+                      child: Image.asset(AppImages.imageSplash, width: width, height: width*0.8,)
                   ),
-                  SizedBox(height: 30,),
-                  Text("Cricket Fantasy", textScaleFactor: 2.5, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorSecondary, fontFamily: 'Raleway'),),
-                  SizedBox(height: 10),
-                  CircularProgressIndicator(backgroundColor: AppColors.colorPrimary, strokeWidth: 5.0, valueColor: new AlwaysStoppedAnimation<Color>(AppColors.colorSecondary),),
+                  Image.asset(AppImages.iconAppName, width: width*0.8,),
+//                  Text("Cricket Fantasy", textScaleFactor: 2.5, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorWhite, fontFamily: 'Raleway'),),
+                  SizedBox(height: 80),
+//                  CircularProgressIndicator(backgroundColor: AppColors.colorPrimary, strokeWidth: 5.0, valueColor: new AlwaysStoppedAnimation<Color>(AppColors.colorSecondary),),
                 ],
               ),
             ),

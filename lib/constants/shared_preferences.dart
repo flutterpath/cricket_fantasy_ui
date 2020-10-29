@@ -4,10 +4,6 @@
 
  class SpUtil {
 
-   //Shared Pref. Key Names
-   static const String USER_DETAILS = 'user_Details';
-   static const String USER_TOKEN = 'user_token';
-
    static SpUtil _instance;
 
    static Future<SpUtil> get instance async {
