@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigationPage() {
-    Navigator.of(context).pushNamed(AppRouters.ON_BOARDING_SCREEN);
+    Navigator.of(context).pushReplacementNamed(AppRouters.ON_BOARDING_SCREEN);
   }
 
   @override
@@ -116,9 +116,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       child: Image.asset(AppImages.imageSplash, width: width, height: width*0.8,)
                   ),
                   Image.asset(AppImages.iconAppName, width: width*0.8,),
-//                  Text("Cricket Fantasy", textScaleFactor: 2.5, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorWhite, fontFamily: 'Raleway'),),
                   SizedBox(height: 80),
-//                  CircularProgressIndicator(backgroundColor: AppColors.colorPrimary, strokeWidth: 5.0, valueColor: new AlwaysStoppedAnimation<Color>(AppColors.colorSecondary),),
                 ],
               ),
             ),

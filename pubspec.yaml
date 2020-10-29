@@ -22,10 +22,16 @@ dependencies:
   flutter_staggered_animations: ^0.1.2
   introduction_screen: ^1.0.9
   step_progress_indicator: ^0.2.4+7
+  flutter_launcher_icons: ^0.8.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"
 
 flutter:
 
@@ -33,6 +39,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/icon/
 
   fonts:
     - family: Raleway
