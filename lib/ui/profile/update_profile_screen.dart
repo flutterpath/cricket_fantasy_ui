@@ -130,21 +130,21 @@ class _UpdateProfile extends State<UpdateProfileScreen> {
                                       padding: const EdgeInsets.only(top: 15, bottom: 15),
                                       child: Text(
                                         "Male",
-                                        style: TextStyle(fontSize: 15, fontFamily: 'Raleway'),
+                                        style: TextStyle(fontSize: 15, fontFamily: AppFontName),
                                       ),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(top: 15, bottom: 15),
                                       child: Text(
                                         "Female",
-                                        style: TextStyle(fontSize: 15, fontFamily: 'Raleway'),
+                                        style: TextStyle(fontSize: 15, fontFamily: AppFontName),
                                       ),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(top: 15, bottom: 15),
                                       child: Text(
                                         "Other",
-                                        style: TextStyle(fontSize: 15, fontFamily: 'Raleway'),
+                                        style: TextStyle(fontSize: 15, fontFamily: AppFontName),
                                       ),
                                     ),
                                   ]
@@ -179,7 +179,7 @@ class _UpdateProfile extends State<UpdateProfileScreen> {
                           borderRadius: BorderRadius.all(Radius.circular(25)),
                           gradient: AppWidgets.getCustomGradient(),
                         ),
-                        child: Text(update.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
+                        child: Text(update.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: AppFontName, color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                       ),
                     ),
 

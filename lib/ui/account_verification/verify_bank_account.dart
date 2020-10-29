@@ -42,7 +42,7 @@ class VerifyBankAccountState extends State<VerifyBankAccount> {
             children: [
               SizedBox(height: 20,),
 
-              Text(bankAccountProof.toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Raleway',),),
+              Text(bankAccountProof.toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: AppFontName,),),
 
               SizedBox(height: 5,),
 
@@ -64,7 +64,7 @@ class VerifyBankAccountState extends State<VerifyBankAccount> {
                     children: [
                       SizedBox(width: 20,),
                       Expanded(
-                          child: Text('Upload Photo', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, fontFamily: 'Raleway',),)
+                          child: Text('Upload Photo', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, fontFamily: AppFontName,),)
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -142,7 +142,7 @@ class VerifyBankAccountState extends State<VerifyBankAccount> {
                   borderRadius: BorderRadius.all(Radius.circular(25)),
                   gradient: AppWidgets.getCustomGradient(),
                 ),
-                child: Text(submit.toUpperCase(), style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
+                child: Text(submit.toUpperCase(), style: TextStyle(fontFamily: AppFontName, color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
               ),
 
               SizedBox(height: 20,),
@@ -177,12 +177,12 @@ class VerifyBankAccountState extends State<VerifyBankAccount> {
                       width: 300,
                       alignment: Alignment.center,
                       color: AppColors.colorPrimary,
-                      child: Text("Select Image Option:", style: TextStyle(fontSize: 18, color: AppColors.colorWhite, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
+                      child: Text("Select Image Option:", style: TextStyle(fontSize: 18, color: AppColors.colorWhite, fontWeight: FontWeight.w500, fontFamily: AppFontName),),
                     ),
                   ),
                   SizedBox(height: 30,),
                   GestureDetector(
-                    child: Text("Gallery", style: TextStyle(fontSize: 16, color: AppColors.colorGreyDark, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
+                    child: Text("Gallery", style: TextStyle(fontSize: 16, color: AppColors.colorGreyDark, fontWeight: FontWeight.w500, fontFamily: AppFontName),),
                     onTap: () {
                       _openGallery(context);
                     },
@@ -192,7 +192,7 @@ class VerifyBankAccountState extends State<VerifyBankAccount> {
                     child: Divider(color: AppColors.colorGreyLight, height: 1, thickness: 1,),
                   ),
                   GestureDetector(
-                    child: Text("Camera", style: TextStyle(fontSize: 16, color: AppColors.colorGreyDark, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
+                    child: Text("Camera", style: TextStyle(fontSize: 16, color: AppColors.colorGreyDark, fontWeight: FontWeight.w500, fontFamily: AppFontName),),
                     onTap: () {
                       _openCamera(context);
                     },

@@ -97,7 +97,7 @@ class _AddMoneyScreenState extends State<AddMoneyScreen> {
                                 children: [
                                   TextWidget(
                                     data: "Add Money to Wallet",
-                                    style: TextStyle(color: AppColors.colorGreyExtraLight, fontSize: 18, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),
+                                    style: TextStyle(color: AppColors.colorGreyExtraLight, fontSize: 18, fontWeight: FontWeight.w500, fontFamily: AppFontName),
                                   ),
                                   SizedBox(height: 10,),
                                   SimpleTextField(
@@ -206,7 +206,7 @@ class _AddMoneyScreenState extends State<AddMoneyScreen> {
                       SizedBox(width: 10,),
                       TextWidget(
                         data: "Add Money",
-                        style: TextStyle(color: AppColors.colorGreyExtraLight, fontSize: 18, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),
+                        style: TextStyle(color: AppColors.colorGreyExtraLight, fontSize: 18, fontWeight: FontWeight.w500, fontFamily: AppFontName),
                       ),
                     ],
                   )

@@ -1,5 +1,6 @@
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/routers/routers.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +26,7 @@ class _MatchListBuilderScreenState extends State<MatchListBuilderScreen> {
                   if(index % 3 != 0)
                     Navigator.of(context).pushNamed(AppRouters.CONTESTS_DASHBOARD_SCREEN);
                   else
-                    Scaffold.of(context).showSnackBar(SnackBar(content: Text('Match will be launched soon', style: TextStyle(fontSize: 15, fontFamily: 'Raleway'),),));
+                    Scaffold.of(context).showSnackBar(SnackBar(content: Text('Match will be launched soon', style: TextStyle(fontSize: 15, fontFamily: AppFontName),),));
                 },
                 child: Opacity(
                   opacity: (index % 3 == 0) ? 0.4 : 1.0,
@@ -49,13 +50,13 @@ class _MatchListBuilderScreenState extends State<MatchListBuilderScreen> {
                             ),
                             child: Column(
                               children: [
-                                Text("ICC Cricket World Cup", textScaleFactor: 0.9, style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Raleway')),
+                                Text("ICC Cricket World Cup", textScaleFactor: 0.9, style: TextStyle(fontWeight: FontWeight.bold, fontFamily: AppFontName)),
                                 SizedBox(height: 10,),
 
-                                Text("VS", textScaleFactor: 0.8, style: TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.w500),),
+                                Text("VS", textScaleFactor: 0.8, style: TextStyle(fontFamily: AppFontName, fontWeight: FontWeight.w500),),
                                 SizedBox(height: 5,),
 
-                                Text("01:30:00", textScaleFactor: 1.0, style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),)
+                                Text("01:30:00", textScaleFactor: 1.0, style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontFamily: AppFontName),)
                               ],
                             ),
                           ),
@@ -76,7 +77,7 @@ class _MatchListBuilderScreenState extends State<MatchListBuilderScreen> {
                                   height: 25,
                                   minWidth: 50,
                                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(25))),
-                                  child: Text("IND", textScaleFactor: 0.9, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorWhite, fontFamily: 'Raleway'),),
+                                  child: Text("IND", textScaleFactor: 0.9, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorWhite, fontFamily: AppFontName),),
                                   onPressed: () {},
                                 ),
                               ],
@@ -99,7 +100,7 @@ class _MatchListBuilderScreenState extends State<MatchListBuilderScreen> {
                                   height: 25,
                                   minWidth: 50,
                                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(25))),
-                                  child: Text("AUS", textScaleFactor: 0.9, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorWhite, fontFamily: 'Raleway'),),
+                                  child: Text("AUS", textScaleFactor: 0.9, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorWhite, fontFamily: AppFontName),),
                                   onPressed: () {},
                                 ),
                               ],

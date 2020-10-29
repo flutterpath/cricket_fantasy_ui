@@ -91,7 +91,7 @@ class WithdrawScreenState extends State<WithdrawScreen> {
                                 children: [
                                   TextWidget(
                                     data: "Withdraw Money from Wallet",
-                                    style: TextStyle(color: AppColors.colorGreyExtraLight, fontSize: 18, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),
+                                    style: TextStyle(color: AppColors.colorGreyExtraLight, fontSize: 18, fontWeight: FontWeight.w500, fontFamily: AppFontName),
                                   ),
                                   SizedBox(height: 10,),
                                   SimpleTextField(
@@ -119,7 +119,7 @@ class WithdrawScreenState extends State<WithdrawScreen> {
                           left: 20,
                           child: FadeAnimation(1.8, Container(
                             width: width,
-                            child: Text('*Min ₹200 and max ₹10,000 allowed per day', style: TextStyle(fontFamily: 'Raleway', fontSize: 13, color: AppColors.colorWhite),),
+                            child: Text('*Min ₹200 and max ₹10,000 allowed per day', style: TextStyle(fontFamily: AppFontName, fontSize: 13, color: AppColors.colorWhite),),
                           ),
                           )
                       )
@@ -149,7 +149,7 @@ class WithdrawScreenState extends State<WithdrawScreen> {
                         SizedBox(width: 20,),
                         TextWidget(
                           data: "Withdraw Money",
-                          style: TextStyle(color: AppColors.colorGreyExtraLight, fontSize: 18, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),
+                          style: TextStyle(color: AppColors.colorGreyExtraLight, fontSize: 18, fontWeight: FontWeight.w500, fontFamily: AppFontName),
                         ),
                       ],
                     )

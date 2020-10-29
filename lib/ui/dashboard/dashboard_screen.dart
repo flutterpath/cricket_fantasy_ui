@@ -38,10 +38,10 @@ class DashboardScreenState extends State<DashboardScreen> {
   var badges = <int>[null, null, null, null];
 
   var iconText = <Widget>[
-    Padding(padding: const EdgeInsets.only(top: 3), child: Text('Home'.toUpperCase(), style: TextStyle(color: Colors.black87, fontSize: 12, fontWeight: FontWeight.bold, fontFamily: 'Raleway')),),
-    Padding(padding: const EdgeInsets.only(top: 3), child: Text('My Matches'.toUpperCase(), style: TextStyle(color: Colors.black87, fontSize: 12, fontWeight: FontWeight.bold, fontFamily: 'Raleway')),),
-    Padding(padding: const EdgeInsets.only(top: 3), child: Text('Profile'.toUpperCase(), style: TextStyle(color: Colors.black87, fontSize: 12, fontWeight: FontWeight.bold, fontFamily: 'Raleway')),),
-    Padding(padding: const EdgeInsets.only(top: 3), child: Text('Settings'.toUpperCase(), style: TextStyle(color: Colors.black87, fontSize: 12, fontWeight: FontWeight.bold, fontFamily: 'Raleway')),),
+    Padding(padding: const EdgeInsets.only(top: 3), child: Text('Home'.toUpperCase(), style: TextStyle(color: Colors.black87, fontSize: 12, fontWeight: FontWeight.bold, fontFamily: AppFontName)),),
+    Padding(padding: const EdgeInsets.only(top: 3), child: Text('My Matches'.toUpperCase(), style: TextStyle(color: Colors.black87, fontSize: 12, fontWeight: FontWeight.bold, fontFamily: AppFontName)),),
+    Padding(padding: const EdgeInsets.only(top: 3), child: Text('Profile'.toUpperCase(), style: TextStyle(color: Colors.black87, fontSize: 12, fontWeight: FontWeight.bold, fontFamily: AppFontName)),),
+    Padding(padding: const EdgeInsets.only(top: 3), child: Text('Settings'.toUpperCase(), style: TextStyle(color: Colors.black87, fontSize: 12, fontWeight: FontWeight.bold, fontFamily: AppFontName)),),
   ];
 
   var indicatorColors = <Color>[
@@ -444,12 +444,12 @@ class DashboardScreenState extends State<DashboardScreen> {
                       width: 300,
                       alignment: Alignment.center,
                       color: AppColors.colorPrimary,
-                      child: Text("Select Image Option:", style: TextStyle(fontSize: 18, color: AppColors.colorWhite, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
+                      child: Text("Select Image Option:", style: TextStyle(fontSize: 18, color: AppColors.colorWhite, fontWeight: FontWeight.w500, fontFamily: AppFontName),),
                     ),
                   ),
                   SizedBox(height: 30,),
                   GestureDetector(
-                    child: Text("Gallery", style: TextStyle(fontSize: 16, color: AppColors.colorGreyDark, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
+                    child: Text("Gallery", style: TextStyle(fontSize: 16, color: AppColors.colorGreyDark, fontWeight: FontWeight.w500, fontFamily: AppFontName),),
                     onTap: () {
 
                     },
@@ -459,7 +459,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                     child: Divider(color: AppColors.colorGreyLight, height: 1, thickness: 1,),
                   ),
                   GestureDetector(
-                    child: Text("Camera", style: TextStyle(fontSize: 16, color: AppColors.colorGreyDark, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
+                    child: Text("Camera", style: TextStyle(fontSize: 16, color: AppColors.colorGreyDark, fontWeight: FontWeight.w500, fontFamily: AppFontName),),
                     onTap: () {
 
                     },

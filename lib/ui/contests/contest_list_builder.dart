@@ -1,4 +1,5 @@
 import 'package:fantasy_app/constants/color_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/routers/routers.dart';
 import 'package:fantasy_app/widgets/custom_widgets.dart';
 import 'package:fantasy_app/widgets/rounded_progress_bar/flutter_rounded_progress_bar.dart';
@@ -81,9 +82,9 @@ class ContestsListBuilderScreenState extends State<ContestsListBuilderScreen> {
                                               ]
                                             ),
                                             child: Row(children: [
-                                              Text('JOIN', textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorGreyExtraLight, fontWeight: FontWeight.w400, fontSize: 13),),
+                                              Text('JOIN', textAlign: TextAlign.center, style: TextStyle(fontFamily: AppFontName, color: AppColors.colorGreyExtraLight, fontWeight: FontWeight.w400, fontSize: 13),),
                                               SizedBox(width: 10,),
-                                              Text('₹15', textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontSize: 18),)
+                                              Text('₹15', textAlign: TextAlign.center, style: TextStyle(fontFamily: AppFontName, color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontSize: 18),)
                                             ],),
                                           ),
                                         ),

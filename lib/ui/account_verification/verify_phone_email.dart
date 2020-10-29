@@ -35,14 +35,14 @@ class VerifyPhoneEmailState extends State<VerifyPhoneEmail> {
                 children: [
                   Icon(Icons.email, size: 40, color: AppColors.colorPrimary,),
                   SizedBox(height: 10,),
-                  Text(verifyEmailAddress.toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Raleway',),),
+                  Text(verifyEmailAddress.toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: AppFontName,),),
                   SizedBox(height: 5,),
                   Container(
                       width: width-80,
                       child: Divider(height: 1, color: AppColors.colorGreyLight,)
                   ),
                   SizedBox(height: 5,),
-                  Text(verifyEmailAddressContent, style: TextStyle(fontSize: 14, fontFamily: 'Raleway',),),
+                  Text(verifyEmailAddressContent, style: TextStyle(fontSize: 14, fontFamily: AppFontName,),),
                   SizedBox(height: 20,),
                   Container(
                     padding: EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
@@ -50,7 +50,7 @@ class VerifyPhoneEmailState extends State<VerifyPhoneEmail> {
                       borderRadius: BorderRadius.all(Radius.circular(25)),
                       gradient: AppWidgets.getCustomGradient(),
                     ),
-                    child: Text(verify.toUpperCase(), style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
+                    child: Text(verify.toUpperCase(), style: TextStyle(fontFamily: AppFontName, color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                   ),
                   SizedBox(height: 20,),
                 ]
@@ -73,14 +73,14 @@ class VerifyPhoneEmailState extends State<VerifyPhoneEmail> {
                 children: [
                   Icon(Icons.phone, size: 40, color: AppColors.colorPrimary,),
                   SizedBox(height: 10,),
-                  Text(verifyPhoneNumber.toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Raleway',),),
+                  Text(verifyPhoneNumber.toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: AppFontName,),),
                   SizedBox(height: 5,),
                   Container(
                       width: width-80,
                       child: Divider(height: 1, color: AppColors.colorGreyLight,)
                   ),
                   SizedBox(height: 5,),
-                  Text(verifyPhoneNumberContent, style: TextStyle(fontSize: 14, fontFamily: 'Raleway',),),
+                  Text(verifyPhoneNumberContent, style: TextStyle(fontSize: 14, fontFamily: AppFontName,),),
                   SizedBox(height: 20,),
                   Container(
                     padding: EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
@@ -88,7 +88,7 @@ class VerifyPhoneEmailState extends State<VerifyPhoneEmail> {
                       borderRadius: BorderRadius.all(Radius.circular(25)),
                       gradient: AppWidgets.getCustomGradient(),
                     ),
-                    child: Text(verify.toUpperCase(), style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
+                    child: Text(verify.toUpperCase(), style: TextStyle(fontFamily: AppFontName, color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                   ),
                   SizedBox(height: 20,),
                 ]

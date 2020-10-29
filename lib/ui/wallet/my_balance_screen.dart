@@ -62,7 +62,7 @@ class MyBalanceScreen extends StatelessWidget {
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
                                     color: AppColors.colorWhite,
-                                    fontFamily: 'Raleway'
+                                    fontFamily: AppFontName
                                 ),
                               ),
                               SizedBox(height: 10,),
@@ -73,7 +73,7 @@ class MyBalanceScreen extends StatelessWidget {
                                     fontSize: 40.0,
                                     fontWeight: FontWeight.bold,
                                     color: AppColors.colorWhite,
-                                    fontFamily: 'Raleway'
+                                    fontFamily: AppFontName
                                 ),
                               ),
                             ],
@@ -103,7 +103,7 @@ class MyBalanceScreen extends StatelessWidget {
 
                                   Text(
                                     "Deposit",
-                                    style: TextStyle(fontSize: 15.0, color: AppColors.colorGreyDark, fontFamily: 'Raleway'),
+                                    style: TextStyle(fontSize: 15.0, color: AppColors.colorGreyDark, fontFamily: AppFontName),
                                   ),
 
                                   Text(
@@ -113,7 +113,7 @@ class MyBalanceScreen extends StatelessWidget {
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
-                                        fontFamily: 'Raleway'
+                                        fontFamily: AppFontName
                                     ),
                                   ),
 
@@ -137,7 +137,7 @@ class MyBalanceScreen extends StatelessWidget {
 
                                   Text(
                                     "Winning",
-                                    style: TextStyle(fontSize: 15.0, color: AppColors.colorGreyDark, fontFamily: 'Raleway'),
+                                    style: TextStyle(fontSize: 15.0, color: AppColors.colorGreyDark, fontFamily: AppFontName),
                                   ),
 
                                   Text(
@@ -147,7 +147,7 @@ class MyBalanceScreen extends StatelessWidget {
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
-                                        fontFamily: 'Raleway'
+                                        fontFamily: AppFontName
                                     ),
                                   ),
 
@@ -171,7 +171,7 @@ class MyBalanceScreen extends StatelessWidget {
 
                                   Text(
                                     "Bonus",
-                                    style: TextStyle(fontSize: 15.0, color: AppColors.colorGreyDark, fontFamily: 'Raleway'),
+                                    style: TextStyle(fontSize: 15.0, color: AppColors.colorGreyDark, fontFamily: AppFontName),
                                   ),
 
                                   Text(
@@ -181,7 +181,7 @@ class MyBalanceScreen extends StatelessWidget {
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
-                                        fontFamily: 'Raleway'
+                                        fontFamily: AppFontName
                                     ),
                                   ),
 
@@ -202,7 +202,7 @@ class MyBalanceScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.all(Radius.circular(25)),
                                   gradient: AppWidgets.getCustomGradient(),
                                 ),
-                                child: Text(add_money.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
+                                child: Text(add_money.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: AppFontName, color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                               ),
                             ),
 
@@ -219,7 +219,7 @@ class MyBalanceScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.all(Radius.circular(25)),
                                   gradient: AppWidgets.getCustomGradient(),
                                 ),
-                                child: Text(withdraw_money.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
+                                child: Text(withdraw_money.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: AppFontName, color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                               ),
                             ),
 

@@ -1,4 +1,5 @@
 import 'package:fantasy_app/constants/color_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/widgets/custom_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -56,7 +57,7 @@ class CustomNotifications extends StatelessWidget {
                             fontSize: 15.0,
                             fontWeight: FontWeight.bold,
                             color: AppColors.colorBlack,
-                            fontFamily: 'Raleway'
+                            fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -78,7 +79,7 @@ class CustomNotifications extends StatelessWidget {
                             fontSize: 14.0,
                             color: AppColors.colorBlack,
                             fontWeight: FontWeight.w400,
-                            fontFamily: 'Raleway'
+                            fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -92,7 +93,7 @@ class CustomNotifications extends StatelessWidget {
                             fontSize: 12.0,
                             color: AppColors.colorGreyDark,
                             fontWeight: FontWeight.w200,
-                            fontFamily: 'Raleway'
+                            fontFamily: AppFontName
                         ),
                       ),
                     ),

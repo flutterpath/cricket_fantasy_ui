@@ -1,4 +1,5 @@
 import 'package:fantasy_app/constants/color_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/widgets/round_button.dart';
 import 'package:flutter/material.dart';
 
@@ -45,7 +46,7 @@ class CustomSettingPage extends StatelessWidget {
             ),
             title: Text(
               title,
-              style: TextStyle(fontSize: 15, fontFamily: 'Raleway', fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 15, fontFamily: AppFontName, fontWeight: FontWeight.w500),
             ),
           ),
         ),

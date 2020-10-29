@@ -82,7 +82,7 @@ class _InviteCodeScreenState extends State<InviteCodeScreen> {
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                       color: AppColors.colorBlack,
-                                      fontFamily: 'Raleway'
+                                      fontFamily: AppFontName
                                   ),
                                 ),
                               ),
@@ -131,7 +131,7 @@ class _InviteCodeScreenState extends State<InviteCodeScreen> {
                                     borderRadius: BorderRadius.all(Radius.circular(25)),
                                     gradient: AppWidgets.getCustomGradient(),
                                   ),
-                                  child: Text('Join This Contest'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
+                                  child: Text('Join This Contest'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: AppFontName, color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                                 ),
                               ),
 

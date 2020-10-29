@@ -1,4 +1,5 @@
 import 'package:fantasy_app/constants/color_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:flutter/material.dart';
 
 class AppWidgets {
@@ -57,7 +58,7 @@ class AppWidgets {
         prefixIcon: Icon(icon, size: 20, color: AppColors.colorPrimary,),
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         labelText:labelText,
-        labelStyle: TextStyle(color: AppColors.colorPrimary, fontFamily: 'Raleway', fontSize: 16),
+        labelStyle: TextStyle(color: AppColors.colorPrimary, fontFamily: AppFontName, fontSize: 16),
       ),
       onTap: onTap,
     );

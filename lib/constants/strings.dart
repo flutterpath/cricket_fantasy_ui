@@ -1,3 +1,5 @@
+const AppFontName = 'Raleway';
+
 const login = 'LOGIN';
 const signup = 'SIGNUP';
 

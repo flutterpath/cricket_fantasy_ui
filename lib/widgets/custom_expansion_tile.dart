@@ -59,7 +59,7 @@ class CustomExpansionTile extends StatelessWidget {
                           fontSize: 15.0,
                           fontWeight: FontWeight.bold,
                           color: AppColors.colorBlack,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                       ),
                     ),
                   ),
@@ -77,7 +77,7 @@ class CustomExpansionTile extends StatelessWidget {
                           fontSize: 14.0,
                           fontWeight: FontWeight.w400,
                           color: AppColors.colorBlack,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                       ),
                     ),
                   ),

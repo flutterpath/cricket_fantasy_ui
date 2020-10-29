@@ -1,4 +1,5 @@
 import 'package:fantasy_app/constants/color_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:flutter/material.dart';
 
 class FilledButton extends StatelessWidget {
@@ -38,7 +39,7 @@ class FilledButton extends StatelessWidget {
               child: Text(
                 buttonText,
                 style:
-                Theme.of(context).textTheme.button.copyWith(color: textColor ?? Colors.white, fontFamily: 'Raleway', fontWeight: FontWeight.w400),
+                Theme.of(context).textTheme.button.copyWith(color: textColor ?? Colors.white, fontFamily: AppFontName, fontWeight: FontWeight.w400),
               ),
             ),
           ],

@@ -1,4 +1,5 @@
 import 'package:fantasy_app/constants/color_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:flutter/material.dart';
 
 class SimpleTextField extends StatelessWidget {
@@ -93,7 +94,7 @@ class SimpleTextField extends StatelessWidget {
         fontWeight: FontWeight.w400,
         color: inputTextColor ?? AppColors.colorSecondary,
         fontSize: inputTextSize,
-        fontFamily: 'Raleway'
+        fontFamily: AppFontName
       ),
       decoration: InputDecoration(
         prefixIcon: this.prefixIcon,
@@ -113,7 +114,7 @@ class SimpleTextField extends StatelessWidget {
           fontWeight: FontWeight.w400,
           color: hintColor,
           fontSize: hintSize ?? 16,
-            fontFamily: 'Raleway'
+            fontFamily: AppFontName
         ),
         errorText: errorText,
         errorStyle: Theme.of(context)

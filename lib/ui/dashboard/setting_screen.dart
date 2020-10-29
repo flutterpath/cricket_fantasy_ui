@@ -75,7 +75,7 @@ class _SettingScreenState extends State<SettingScreen> {
                             ),
                             child: Text(
                               VERIFIED.toUpperCase(),
-                              style: TextStyle(color: AppColors.colorGreen, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),
+                              style: TextStyle(color: AppColors.colorGreen, fontWeight: FontWeight.bold, fontFamily: AppFontName),
                             ),
                           ),
                           Icon(Icons.navigate_next),
@@ -83,7 +83,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                   title: Text(
                     KYC,
-                    style: TextStyle(fontSize: 15, fontFamily: 'Raleway', fontWeight: FontWeight.w500),
+                    style: TextStyle(fontSize: 15, fontFamily: AppFontName, fontWeight: FontWeight.w500),
                   ),
                 ),
               ),

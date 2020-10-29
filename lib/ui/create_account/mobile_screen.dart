@@ -40,7 +40,7 @@ class _MobileScreenState extends State<MobileScreen> {
           borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
           child: CountryPickerCupertino(
             backgroundColor: AppColors.colorWhite,
-//          textStyle: TextStyle(color: AppColors.colorWhite, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),
+//          textStyle: TextStyle(color: AppColors.colorWhite, fontWeight: FontWeight.w500, fontFamily: AppFontName),
             itemBuilder: _buildCupertinoSelectedItem,
             pickerSheetHeight: 250.0,
             pickerItemHeight: 50,

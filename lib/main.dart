@@ -4,6 +4,8 @@ import 'package:fantasy_app/routers/routers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'constants/strings.dart';
+
 SpUtil sp;
 
 Future<void> main() async {
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
       initialRoute: AppRouters.SPLASH_SCREEN,
       onGenerateRoute: AppRouters.generateRoute,
       theme: ThemeData(
-          fontFamily: 'Raleway',
+          fontFamily: AppFontName,
           accentColor: AppColors.colorSecondaryMaterial,
           primaryColor: AppColors.colorPrimaryMaterial
       ),

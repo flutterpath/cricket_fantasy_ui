@@ -1,5 +1,6 @@
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/routers/routers.dart';
 import 'package:flutter/material.dart';
 
@@ -55,8 +56,8 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                                   child: RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: "(C)", style: TextStyle(fontSize: 13 ,fontWeight: FontWeight.bold, color: AppColors.colorWhite, fontFamily: 'Raleway'),),
-                                        TextSpan(text: " Virat Kohli", style: TextStyle(fontSize: 10 ,fontWeight: FontWeight.w400, color: AppColors.colorWhite, fontFamily: 'Raleway'),),
+                                        TextSpan(text: "(C)", style: TextStyle(fontSize: 13 ,fontWeight: FontWeight.bold, color: AppColors.colorWhite, fontFamily: AppFontName),),
+                                        TextSpan(text: " Virat Kohli", style: TextStyle(fontSize: 10 ,fontWeight: FontWeight.w400, color: AppColors.colorWhite, fontFamily: AppFontName),),
                                       ]
                                     ),
                                   ),
@@ -94,8 +95,8 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                                   child: RichText(
                                     text: TextSpan(
                                         children: [
-                                          TextSpan(text: "(VC)", style: TextStyle(fontSize: 13 ,fontWeight: FontWeight.bold, color: AppColors.colorWhite, fontFamily: 'Raleway'),),
-                                          TextSpan(text: " Aaron Finch", style: TextStyle(fontSize: 10 ,fontWeight: FontWeight.w400, color: AppColors.colorWhite, fontFamily: 'Raleway'),),
+                                          TextSpan(text: "(VC)", style: TextStyle(fontSize: 13 ,fontWeight: FontWeight.bold, color: AppColors.colorWhite, fontFamily: AppFontName),),
+                                          TextSpan(text: " Aaron Finch", style: TextStyle(fontSize: 10 ,fontWeight: FontWeight.w400, color: AppColors.colorWhite, fontFamily: AppFontName),),
                                         ]
                                     ),
                                   ),
@@ -136,7 +137,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                                 color: AppColors.colorPrimary,
                               ),
                               alignment: Alignment.center,
-                              child: Text('Team ${index+1}', style: TextStyle(fontSize: 16 ,color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),),
+                              child: Text('Team ${index+1}', style: TextStyle(fontSize: 16 ,color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: AppFontName),),
                             ),
 
                             SizedBox(height: 5,),
@@ -164,7 +165,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                                                   fontSize: 20.0,
                                                   fontWeight: FontWeight.bold,
                                                   color: AppColors.colorSecondary,
-                                                  fontFamily: 'Raleway'
+                                                  fontFamily: AppFontName
                                               ),
                                             ),
                                             Text(
@@ -175,7 +176,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                                                   fontSize: 12.0,
                                                   fontWeight: FontWeight.bold,
                                                   color: AppColors.colorGrey,
-                                                  fontFamily: 'Raleway'
+                                                  fontFamily: AppFontName
                                               ),
                                             ),
                                           ],
@@ -205,7 +206,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                                                   fontSize: 20.0,
                                                   fontWeight: FontWeight.bold,
                                                   color: AppColors.colorSecondary,
-                                                  fontFamily: 'Raleway'
+                                                  fontFamily: AppFontName
                                               ),
                                             ),
                                             Text(
@@ -216,7 +217,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                                                   fontSize: 12.0,
                                                   fontWeight: FontWeight.bold,
                                                   color: AppColors.colorGrey,
-                                                  fontFamily: 'Raleway'
+                                                  fontFamily: AppFontName
                                               ),
                                             ),
                                           ],
@@ -240,7 +241,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
 
                                       Text(
                                         "WK",
-                                        style: TextStyle(fontSize: 12.0, color: AppColors.colorGreyDark, fontFamily: 'Raleway'),
+                                        style: TextStyle(fontSize: 12.0, color: AppColors.colorGreyDark, fontFamily: AppFontName),
                                       ),
 
                                       Text(
@@ -250,7 +251,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black,
-                                            fontFamily: 'Raleway'
+                                            fontFamily: AppFontName
                                         ),
                                       ),
 
@@ -272,7 +273,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
 
                                       Text(
                                         "BAT",
-                                        style: TextStyle(fontSize: 12.0, color: AppColors.colorGreyDark, fontFamily: 'Raleway'),
+                                        style: TextStyle(fontSize: 12.0, color: AppColors.colorGreyDark, fontFamily: AppFontName),
                                       ),
 
                                       Text(

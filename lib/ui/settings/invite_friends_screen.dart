@@ -78,7 +78,7 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                       color: AppColors.colorBlack,
-                                      fontFamily: 'Raleway'
+                                      fontFamily: AppFontName
                                   ),
                                 ),
                               ),
@@ -117,7 +117,7 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Text('FAN_4BFR74H8', style: TextStyle(fontSize:20 , color: AppColors.colorPrimary, fontFamily: 'Raleway'),),
+                                      Text('FAN_4BFR74H8', style: TextStyle(fontSize:20 , color: AppColors.colorPrimary, fontFamily: AppFontName),),
                                       SizedBox(width: 20,),
                                       Builder(
                                         builder: (BuildContext context) {
@@ -148,7 +148,7 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
                                     borderRadius: BorderRadius.all(Radius.circular(25)),
                                     gradient: AppWidgets.getCustomGradient(),
                                   ),
-                                  child: Text('Join This Contest'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
+                                  child: Text('Join This Contest'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: AppFontName, color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                                 ),
                               ),
 

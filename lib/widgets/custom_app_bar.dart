@@ -1,4 +1,5 @@
 import 'package:fantasy_app/constants/color_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:flutter/material.dart';
 
 class MyCustomAppBar {
@@ -27,7 +28,7 @@ class MyCustomAppBar {
             Container(
                 child: Center(
                   child: Text(title,
-                    style: TextStyle(fontSize: 20, color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),
+                    style: TextStyle(fontSize: 20, color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: AppFontName),
                   ),
                 )
             )

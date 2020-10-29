@@ -69,11 +69,11 @@ class CreateContestScreenState extends State<CreateContestScreen> {
                                       SizedBox(width: 10,),
                                       RichText(
                                         text: TextSpan(
-                                            style: TextStyle(fontSize: 13, color: AppColors.colorGreyDark, fontFamily: 'Raleway'),
+                                            style: TextStyle(fontSize: 13, color: AppColors.colorGreyDark, fontFamily: AppFontName),
                                             children: [
-                                              TextSpan(text: 'IND', style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
+                                              TextSpan(text: 'IND', style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontFamily: AppFontName, fontWeight: FontWeight.w600)),
                                               TextSpan(text: '  VS  ',),
-                                              TextSpan(text: 'AUS', style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
+                                              TextSpan(text: 'AUS', style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontFamily: AppFontName, fontWeight: FontWeight.w600)),
                                             ]
                                         ),
                                       ),
@@ -87,7 +87,7 @@ class CreateContestScreenState extends State<CreateContestScreen> {
 
                                   Padding(
                                     padding: const EdgeInsets.only(right: 20),
-                                    child: Text(dummy_date, textAlign: TextAlign.end, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorPrimary, fontFamily: 'Raleway'),),
+                                    child: Text(dummy_date, textAlign: TextAlign.end, style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.colorPrimary, fontFamily: AppFontName),),
                                   ),
 
                                 ],
@@ -145,7 +145,7 @@ class CreateContestScreenState extends State<CreateContestScreen> {
                                           Icon(FontAwesomeIcons.solidCheckCircle, color: AppColors.colorPrimary, size: 25,)
                                               : Icon(FontAwesomeIcons.circle, color: AppColors.colorPrimary, size: 25,),
                                           SizedBox(width: 5,),
-                                          Text('Allow friends to join with multiple teams',  style: TextStyle(fontSize: 13.0, fontFamily: 'Raleway', fontWeight: FontWeight.w400, color: AppColors.colorGreyDark),),
+                                          Text('Allow friends to join with multiple teams',  style: TextStyle(fontSize: 13.0, fontFamily: AppFontName, fontWeight: FontWeight.w400, color: AppColors.colorGreyDark),),
                                           SizedBox(width: 20,),
                                         ],
                                       )
@@ -163,10 +163,10 @@ class CreateContestScreenState extends State<CreateContestScreen> {
 
                               RichText(
                                 text: TextSpan(
-                                    style: TextStyle(fontSize: 13, color: AppColors.colorGreyDark, fontFamily: 'Raleway', fontWeight: FontWeight.w600),
+                                    style: TextStyle(fontSize: 13, color: AppColors.colorGreyDark, fontFamily: AppFontName, fontWeight: FontWeight.w600),
                                     children: [
                                       TextSpan(text: 'Entry Per Team:  ',),
-                                      TextSpan(text: '\$10', style: TextStyle(fontSize: 15, color: AppColors.colorPrimary, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
+                                      TextSpan(text: '\$10', style: TextStyle(fontSize: 15, color: AppColors.colorPrimary, fontFamily: AppFontName, fontWeight: FontWeight.w600)),
                                     ]
                                 ),
                               ),
@@ -192,7 +192,7 @@ class CreateContestScreenState extends State<CreateContestScreen> {
                                 borderRadius: BorderRadius.all(Radius.circular(25)),
                                 gradient: AppWidgets.getCustomGradient(),
                               ),
-                              child: Text('Join This Contest'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Raleway', color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
+                              child: Text('Join This Contest'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontFamily: AppFontName, color: AppColors.colorWhite, fontWeight: FontWeight.bold),),
                             ),
                           ),
                         ),

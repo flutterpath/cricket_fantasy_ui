@@ -102,7 +102,7 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                                     SizedBox(width: 15,),
                                     RichText(
                                       text: TextSpan(
-                                          style: TextStyle(fontSize: 13, color: AppColors.colorGreyDark, fontFamily: 'Raleway'),
+                                          style: TextStyle(fontSize: 13, color: AppColors.colorGreyDark, fontFamily: AppFontName),
                                           children: [
                                             TextSpan(text: 'IND', style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
                                             TextSpan(text: '  VS  ',),

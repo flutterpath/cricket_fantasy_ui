@@ -1,3 +1,4 @@
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:flutter/material.dart';
 
 class TextWidget extends StatelessWidget {
@@ -46,7 +47,7 @@ class TextWidget extends StatelessWidget {
       style: style ?? TextStyle(
           color: color ?? Colors.white,
           fontWeight: fontWeight ?? FontWeight.normal,
-      fontFamily: 'Raleway') ,
+      fontFamily: AppFontName) ,
     );
   }
 }
@@ -96,7 +97,7 @@ class TextWidgetBold extends StatelessWidget {
       textAlign: textAlign,
       style: TextStyle(
           fontWeight: FontWeight.bold,
-          fontFamily: 'Raleway',
+          fontFamily: AppFontName,
           fontSize: fontSize ?? 24,
           color: color,
       ),

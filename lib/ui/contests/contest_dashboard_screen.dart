@@ -97,11 +97,11 @@ class _ContestDashboardScreenState extends State<ContestDashboardScreen> with Si
                                  SizedBox(width: 15,),
                                  RichText(
                                    text: TextSpan(
-                                       style: TextStyle(fontSize: 13, color: AppColors.colorGreyDark, fontFamily: 'Raleway'),
+                                       style: TextStyle(fontSize: 13, color: AppColors.colorGreyDark, fontFamily: AppFontName),
                                        children: [
-                                         TextSpan(text: 'IND', style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
+                                         TextSpan(text: 'IND', style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontFamily: AppFontName, fontWeight: FontWeight.w600)),
                                          TextSpan(text: '  VS  ',),
-                                         TextSpan(text: 'AUS', style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
+                                         TextSpan(text: 'AUS', style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontFamily: AppFontName, fontWeight: FontWeight.w600)),
                                        ]
                                    ),
                                  ),
@@ -242,7 +242,7 @@ class _ContestDashboardScreenState extends State<ContestDashboardScreen> with Si
                         BoxShadow(color: AppColors.colorGreyLight, spreadRadius: 1, blurRadius: 3)
                       ]
                   ),
-                  child: Text(create_team.toUpperCase(), style: TextStyle(fontSize: 15, color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),),
+                  child: Text(create_team.toUpperCase(), style: TextStyle(fontSize: 15, color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: AppFontName),),
                 ),
               ),
             )

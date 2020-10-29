@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.only(left: 25, top: 5, bottom: 5, right: 15),
                   child: Image.asset(AppImages.iconUpcomingMatch, height: 25, width: 25,),
                 ),
-                Text(upcomingMatches.toUpperCase(), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),)
+                Text(upcomingMatches.toUpperCase(), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: AppFontName),)
               ],
             ),
             SizedBox(height: 5,),
