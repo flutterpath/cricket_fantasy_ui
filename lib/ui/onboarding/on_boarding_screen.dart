@@ -1,5 +1,6 @@
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/routers/routers.dart';
 import 'package:fantasy_app/widgets/custom_widgets.dart';
 import 'package:flutter/material.dart';
@@ -19,9 +20,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const bodyStyle = TextStyle(fontSize: 17.0, fontWeight: FontWeight.w400, fontFamily: 'Raleway');
+    const bodyStyle = TextStyle(fontSize: 17.0, fontWeight: FontWeight.w400, fontFamily: AppFontName);
     const pageDecoration = const PageDecoration(
-      titleTextStyle: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),
+      titleTextStyle: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold, fontFamily: AppFontName),
       bodyTextStyle: bodyStyle,
       descriptionPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
       pageColor: AppColors.colorPrimaryLight,
@@ -98,9 +99,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               showSkipButton: true,
               skipFlex: 0,
               nextFlex: 0,
-              skip: Text('Skip'.toUpperCase(), style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Raleway')),
+              skip: Text('Skip'.toUpperCase(), style: TextStyle(fontWeight: FontWeight.bold, fontFamily: AppFontName)),
               next: const Icon(Icons.arrow_forward),
-              done: Text('Done'.toUpperCase(), style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Raleway')),
+              done: Text('Done'.toUpperCase(), style: TextStyle(fontWeight: FontWeight.bold, fontFamily: AppFontName)),
               dotsDecorator: const DotsDecorator(
                 size: Size(10.0, 10.0),
                 color: AppColors.colorSecondary,

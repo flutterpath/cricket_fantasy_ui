@@ -104,9 +104,9 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                                       text: TextSpan(
                                           style: TextStyle(fontSize: 13, color: AppColors.colorGreyDark, fontFamily: AppFontName),
                                           children: [
-                                            TextSpan(text: 'IND', style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
+                                            TextSpan(text: 'IND', style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontFamily: AppFontName, fontWeight: FontWeight.w600)),
                                             TextSpan(text: '  VS  ',),
-                                            TextSpan(text: 'AUS', style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
+                                            TextSpan(text: 'AUS', style: TextStyle(fontSize: 15, color: AppColors.colorBlack, fontFamily: AppFontName, fontWeight: FontWeight.w600)),
                                           ]
                                       ),
                                     ),
@@ -124,7 +124,7 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                                   children: [
                                     Text(
                                       "Max 7 players from a team",
-                                      style: TextStyle(fontSize: 13.0, color: AppColors.colorGreyDark, fontFamily: 'Raleway'),
+                                      style: TextStyle(fontSize: 13.0, color: AppColors.colorGreyDark, fontFamily: AppFontName),
                                     ),
                                   ],
                                 ),
@@ -243,9 +243,9 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                               text: TextSpan(
                                   style: TextStyle(fontSize: 17, color: AppColors.colorGreyExtraLight),
                                   children: [
-                                    TextSpan(text: '7', style: TextStyle(fontSize: 17, color: AppColors.colorWhite, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
+                                    TextSpan(text: '7', style: TextStyle(fontSize: 17, color: AppColors.colorWhite, fontFamily: AppFontName, fontWeight: FontWeight.w600)),
                                     TextSpan(text: '    /    ',),
-                                    TextSpan(text: '4', style: TextStyle(fontSize: 17, color: AppColors.colorWhite, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
+                                    TextSpan(text: '4', style: TextStyle(fontSize: 17, color: AppColors.colorWhite, fontFamily: AppFontName, fontWeight: FontWeight.w600)),
                                   ]
                               ),
                             ),
@@ -280,13 +280,13 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.bold,
                                         color: AppColors.colorWhite,
-                                        fontFamily: 'Raleway'
+                                        fontFamily: AppFontName
                                     ),
                                   ),
                                   SizedBox(height: 4,),
                                   Text(
                                     "Credit Left",
-                                    style: TextStyle(fontSize: 13.0, color: AppColors.colorGreyLight, fontFamily: 'Raleway'),
+                                    style: TextStyle(fontSize: 13.0, color: AppColors.colorGreyLight, fontFamily: AppFontName),
                                   ),
 
                                 ],
@@ -309,7 +309,7 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                                     text: TextSpan(
                                         style: TextStyle(fontSize: 16, color: AppColors.colorGreyLight),
                                         children: [
-                                          TextSpan(text: '11', style: TextStyle(fontSize: 17, color: AppColors.colorWhite, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
+                                          TextSpan(text: '11', style: TextStyle(fontSize: 17, color: AppColors.colorWhite, fontFamily: AppFontName, fontWeight: FontWeight.w600)),
                                           TextSpan(text: ' / 11',),
                                         ]
                                     ),
@@ -317,7 +317,7 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                                   SizedBox(height: 4,),
                                   Text(
                                     "Players",
-                                    style: TextStyle(fontSize: 13.0, color: AppColors.colorGreyLight, fontFamily: 'Raleway'),
+                                    style: TextStyle(fontSize: 13.0, color: AppColors.colorGreyLight, fontFamily: AppFontName),
                                   ),
 
                                 ],
@@ -355,7 +355,7 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                           ],
                         border: new Border.all(width: 2.0, color: AppColors.colorPrimary,),
                       ),
-                      child: Text('Team Preview'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontSize: 15, color: AppColors.colorPrimary, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),),
+                      child: Text('Team Preview'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontSize: 15, color: AppColors.colorPrimary, fontWeight: FontWeight.bold, fontFamily: AppFontName),),
                     ),
                   ),
                   SizedBox(width: 20,),
@@ -374,7 +374,7 @@ class CreateTeamDashboardScreenState extends State<CreateTeamDashboardScreen> wi
                             BoxShadow(color: AppColors.colorGreyLight, spreadRadius: 1, blurRadius: 3)
                           ]
                       ),
-                      child: Text('Continue'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontSize: 15, color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),),
+                      child: Text('Continue'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(fontSize: 15, color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: AppFontName),),
                     ),
                   )
                 ],

@@ -71,7 +71,7 @@ class MyProfileScreen extends StatelessWidget {
                                 fontSize: 13.0,
                                 fontWeight: FontWeight.normal,
                                 color: AppColors.colorWhite,
-                                fontFamily: 'Raleway'
+                                fontFamily: AppFontName
                             ),
                           ),
                         ),
@@ -96,7 +96,7 @@ class MyProfileScreen extends StatelessWidget {
                                 fontSize: 15.0,
                                 fontWeight: FontWeight.bold,
                                 color: AppColors.colorWhite,
-                                fontFamily: 'Raleway'
+                                fontFamily: AppFontName
                             ),
                           ),
                         ),
@@ -127,7 +127,7 @@ class MyProfileScreen extends StatelessWidget {
                             padding: const EdgeInsets.only(left: 20, top: 5, bottom: 5, right: 15),
                             child: Image.asset(AppImages.iconUser, height: 25, width: 25,),
                           ),
-                          Text('User Details'.toUpperCase(), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'Raleway', color: AppColors.colorWhite),)
+                          Text('User Details'.toUpperCase(), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: AppFontName, color: AppColors.colorWhite),)
                         ],
                       ),
                     ),
@@ -144,7 +144,7 @@ class MyProfileScreen extends StatelessWidget {
                           fontSize: 13.0,
                           fontWeight: FontWeight.normal,
                           color: AppColors.colorGrey,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -162,7 +162,7 @@ class MyProfileScreen extends StatelessWidget {
                           fontSize: 15.0,
                           fontWeight: FontWeight.bold,
                           color: AppColors.colorBlack,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -184,7 +184,7 @@ class MyProfileScreen extends StatelessWidget {
                           fontSize: 13.0,
                           fontWeight: FontWeight.normal,
                           color: AppColors.colorGrey,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -202,7 +202,7 @@ class MyProfileScreen extends StatelessWidget {
                           fontSize: 15.0,
                           fontWeight: FontWeight.bold,
                           color: AppColors.colorBlack,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -224,7 +224,7 @@ class MyProfileScreen extends StatelessWidget {
                           fontSize: 13.0,
                           fontWeight: FontWeight.normal,
                           color: AppColors.colorGrey,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -242,7 +242,7 @@ class MyProfileScreen extends StatelessWidget {
                           fontSize: 15.0,
                           fontWeight: FontWeight.bold,
                           color: AppColors.colorBlack,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -264,7 +264,7 @@ class MyProfileScreen extends StatelessWidget {
                           fontSize: 13.0,
                           fontWeight: FontWeight.normal,
                           color: AppColors.colorGrey,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -282,7 +282,7 @@ class MyProfileScreen extends StatelessWidget {
                           fontSize: 15.0,
                           fontWeight: FontWeight.bold,
                           color: AppColors.colorBlack,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -304,7 +304,7 @@ class MyProfileScreen extends StatelessWidget {
                           fontSize: 13.0,
                           fontWeight: FontWeight.normal,
                           color: AppColors.colorGrey,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -322,7 +322,7 @@ class MyProfileScreen extends StatelessWidget {
                           fontSize: 15.0,
                           fontWeight: FontWeight.bold,
                           color: AppColors.colorBlack,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -344,7 +344,7 @@ class MyProfileScreen extends StatelessWidget {
                           fontSize: 13.0,
                           fontWeight: FontWeight.normal,
                           color: AppColors.colorGrey,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -362,7 +362,7 @@ class MyProfileScreen extends StatelessWidget {
                           fontSize: 15.0,
                           fontWeight: FontWeight.bold,
                           color: AppColors.colorBlack,
-                          fontFamily: 'Raleway'
+                          fontFamily: AppFontName
                         ),
                       ),
                     ),
@@ -390,7 +390,7 @@ class MyProfileScreen extends StatelessWidget {
                               padding: const EdgeInsets.only(left: 20, top: 5, bottom: 5, right: 15),
                               child: Image.asset(AppImages.iconUpcomingMatch, height: 25, width: 25,),
                             ),
-                            Text('Playing History'.toUpperCase(), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'Raleway', color: AppColors.colorWhite),)
+                            Text('Playing History'.toUpperCase(), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: AppFontName, color: AppColors.colorWhite),)
                           ],
                         ),
                       ),
@@ -424,7 +424,7 @@ class MyProfileScreen extends StatelessWidget {
                                         fontSize: 20.0,
                                         fontWeight: FontWeight.bold,
                                         color: AppColors.colorSecondary,
-                                        fontFamily: 'Raleway'
+                                        fontFamily: AppFontName
                                     ),
                                   ),
                                   SizedBox(height: 10,),
@@ -436,7 +436,7 @@ class MyProfileScreen extends StatelessWidget {
                                         fontSize: 12.0,
                                         fontWeight: FontWeight.bold,
                                         color: AppColors.colorGreyDark,
-                                        fontFamily: 'Raleway'
+                                        fontFamily: AppFontName
                                     ),
                                   ),
                                 ],
@@ -466,7 +466,7 @@ class MyProfileScreen extends StatelessWidget {
                                         fontSize: 20.0,
                                         fontWeight: FontWeight.bold,
                                         color: AppColors.colorSecondary,
-                                        fontFamily: 'Raleway'
+                                        fontFamily: AppFontName
                                     ),
                                   ),
                                   SizedBox(height: 10,),
@@ -478,7 +478,7 @@ class MyProfileScreen extends StatelessWidget {
                                         fontSize: 12.0,
                                         fontWeight: FontWeight.bold,
                                         color: AppColors.colorGreyDark,
-                                        fontFamily: 'Raleway'
+                                        fontFamily: AppFontName
                                     ),
                                   ),
                                 ],
@@ -524,7 +524,7 @@ class MyProfileScreen extends StatelessWidget {
                                         fontSize: 20.0,
                                         fontWeight: FontWeight.bold,
                                         color: AppColors.colorSecondary,
-                                        fontFamily: 'Raleway'
+                                        fontFamily: AppFontName
                                     ),
                                   ),
                                   SizedBox(height: 10,),
@@ -536,7 +536,7 @@ class MyProfileScreen extends StatelessWidget {
                                         fontSize: 12.0,
                                         fontWeight: FontWeight.bold,
                                         color: AppColors.colorGreyDark,
-                                        fontFamily: 'Raleway'
+                                        fontFamily: AppFontName
                                     ),
                                   ),
                                 ],
@@ -566,7 +566,7 @@ class MyProfileScreen extends StatelessWidget {
                                         fontSize: 20.0,
                                         fontWeight: FontWeight.bold,
                                         color: AppColors.colorSecondary,
-                                        fontFamily: 'Raleway'
+                                        fontFamily: AppFontName
                                     ),
                                   ),
                                   SizedBox(height: 10,),
@@ -578,7 +578,7 @@ class MyProfileScreen extends StatelessWidget {
                                         fontSize: 12.0,
                                         fontWeight: FontWeight.bold,
                                         color: AppColors.colorGreyDark,
-                                        fontFamily: 'Raleway'
+                                        fontFamily: AppFontName
                                     ),
                                   ),
                                 ],

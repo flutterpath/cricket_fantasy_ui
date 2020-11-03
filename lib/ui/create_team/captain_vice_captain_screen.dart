@@ -27,7 +27,6 @@ class CaptainViceCaptainScreenState extends State<CaptainViceCaptainScreen> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -59,7 +58,7 @@ class CaptainViceCaptainScreenState extends State<CaptainViceCaptainScreen> {
                 Center(
                   child: Text(
                     "Choose your Captain and Vice Captain",
-                    style: TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'Raleway'),
+                    style: TextStyle(color: Colors.white, fontSize: 14, fontFamily: AppFontName),
                   ),
                 ),
 
@@ -76,7 +75,7 @@ class CaptainViceCaptainScreenState extends State<CaptainViceCaptainScreen> {
                         backgroundColor: Colors.transparent,
                         child: Text(
                           "C",
-                          style: TextStyle(color: Colors.white, fontSize: 12, fontFamily: 'Raleway', fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.white, fontSize: 12, fontFamily: AppFontName, fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
@@ -85,7 +84,7 @@ class CaptainViceCaptainScreenState extends State<CaptainViceCaptainScreen> {
                     ),
                     Text(
                       "gets 2x points",
-                      style: TextStyle(color: Colors.white, fontSize: 12, fontFamily: 'Raleway', fontWeight: FontWeight.bold),
+                      style: TextStyle(color: Colors.white, fontSize: 12, fontFamily: AppFontName, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
                       width: 20,
@@ -100,7 +99,7 @@ class CaptainViceCaptainScreenState extends State<CaptainViceCaptainScreen> {
                         backgroundColor: Colors.transparent,
                         child: Text(
                           "C",
-                          style: TextStyle(color: Colors.white, fontSize: 12, fontFamily: 'Raleway', fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.white, fontSize: 12, fontFamily: AppFontName, fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
@@ -109,7 +108,7 @@ class CaptainViceCaptainScreenState extends State<CaptainViceCaptainScreen> {
                     ),
                     Text(
                       "gets 1.5x points",
-                      style: TextStyle(color: Colors.white, fontSize: 12, fontFamily: 'Raleway', fontWeight: FontWeight.bold),
+                      style: TextStyle(color: Colors.white, fontSize: 12, fontFamily: AppFontName, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
@@ -161,7 +160,7 @@ class CaptainViceCaptainScreenState extends State<CaptainViceCaptainScreen> {
                                                       BoxShadow(color: AppColors.colorGreyLight, spreadRadius: 1, blurRadius: 3)
                                                     ]
                                                 ),
-                                                child: Text(selectedPlayers[index].playerTypeComplete, textAlign: TextAlign.center, style: TextStyle(fontSize: 13, color: AppColors.colorWhite, fontWeight: FontWeight.w500, fontFamily: 'Raleway'),),
+                                                child: Text(selectedPlayers[index].playerTypeComplete, textAlign: TextAlign.center, style: TextStyle(fontSize: 13, color: AppColors.colorWhite, fontWeight: FontWeight.w500, fontFamily: AppFontName),),
                                               ),
 
                                               Container(color: AppColors.colorPrimary, height: 1.5, width: width*0.2,),
@@ -202,13 +201,13 @@ class CaptainViceCaptainScreenState extends State<CaptainViceCaptainScreen> {
                                                             fontSize: 13.0,
                                                             fontWeight: FontWeight.bold,
                                                             color: AppColors.colorBlack,
-                                                            fontFamily: 'Raleway'
+                                                            fontFamily: AppFontName
                                                         ),
                                                       ),
                                                       SizedBox(height: 4,),
                                                       Text(
                                                         "${selectedPlayers[index].country} (${selectedPlayers[index].playerType})",
-                                                        style: TextStyle(fontSize: 12.0, color: AppColors.colorGrey, fontFamily: 'Raleway', fontWeight: FontWeight.w400),
+                                                        style: TextStyle(fontSize: 12.0, color: AppColors.colorGrey, fontFamily: AppFontName, fontWeight: FontWeight.w400),
                                                       ),
                                                     ],
                                                   ),
@@ -226,8 +225,8 @@ class CaptainViceCaptainScreenState extends State<CaptainViceCaptainScreen> {
                                                     child: RichText(
                                                       text: TextSpan(
                                                           children: [
-                                                            TextSpan(text: 'Points- '.toUpperCase(), style: TextStyle(color: AppColors.colorGreyDark, fontSize: 11, fontWeight: FontWeight.w500, fontFamily: 'Raleway')),
-                                                            TextSpan(text: '${selectedPlayers[index].points}'.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15, fontWeight: FontWeight.bold, fontFamily: 'Raleway')),
+                                                            TextSpan(text: 'Points- '.toUpperCase(), style: TextStyle(color: AppColors.colorGreyDark, fontSize: 11, fontWeight: FontWeight.w500, fontFamily: AppFontName)),
+                                                            TextSpan(text: '${selectedPlayers[index].points}'.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15, fontWeight: FontWeight.bold, fontFamily: AppFontName)),
                                                           ]
                                                       ),
                                                     ),

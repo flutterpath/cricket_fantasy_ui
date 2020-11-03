@@ -2,10 +2,10 @@
 import 'package:fantasy_app/animation/fadeAnimation.dart';
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/routers/routers.dart';
 import 'package:fantasy_app/widgets/custom_widgets.dart';
 import 'package:fantasy_app/widgets/filled_button.dart';
-import 'package:fantasy_app/widgets/iconButton.dart';
 import 'package:fantasy_app/widgets/round_button.dart';
 import 'package:fantasy_app/widgets/textWidget.dart';
 import 'package:flutter/material.dart';
@@ -127,7 +127,7 @@ class _OtpScreenState extends State<OtpScreen> {
                                       child: TextWidget(
                                         data: "Please enter the verification code sent to +919997052132",
                                         textAlign: TextAlign.center,
-                                        style: TextStyle(fontWeight: FontWeight.w400, fontFamily: 'Raleway', fontSize: 14),
+                                        style: TextStyle(fontWeight: FontWeight.w400, fontFamily: AppFontName, fontSize: 14),
                                       ),
                                     ),
                                     SizedBox(
@@ -142,9 +142,9 @@ class _OtpScreenState extends State<OtpScreen> {
                                                   horizontal: 30),
                                               child: PinCodeTextField(
                                                 appContext: context,
-                                                pastedTextStyle: TextStyle(color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),
+                                                pastedTextStyle: TextStyle(color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontFamily: AppFontName),
                                                 length: 4,
-                                                textStyle: TextStyle(color: AppColors.colorSecondary, fontWeight: FontWeight.bold, fontFamily: 'Raleway', fontSize: 23),
+                                                textStyle: TextStyle(color: AppColors.colorSecondary, fontWeight: FontWeight.bold, fontFamily: AppFontName, fontSize: 23),
                                                 obscureText: false,
                                                 animationType: AnimationType.slide,
                                                 pinTheme: PinTheme(

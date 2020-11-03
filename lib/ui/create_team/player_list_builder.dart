@@ -1,5 +1,6 @@
 import 'package:fantasy_app/constants/color_constants.dart';
 import 'package:fantasy_app/constants/images_constants.dart';
+import 'package:fantasy_app/constants/strings.dart';
 import 'package:fantasy_app/models/player_item_model.dart';
 import 'package:flutter/material.dart';
 
@@ -53,13 +54,13 @@ class PlayerListBuilderState extends State<PlayerListBuilder> {
                                       fontSize: 13.0,
                                       fontWeight: FontWeight.bold,
                                       color: AppColors.colorBlack,
-                                      fontFamily: 'Raleway'
+                                      fontFamily: AppFontName
                                   ),
                                 ),
                                 SizedBox(height: 4,),
                                 Text(
                                   "${widget.playersList[index].country} (${widget.playersList[index].playerType})",
-                                  style: TextStyle(fontSize: 12.0, color: AppColors.colorGrey, fontFamily: 'Raleway', fontWeight: FontWeight.w400),
+                                  style: TextStyle(fontSize: 12.0, color: AppColors.colorGrey, fontFamily: AppFontName, fontWeight: FontWeight.w400),
                                 ),
                               ],
                             ),
@@ -77,8 +78,8 @@ class PlayerListBuilderState extends State<PlayerListBuilder> {
                               child: RichText(
                                 text: TextSpan(
                                     children: [
-                                      TextSpan(text: 'Points- '.toUpperCase(), style: TextStyle(color: AppColors.colorGreyDark, fontSize: 11, fontWeight: FontWeight.w500, fontFamily: 'Raleway')),
-                                      TextSpan(text: '${widget.playersList[index].points}'.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15, fontWeight: FontWeight.bold, fontFamily: 'Raleway')),
+                                      TextSpan(text: 'Points- '.toUpperCase(), style: TextStyle(color: AppColors.colorGreyDark, fontSize: 11, fontWeight: FontWeight.w500, fontFamily: AppFontName)),
+                                      TextSpan(text: '${widget.playersList[index].points}'.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15, fontWeight: FontWeight.bold, fontFamily: AppFontName)),
                                     ]
                                 ),
                               ),
@@ -96,8 +97,8 @@ class PlayerListBuilderState extends State<PlayerListBuilder> {
                               child: RichText(
                                 text: TextSpan(
                                     children: [
-                                      TextSpan(text: 'Credits- '.toUpperCase(), style: TextStyle(color: AppColors.colorGreyDark, fontSize: 11, fontWeight: FontWeight.w500, fontFamily: 'Raleway')),
-                                      TextSpan(text: '${widget.playersList[index].credits}'.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15, fontWeight: FontWeight.bold, fontFamily: 'Raleway')),
+                                      TextSpan(text: 'Credits- '.toUpperCase(), style: TextStyle(color: AppColors.colorGreyDark, fontSize: 11, fontWeight: FontWeight.w500, fontFamily: AppFontName)),
+                                      TextSpan(text: '${widget.playersList[index].credits}'.toUpperCase(), style: TextStyle(color: AppColors.colorBlack, fontSize: 15, fontWeight: FontWeight.bold, fontFamily: AppFontName)),
                                     ]
                                 ),
                               ),

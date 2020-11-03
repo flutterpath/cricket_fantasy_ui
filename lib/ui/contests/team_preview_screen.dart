@@ -15,7 +15,6 @@ class TeamPreviewScreenState extends State<TeamPreviewScreen> {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
@@ -66,9 +65,9 @@ class TeamPreviewScreenState extends State<TeamPreviewScreen> {
                         text: TextSpan(
                             style: TextStyle(fontSize: 17, color: AppColors.colorGreyExtraLight),
                             children: [
-                              TextSpan(text: '7', style: TextStyle(fontSize: 17, color: AppColors.colorWhite, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
+                              TextSpan(text: '7', style: TextStyle(fontSize: 17, color: AppColors.colorWhite, fontFamily: AppFontName, fontWeight: FontWeight.w600)),
                               TextSpan(text: '    /    ',),
-                              TextSpan(text: '4', style: TextStyle(fontSize: 17, color: AppColors.colorWhite, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
+                              TextSpan(text: '4', style: TextStyle(fontSize: 17, color: AppColors.colorWhite, fontFamily: AppFontName, fontWeight: FontWeight.w600)),
                             ]
                         ),
                       ),
@@ -103,13 +102,13 @@ class TeamPreviewScreenState extends State<TeamPreviewScreen> {
                                   fontSize: 16.0,
                                   fontWeight: FontWeight.bold,
                                   color: AppColors.colorWhite,
-                                  fontFamily: 'Raleway'
+                                  fontFamily: AppFontName
                               ),
                             ),
                             SizedBox(height: 4,),
                             Text(
                               "Credit Left",
-                              style: TextStyle(fontSize: 13.0, color: AppColors.colorGreyLight, fontFamily: 'Raleway'),
+                              style: TextStyle(fontSize: 13.0, color: AppColors.colorGreyLight, fontFamily: AppFontName),
                             ),
 
                           ],
@@ -132,7 +131,7 @@ class TeamPreviewScreenState extends State<TeamPreviewScreen> {
                               text: TextSpan(
                                   style: TextStyle(fontSize: 16, color: AppColors.colorGreyLight),
                                   children: [
-                                    TextSpan(text: '11', style: TextStyle(fontSize: 17, color: AppColors.colorWhite, fontFamily: 'Raleway', fontWeight: FontWeight.w600)),
+                                    TextSpan(text: '11', style: TextStyle(fontSize: 17, color: AppColors.colorWhite, fontFamily: AppFontName, fontWeight: FontWeight.w600)),
                                     TextSpan(text: ' / 11',),
                                   ]
                               ),
@@ -140,7 +139,7 @@ class TeamPreviewScreenState extends State<TeamPreviewScreen> {
                             SizedBox(height: 4,),
                             Text(
                               "Players",
-                              style: TextStyle(fontSize: 13.0, color: AppColors.colorGreyLight, fontFamily: 'Raleway'),
+                              style: TextStyle(fontSize: 13.0, color: AppColors.colorGreyLight, fontFamily: AppFontName),
                             ),
 
                           ],
@@ -165,7 +164,7 @@ class TeamPreviewScreenState extends State<TeamPreviewScreen> {
         Text(
           categoryName,
           style: TextStyle(
-              color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold, fontFamily: 'Raleway'),
+              color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold, fontFamily: AppFontName),
         ),
         SizedBox(
           height: 5,
@@ -203,7 +202,7 @@ class TeamPreviewScreenState extends State<TeamPreviewScreen> {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 10,
-                                  fontFamily: 'Raleway'
+                                  fontFamily: AppFontName
                                 ),
                               ),
                             ),
@@ -216,7 +215,7 @@ class TeamPreviewScreenState extends State<TeamPreviewScreen> {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 11,
-                              fontFamily: 'Raleway',
+                              fontFamily: AppFontName,
                               fontWeight: FontWeight.w500
                             ),
                           ),

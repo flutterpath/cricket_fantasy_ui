@@ -13,7 +13,6 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.only(top: 10, bottom: 10),
       child: ListView.builder(
@@ -283,7 +282,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black,
-                                            fontFamily: 'Raleway'
+                                            fontFamily: AppFontName
                                         ),
                                       ),
 
@@ -305,7 +304,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
 
                                       Text(
                                         "ALL",
-                                        style: TextStyle(fontSize: 12.0, color: AppColors.colorGreyDark, fontFamily: 'Raleway'),
+                                        style: TextStyle(fontSize: 12.0, color: AppColors.colorGreyDark, fontFamily: AppFontName),
                                       ),
 
                                       Text(
@@ -315,7 +314,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black,
-                                            fontFamily: 'Raleway'
+                                            fontFamily: AppFontName
                                         ),
                                       ),
 
@@ -337,7 +336,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
 
                                       Text(
                                         "BOWL",
-                                        style: TextStyle(fontSize: 12.0, color: AppColors.colorGreyDark, fontFamily: 'Raleway'),
+                                        style: TextStyle(fontSize: 12.0, color: AppColors.colorGreyDark, fontFamily: AppFontName),
                                       ),
 
                                       Text(
@@ -347,7 +346,7 @@ class MyTeamsListBuilderScreenState extends State<MyTeamsListBuilderScreen> {
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black,
-                                            fontFamily: 'Raleway'
+                                            fontFamily: AppFontName
                                         ),
                                       ),
 
